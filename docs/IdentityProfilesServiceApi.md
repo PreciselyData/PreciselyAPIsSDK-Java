@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getIdentityByAddress"></a>
 # **getIdentityByAddress**
-> GeoIdentityResponse getIdentityByAddress(address, givenName, familyName, confidence, maxCandidates, theme, filter)
+> IdentityResponse getIdentityByAddress(address, confidence, maxCandidates, theme, filter)
 
 Identities By Address
 
@@ -35,14 +35,12 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 IdentityProfilesServiceApi apiInstance = new IdentityProfilesServiceApi();
 String address = "address_example"; // String | free form address text
-String givenName = "givenName_example"; // String | This filters all the associated identities of address by given Name
-String familyName = "familyName_example"; // String | This filters all the associated identities of address by family Name
 String confidence = "confidence_example"; // String | To adjust quality threshold of data returned. Default is HIGH
 String maxCandidates = "maxCandidates_example"; // String | Number of identities returned in response
 String theme = "theme_example"; // String | theme parameter for filtering results
 String filter = "filter_example"; // String | filter params
 try {
-    GeoIdentityResponse result = apiInstance.getIdentityByAddress(address, givenName, familyName, confidence, maxCandidates, theme, filter);
+    IdentityResponse result = apiInstance.getIdentityByAddress(address, confidence, maxCandidates, theme, filter);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling IdentityProfilesServiceApi#getIdentityByAddress");
@@ -55,8 +53,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address** | **String**| free form address text |
- **givenName** | **String**| This filters all the associated identities of address by given Name | [optional]
- **familyName** | **String**| This filters all the associated identities of address by family Name | [optional]
  **confidence** | **String**| To adjust quality threshold of data returned. Default is HIGH | [optional] [enum: LOW, MED, HIGH, MAX]
  **maxCandidates** | **String**| Number of identities returned in response | [optional]
  **theme** | **String**| theme parameter for filtering results | [optional]
@@ -64,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GeoIdentityResponse**](GeoIdentityResponse.md)
+[**IdentityResponse**](IdentityResponse.md)
 
 ### Authorization
 
@@ -73,7 +69,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
+ - **Accept**: application/json, application/xml
 
 <a name="getIdentityByEmail"></a>
 # **getIdentityByEmail**
@@ -133,7 +129,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
+ - **Accept**: application/json, application/xml
 
 <a name="getIdentityByTwitter"></a>
 # **getIdentityByTwitter**

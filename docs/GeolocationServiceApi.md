@@ -4,66 +4,9 @@ All URIs are relative to *https://api.precisely.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDeviceStatus**](GeolocationServiceApi.md#getDeviceStatus) | **GET** /geolocation/v1/devicestatus | Location By Device Status.
 [**getLocationByIPAddress**](GeolocationServiceApi.md#getLocationByIPAddress) | **GET** /geolocation/v1/location/byipaddress | Location By IP Address.
 [**getLocationByWiFiAccessPoint**](GeolocationServiceApi.md#getLocationByWiFiAccessPoint) | **GET** /geolocation/v1/location/byaccesspoint | Location by WiFi Access Point.
 
-
-<a name="getDeviceStatus"></a>
-# **getDeviceStatus**
-> GeoLocationDeviceSatus getDeviceStatus(deviceId, includeNetworkInfo_)
-
-Location By Device Status.
-
-This service accepts a phone number as input and returns details distinguishing landline and wireless numbers and also checks if a wireless number can be located.
-
-### Example
-```java
-// Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.GeolocationServiceApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-GeolocationServiceApi apiInstance = new GeolocationServiceApi();
-String deviceId = "deviceId_example"; // String | Unique identifier for the intended device. Supported identifiers are fixed line and mobile number.
-String includeNetworkInfo_ = "includeNetworkInfo__example"; // String | Y or N (default is Y) – if it is N, then network/carrier details will not be added in the response.
-try {
-    GeoLocationDeviceSatus result = apiInstance.getDeviceStatus(deviceId, includeNetworkInfo_);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling GeolocationServiceApi#getDeviceStatus");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **deviceId** | **String**| Unique identifier for the intended device. Supported identifiers are fixed line and mobile number. |
- **includeNetworkInfo_** | **String**| Y or N (default is Y) – if it is N, then network/carrier details will not be added in the response. | [optional]
-
-### Return type
-
-[**GeoLocationDeviceSatus**](GeoLocationDeviceSatus.md)
-
-### Authorization
-
-[oAuth2Password](../README.md#oAuth2Password)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
 
 <a name="getLocationByIPAddress"></a>
 # **getLocationByIPAddress**

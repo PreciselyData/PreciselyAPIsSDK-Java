@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**psapId** | **String** |  |  [optional]
 **fccId** | **String** |  |  [optional]
 **type** | **String** |  |  [optional]
 **count** | **Integer** |  |  [optional]

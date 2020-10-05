@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**boundaryId** | **String** |  |  [optional]
 **populationTheme** | [**PopulationTheme**](PopulationTheme.md) |  |  [optional]
 **raceAndEthnicityTheme** | [**RaceAndEthnicityTheme**](RaceAndEthnicityTheme.md) |  |  [optional]
 **healthTheme** | [**HealthTheme**](HealthTheme.md) |  |  [optional]

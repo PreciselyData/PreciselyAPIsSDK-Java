@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **service** | **String** |  |  [optional]
 **followers** | **Integer** |  |  [optional]
 **following** | **Integer** |  |  [optional]
-**score** | **Integer** |  |  [optional]
 
 
 

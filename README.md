@@ -47,6 +47,9 @@
 
 * [Email Verification](https://developer.precisely.com/apis/emailverification): Email address validation and protection. The Email Verification API corrects and validates your email addresses to protect your database from invalid, toxic and undesirable email addresses. We help you avoid a damaged sender reputations by flagging those bouncing emails, spam trap hits, honeypots, stale lists and do-not-contact list before you have a chance to use them.
 
+* [Addresses](https://developer.precisely.com/apis/addresses): Gather multiple Addresses if you don’t have them and use these to query all other Precisely APIs. The Addresses API accepts names of a boundary such as zip code, neighborhood, county, and city—as well as your custom geographic boundaries or drivetimes & drive distances—and returns all known & valid Addresses associated with these names, or Addresses contained with the supplied or chosen geographic boundary.
+
+* [Phone Verification](https://developer.precisely.com/apis/phoneverification): The Phone Verification API accepts any phone number as input and returns verification information, Service Provider name, and more. Useful to verify if phone numbers exist to reduce fraud and improve communications.
 
 The following platforms are supported by Precisely SDKs:
 *	[Android](https://developer.precisely.com/apis/docs/index.html#Android%20SDK/android_intro.html)
@@ -55,7 +58,7 @@ The following platforms are supported by Precisely SDKs:
 *	[Java](https://developer.precisely.com/apis/docs/index.html#Java%20SDK/java_intro.html)
 *	[C#](https://developer.precisely.com/apis/docs/index.html#C_sdk/java_intro.html)  
 
-[Click here](https://developer.precisely.com/apis/docs/index.html) for detailed Documentation on Precisely APIs 
+[Click here](https://developer.precisely.com/apis/docs/index.html ) for detailed Documentation on Precisely APIs 
 
 
 # PreciselyAPISJavaSDK
@@ -64,7 +67,7 @@ The following platforms are supported by Precisely SDKs:
 PreciselyAPIs Java SDK facilitates you to build Java applications using Precisely APIs.
 ### Getting Started
 To get started with Java SDK, you must first register at [Precisely APIs Home Page](https://developer.precisely.com/) and obtain your API Key and Secret to get started with the Java SDK and call Precisely APIs.
-For more information refer to [â€˜Getting Started with Java SDKâ€™](https://developer.precisely.com/apis/docs/index.html#Java%20SDK/java_intro.html) section in documentation.
+For more information refer to [‘Getting Started with Java SDK’](https://developer.precisely.com/apis/docs/index.html#Java%20SDK/java_intro.html) section in documentation.
 
 
 ## Requirements
@@ -95,7 +98,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>io.swagger</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>9.0.0</version>
+    <version>9.5.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -105,7 +108,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:PreciselyAPISJavaSDK:9.0.0"
+compile "io.swagger:PreciselyAPISJavaSDK:9.5.0"
 ```
 
 ### Others
@@ -116,7 +119,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-9.0.0.jar
+* target/PreciselyAPISJavaSDK-9.5.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -169,7 +172,14 @@ Class | Method | HTTP request | Description
 *AddressVerificationServiceApi* | [**validateMailingAddressPremium**](docs/AddressVerificationServiceApi.md#validateMailingAddressPremium) | **POST** /addressverification/v1/validatemailingaddresspremium/results.json | ValidateMailingAddressPremium
 *AddressVerificationServiceApi* | [**validateMailingAddressPro**](docs/AddressVerificationServiceApi.md#validateMailingAddressPro) | **POST** /addressverification/v1/validatemailingaddresspro/results.json | ValidateMailingAddressPro
 *AddressVerificationServiceApi* | [**validateMailingAddressUSCAN**](docs/AddressVerificationServiceApi.md#validateMailingAddressUSCAN) | **POST** /addressverification/v1/validatemailingaddressuscan/results.json | ValidateMailingAddressUSCAN
+*AddressesAPIServiceApi* | [**getAddressesByBoundaryName**](docs/AddressesAPIServiceApi.md#getAddressesByBoundaryName) | **GET** /addresses/v1/address/byboundaryname | Addresses By Boundary Area.
+*AddressesAPIServiceApi* | [**getAddressesCountByBoundary**](docs/AddressesAPIServiceApi.md#getAddressesCountByBoundary) | **POST** /addresses/v1/addresscount/byboundary | Address Counts by Boundary.
+*AddressesAPIServiceApi* | [**getAddressesCountByBoundaryName**](docs/AddressesAPIServiceApi.md#getAddressesCountByBoundaryName) | **GET** /addresses/v1/addresscount/byboundaryname | Address Counts by Boundary Name.
+*AddressesAPIServiceApi* | [**getAddressesbyBoundary**](docs/AddressesAPIServiceApi.md#getAddressesbyBoundary) | **POST** /addresses/v1/address/byboundary | Addresses by Boundary.
+*DemographicsServiceApi* | [**getDemographicsAdvanced**](docs/DemographicsServiceApi.md#getDemographicsAdvanced) | **POST** /demographics-segmentation/v1/advanced/demographics | Demographics Advanced Endpoint
+*DemographicsServiceApi* | [**getDemographicsBasic**](docs/DemographicsServiceApi.md#getDemographicsBasic) | **GET** /demographics-segmentation/v1/basic/demographics | Demographics Basic
 *DemographicsServiceApi* | [**getDemographicsByAddressV2**](docs/DemographicsServiceApi.md#getDemographicsByAddressV2) | **GET** /demographics-segmentation/v1/demographics/byaddress | Demographics By Address.
+*DemographicsServiceApi* | [**getDemographicsByBoundaryIds**](docs/DemographicsServiceApi.md#getDemographicsByBoundaryIds) | **GET** /demographics-segmentation/v1/demographics/byboundaryids | Demographics By Boundaryids.
 *DemographicsServiceApi* | [**getDemographicsByLocationV2**](docs/DemographicsServiceApi.md#getDemographicsByLocationV2) | **GET** /demographics-segmentation/v1/demographics/bylocation | Demographics By Location.
 *DemographicsServiceApi* | [**getSegmentationByAddress**](docs/DemographicsServiceApi.md#getSegmentationByAddress) | **GET** /demographics-segmentation/v1/segmentation/byaddress | Segmentation By Address.
 *DemographicsServiceApi* | [**getSegmentationByLocation**](docs/DemographicsServiceApi.md#getSegmentationByLocation) | **GET** /demographics-segmentation/v1/segmentation/bylocation | Segmentation By Location.
@@ -184,7 +194,6 @@ Class | Method | HTTP request | Description
 *GeocodeServiceApi* | [**keyLookupBatch**](docs/GeocodeServiceApi.md#keyLookupBatch) | **POST** /geocode/v1/keylookup | Post Key Lookup
 *GeocodeServiceApi* | [**reverseGeocodBatch**](docs/GeocodeServiceApi.md#reverseGeocodBatch) | **POST** /geocode/v1/{datapackBundle}/reverseGeocode | Post Reverse Geocode
 *GeocodeServiceApi* | [**reverseGeocode**](docs/GeocodeServiceApi.md#reverseGeocode) | **GET** /geocode/v1/{datapackBundle}/reverseGeocode | Get Reverse Geocode
-*GeolocationServiceApi* | [**getDeviceStatus**](docs/GeolocationServiceApi.md#getDeviceStatus) | **GET** /geolocation/v1/devicestatus | Location By Device Status.
 *GeolocationServiceApi* | [**getLocationByIPAddress**](docs/GeolocationServiceApi.md#getLocationByIPAddress) | **GET** /geolocation/v1/location/byipaddress | Location By IP Address.
 *GeolocationServiceApi* | [**getLocationByWiFiAccessPoint**](docs/GeolocationServiceApi.md#getLocationByWiFiAccessPoint) | **GET** /geolocation/v1/location/byaccesspoint | Location by WiFi Access Point.
 *IdentityProfilesServiceApi* | [**getIdentityByAddress**](docs/IdentityProfilesServiceApi.md#getIdentityByAddress) | **GET** /identityprofiles/v1/identity/byaddress | Identities By Address
@@ -201,6 +210,7 @@ Class | Method | HTTP request | Description
 *LocalTaxServiceApi* | [**getSpecificTaxRateByAddress**](docs/LocalTaxServiceApi.md#getSpecificTaxRateByAddress) | **GET** /localtax/v1/taxrate/{taxRateTypeId}/byaddress | Get Taxrate By Address
 *LocalTaxServiceApi* | [**getSpecificTaxRateByLocation**](docs/LocalTaxServiceApi.md#getSpecificTaxRateByLocation) | **GET** /localtax/v1/taxrate/{taxRateTypeId}/bylocation | Get Taxrate By Location
 *NeighborhoodsServiceApi* | [**getPlaceByLocation**](docs/NeighborhoodsServiceApi.md#getPlaceByLocation) | **GET** /neighborhoods/v1/place/bylocation | Place By Location.
+*PhoneVerificationServiceApi* | [**phoneVerification**](docs/PhoneVerificationServiceApi.md#phoneVerification) | **GET** /phoneverification/v1/phoneverification | Phone verification.
 *PlacesServiceApi* | [**getCategoryCodeMetadata**](docs/PlacesServiceApi.md#getCategoryCodeMetadata) | **GET** /places/v1/metadata/category | Returns Category Codes with their sub-categories (if exist), descriptions and SIC Codes mapping
 *PlacesServiceApi* | [**getPOIById**](docs/PlacesServiceApi.md#getPOIById) | **GET** /places/v1/poi/{id} | Points Of Interest Details By Id
 *PlacesServiceApi* | [**getPOIsByAddress**](docs/PlacesServiceApi.md#getPOIsByAddress) | **GET** /places/v1/poi/byaddress | Points of Interest By Address.
@@ -276,6 +286,12 @@ Class | Method | HTTP request | Description
  - [Accuracy](docs/Accuracy.md)
  - [Address](docs/Address.md)
  - [AddressTime](docs/AddressTime.md)
+ - [AddressType](docs/AddressType.md)
+ - [AddressesByBoundaryRequest](docs/AddressesByBoundaryRequest.md)
+ - [AddressesCount](docs/AddressesCount.md)
+ - [AddressesDTO](docs/AddressesDTO.md)
+ - [AddressesPreferences](docs/AddressesPreferences.md)
+ - [AddressesResponse](docs/AddressesResponse.md)
  - [Age](docs/Age.md)
  - [AgeTheme](docs/AgeTheme.md)
  - [Area](docs/Area.md)
@@ -286,7 +302,6 @@ Class | Method | HTTP request | Description
  - [BaseFloodElevation](docs/BaseFloodElevation.md)
  - [BasicBoundary](docs/BasicBoundary.md)
  - [BasicBoundaryAddress](docs/BasicBoundaryAddress.md)
- - [Birthday](docs/Birthday.md)
  - [Boundaries](docs/Boundaries.md)
  - [Boundary](docs/Boundary.md)
  - [BoundaryBuffer](docs/BoundaryBuffer.md)
@@ -336,9 +351,11 @@ Class | Method | HTTP request | Description
  - [CustomObjectMember](docs/CustomObjectMember.md)
  - [CustomPreferences](docs/CustomPreferences.md)
  - [DateTimeEarthQuake](docs/DateTimeEarthQuake.md)
+ - [Demographics](docs/Demographics.md)
+ - [DemographicsAdvancedPreferences](docs/DemographicsAdvancedPreferences.md)
+ - [DemographicsAdvancedRequest](docs/DemographicsAdvancedRequest.md)
  - [DemographicsThemes](docs/DemographicsThemes.md)
  - [DemographicsThemesV2](docs/DemographicsThemesV2.md)
- - [DemographicsV2](docs/DemographicsV2.md)
  - [Depth](docs/Depth.md)
  - [DeviceStatusNetwork](docs/DeviceStatusNetwork.md)
  - [Dictionary](docs/Dictionary.md)
@@ -407,12 +424,8 @@ Class | Method | HTTP request | Description
  - [GenderTheme](docs/GenderTheme.md)
  - [GeoEnrichMetadataResponse](docs/GeoEnrichMetadataResponse.md)
  - [GeoEnrichResponse](docs/GeoEnrichResponse.md)
- - [GeoIdentityName](docs/GeoIdentityName.md)
- - [GeoIdentityPlace](docs/GeoIdentityPlace.md)
- - [GeoIdentityResponse](docs/GeoIdentityResponse.md)
  - [GeoLocationAccessPoint](docs/GeoLocationAccessPoint.md)
  - [GeoLocationCountry](docs/GeoLocationCountry.md)
- - [GeoLocationDeviceSatus](docs/GeoLocationDeviceSatus.md)
  - [GeoLocationFixedLine](docs/GeoLocationFixedLine.md)
  - [GeoLocationFixedLineCountry](docs/GeoLocationFixedLineCountry.md)
  - [GeoLocationIpAddr](docs/GeoLocationIpAddr.md)
@@ -459,14 +472,16 @@ Class | Method | HTTP request | Description
  - [Greatschools](docs/Greatschools.md)
  - [Grid](docs/Grid.md)
  - [HealthTheme](docs/HealthTheme.md)
- - [HouseholdFinance](docs/HouseholdFinance.md)
  - [HouseholdSizeTheme](docs/HouseholdSizeTheme.md)
  - [HouseholdsTheme](docs/HouseholdsTheme.md)
  - [HousingTheme](docs/HousingTheme.md)
  - [IPDTaxByAddressBatchRequest](docs/IPDTaxByAddressBatchRequest.md)
  - [IPDTaxJurisdiction](docs/IPDTaxJurisdiction.md)
  - [Identity](docs/Identity.md)
+ - [IdentityDemographics](docs/IdentityDemographics.md)
  - [IdentityDetail](docs/IdentityDetail.md)
+ - [IdentityName](docs/IdentityName.md)
+ - [IdentityResponse](docs/IdentityResponse.md)
  - [IncomeTheme](docs/IncomeTheme.md)
  - [IncomeThemeV2](docs/IncomeThemeV2.md)
  - [IndexVariable](docs/IndexVariable.md)
@@ -482,7 +497,6 @@ Class | Method | HTTP request | Description
  - [Keys](docs/Keys.md)
  - [LatLongFields](docs/LatLongFields.md)
  - [LifeStyleTheme](docs/LifeStyleTheme.md)
- - [Lifestyle](docs/Lifestyle.md)
  - [Location](docs/Location.md)
  - [LocationTime](docs/LocationTime.md)
  - [Magnitude](docs/Magnitude.md)
@@ -491,7 +505,6 @@ Class | Method | HTTP request | Description
  - [MatchedAddress](docs/MatchedAddress.md)
  - [Matrix](docs/Matrix.md)
  - [Mcd](docs/Mcd.md)
- - [Neighborhood](docs/Neighborhood.md)
  - [Network](docs/Network.md)
  - [Operation](docs/Operation.md)
  - [OrganizationType](docs/OrganizationType.md)
@@ -510,6 +523,7 @@ Class | Method | HTTP request | Description
  - [ParcelBoundary](docs/ParcelBoundary.md)
  - [ParentBusiness](docs/ParentBusiness.md)
  - [PbKey](docs/PbKey.md)
+ - [PhoneVerification](docs/PhoneVerification.md)
  - [Photo](docs/Photo.md)
  - [PlaceByLocations](docs/PlaceByLocations.md)
  - [PlaceByLocationsLocation](docs/PlaceByLocationsLocation.md)
@@ -530,8 +544,8 @@ Class | Method | HTTP request | Description
  - [Preferences](docs/Preferences.md)
  - [PrimaryZone](docs/PrimaryZone.md)
  - [Profile](docs/Profile.md)
+ - [Profiles](docs/Profiles.md)
  - [Properties](docs/Properties.md)
- - [Property](docs/Property.md)
  - [Proxy](docs/Proxy.md)
  - [PurchasingBehaviorTheme](docs/PurchasingBehaviorTheme.md)
  - [RaceAndEthnicityTheme](docs/RaceAndEthnicityTheme.md)
