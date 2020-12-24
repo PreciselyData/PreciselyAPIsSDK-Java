@@ -4,7 +4,7 @@
   <groupId>io.swagger</groupId>
   <artifactId>PreciselyAPISJavaSDK</artifactId>
   <name>PreciselyAPISJavaSDK</name>
-  <version>9.5.0</version>
+  <version>10.0.0</version>
   <prerequisites>
     <maven>2.2.0</maven>
   </prerequisites>
@@ -98,7 +98,7 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <finalName>PreciselyAPISJavaSDK-9.5.0</finalName>
+              <finalName>PreciselyAPISJavaSDK-10.0.0</finalName>
             </configuration>
           </execution>
         </executions>

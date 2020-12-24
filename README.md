@@ -63,13 +63,6 @@ The following platforms are supported by Precisely SDKs:
 
 # PreciselyAPISJavaSDK
 
-### Description
-PreciselyAPIs Java SDK facilitates you to build Java applications using Precisely APIs.
-### Getting Started
-To get started with Java SDK, you must first register at [Precisely APIs Home Page](https://developer.precisely.com/) and obtain your API Key and Secret to get started with the Java SDK and call Precisely APIs.
-For more information refer to [‘Getting Started with Java SDK’](https://developer.precisely.com/apis/docs/index.html#Java%20SDK/java_intro.html) section in documentation.
-
-
 ## Requirements
 
 Building the API client library requires [Maven](https://maven.apache.org/) to be installed.
@@ -98,7 +91,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>io.swagger</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>9.5.0</version>
+    <version>10.0.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -108,7 +101,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:PreciselyAPISJavaSDK:9.5.0"
+compile "io.swagger:PreciselyAPISJavaSDK:10.0.0"
 ```
 
 ### Others
@@ -119,7 +112,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-9.5.0.jar
+* target/PreciselyAPISJavaSDK-10.0.0.jar
 * target/lib/*.jar
 
 ## Getting Started
