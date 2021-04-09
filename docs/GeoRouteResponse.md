@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **time** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
 **geometry** | [**RouteGeometry**](RouteGeometry.md) |  |  [optional]
 **routeDirections** | [**RouteDirections**](RouteDirections.md) |  |  [optional]
+**intermediatePoints** | [**IntermediatePoints**](IntermediatePoints.md) |  |  [optional]
 
 
 

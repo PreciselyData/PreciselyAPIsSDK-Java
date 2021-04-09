@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **maxCandidates** | **String** |  |  [optional]
 **fuzzyOnName** | **String** |  |  [optional]
 **page** | **String** |  |  [optional]
+**matchMode** | **String** |  |  [optional]
+**specificMatchOn** | **String** |  |  [optional]
 **geometry** | [**CommonGeometry**](CommonGeometry.md) |  |  [optional]
 **geometryAsText** | **String** |  |  [optional]
 

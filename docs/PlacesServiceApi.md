@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 <a name="getPOIsByAddress"></a>
 # **getPOIsByAddress**
-> GeoEnrichResponse getPOIsByAddress(address, country, name, type, categoryCode, sicCode, maxCandidates, searchRadius, searchRadiusUnit, travelTime, travelTimeUnit, travelDistance, travelDistanceUnit, travelMode, sortBy, fuzzyOnName, page)
+> GeoEnrichResponse getPOIsByAddress(address, country, name, type, categoryCode, sicCode, maxCandidates, searchRadius, searchRadiusUnit, travelTime, travelTimeUnit, travelDistance, travelDistanceUnit, travelMode, sortBy, fuzzyOnName, page, matchMode, specificMatchOn)
 
 Points of Interest By Address.
 
@@ -167,8 +167,10 @@ String travelMode = "travelMode_example"; // String | Specifies the available mo
 String sortBy = "distance"; // String | Specifies the order in which POIs are retrieved.
 String fuzzyOnName = "fuzzyOnName_example"; // String | Allowed values are Y/N. If N, the search on name will not allow fuzziness.
 String page = "page_example"; // String | Will support pagination, by default 1st page with maxCandidates results are returned.
+String matchMode = "matchMode_example"; // String | 
+String specificMatchOn = "specificMatchOn_example"; // String | 
 try {
-    GeoEnrichResponse result = apiInstance.getPOIsByAddress(address, country, name, type, categoryCode, sicCode, maxCandidates, searchRadius, searchRadiusUnit, travelTime, travelTimeUnit, travelDistance, travelDistanceUnit, travelMode, sortBy, fuzzyOnName, page);
+    GeoEnrichResponse result = apiInstance.getPOIsByAddress(address, country, name, type, categoryCode, sicCode, maxCandidates, searchRadius, searchRadiusUnit, travelTime, travelTimeUnit, travelDistance, travelDistanceUnit, travelMode, sortBy, fuzzyOnName, page, matchMode, specificMatchOn);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlacesServiceApi#getPOIsByAddress");
@@ -197,6 +199,8 @@ Name | Type | Description  | Notes
  **sortBy** | **String**| Specifies the order in which POIs are retrieved. | [optional] [default to distance] [enum: distance, relevance]
  **fuzzyOnName** | **String**| Allowed values are Y/N. If N, the search on name will not allow fuzziness. | [optional]
  **page** | **String**| Will support pagination, by default 1st page with maxCandidates results are returned. | [optional]
+ **matchMode** | **String**|  | [optional]
+ **specificMatchOn** | **String**|  | [optional]
 
 ### Return type
 
@@ -213,7 +217,7 @@ Name | Type | Description  | Notes
 
 <a name="getPOIsByArea"></a>
 # **getPOIsByArea**
-> GeoEnrichResponse getPOIsByArea(country, areaName3, postcode1, postcode2, name, type, categoryCode, sicCode, maxCandidates, fuzzyOnName, page)
+> GeoEnrichResponse getPOIsByArea(country, areaName3, postcode1, postcode2, name, type, categoryCode, sicCode, maxCandidates, fuzzyOnName, page, matchMode, specificMatchOn)
 
 Points of Interest By Area.
 
@@ -247,8 +251,10 @@ String sicCode = "sicCode_example"; // String | Specific SIC Codes/Codes for the
 String maxCandidates = "maxCandidates_example"; // String | Maximum number of POIs that can be retrieved.
 String fuzzyOnName = "fuzzyOnName_example"; // String | Allowed values are Y/N. If N, the search on name will not allow fuzziness.
 String page = "page_example"; // String | Will support pagination, by default 1st page with maxCandidates results are returned.
+String matchMode = "matchMode_example"; // String | 
+String specificMatchOn = "specificMatchOn_example"; // String | 
 try {
-    GeoEnrichResponse result = apiInstance.getPOIsByArea(country, areaName3, postcode1, postcode2, name, type, categoryCode, sicCode, maxCandidates, fuzzyOnName, page);
+    GeoEnrichResponse result = apiInstance.getPOIsByArea(country, areaName3, postcode1, postcode2, name, type, categoryCode, sicCode, maxCandidates, fuzzyOnName, page, matchMode, specificMatchOn);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlacesServiceApi#getPOIsByArea");
@@ -271,6 +277,8 @@ Name | Type | Description  | Notes
  **maxCandidates** | **String**| Maximum number of POIs that can be retrieved. | [optional]
  **fuzzyOnName** | **String**| Allowed values are Y/N. If N, the search on name will not allow fuzziness. | [optional]
  **page** | **String**| Will support pagination, by default 1st page with maxCandidates results are returned. | [optional]
+ **matchMode** | **String**|  | [optional]
+ **specificMatchOn** | **String**|  | [optional]
 
 ### Return type
 
@@ -345,7 +353,7 @@ Name | Type | Description  | Notes
 
 <a name="getPOIsByLocation"></a>
 # **getPOIsByLocation**
-> GeoEnrichResponse getPOIsByLocation(longitude, latitude, searchText, type, categoryCode, sicCode, maxCandidates, searchRadius, searchRadiusUnit, travelTime, travelTimeUnit, travelDistance, travelDistanceUnit, travelMode, sortBy, fuzzyOnName, page, searchOnNameOnly)
+> GeoEnrichResponse getPOIsByLocation(longitude, latitude, searchText, type, categoryCode, sicCode, maxCandidates, searchRadius, searchRadiusUnit, travelTime, travelTimeUnit, travelDistance, travelDistanceUnit, travelMode, sortBy, fuzzyOnName, page, searchOnNameOnly, matchMode, specificMatchOn)
 
 Points of Interest By Location.
 
@@ -386,8 +394,10 @@ String sortBy = "distance"; // String | Specifies the order in which POIs are re
 String fuzzyOnName = "fuzzyOnName_example"; // String | Allowed values are Y/N. If N, the search on name will not allow fuzziness.
 String page = "page_example"; // String | Will support pagination, by default 1st page with maxCandidates results are returned.
 String searchOnNameOnly = "searchOnNameOnly_example"; // String | search name description
+String matchMode = "matchMode_example"; // String | 
+String specificMatchOn = "specificMatchOn_example"; // String | 
 try {
-    GeoEnrichResponse result = apiInstance.getPOIsByLocation(longitude, latitude, searchText, type, categoryCode, sicCode, maxCandidates, searchRadius, searchRadiusUnit, travelTime, travelTimeUnit, travelDistance, travelDistanceUnit, travelMode, sortBy, fuzzyOnName, page, searchOnNameOnly);
+    GeoEnrichResponse result = apiInstance.getPOIsByLocation(longitude, latitude, searchText, type, categoryCode, sicCode, maxCandidates, searchRadius, searchRadiusUnit, travelTime, travelTimeUnit, travelDistance, travelDistanceUnit, travelMode, sortBy, fuzzyOnName, page, searchOnNameOnly, matchMode, specificMatchOn);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlacesServiceApi#getPOIsByLocation");
@@ -417,6 +427,8 @@ Name | Type | Description  | Notes
  **fuzzyOnName** | **String**| Allowed values are Y/N. If N, the search on name will not allow fuzziness. | [optional]
  **page** | **String**| Will support pagination, by default 1st page with maxCandidates results are returned. | [optional]
  **searchOnNameOnly** | **String**| search name description | [optional]
+ **matchMode** | **String**|  | [optional]
+ **specificMatchOn** | **String**|  | [optional]
 
 ### Return type
 
@@ -545,7 +557,7 @@ Name | Type | Description  | Notes
 
 <a name="poisAutocomplete"></a>
 # **poisAutocomplete**
-> GeoEnrichResponse poisAutocomplete(longitude, latitude, searchText, searchRadius, searchRadiusUnit, travelTime, travelTimeUnit, travelDistance, travelDistanceUnit, travelMode, country, areaName1, areaName3, postcode1, postcode2, ipAddress, autoDetectLocation, type, categoryCode, sicCode, maxCandidates, sortBy, searchOnNameOnly)
+> GeoEnrichResponse poisAutocomplete(longitude, latitude, searchText, searchRadius, searchRadiusUnit, travelTime, travelTimeUnit, travelDistance, travelDistanceUnit, travelMode, country, areaName1, areaName3, postcode1, postcode2, ipAddress, autoDetectLocation, type, categoryCode, sicCode, maxCandidates, sortBy, searchOnNameOnly, matchMode, specificMatchOn)
 
 Points of Interest Autocomplete.
 
@@ -591,8 +603,10 @@ String sicCode = "sicCode_example"; // String | Specific SIC Codes/Codes for the
 String maxCandidates = "maxCandidates_example"; // String | Maximum number of POIs that can be retrieved.
 String sortBy = "distance"; // String | Specifies the order in which POIs are retrieved.
 String searchOnNameOnly = "searchOnNameOnly_example"; // String | specifies search on name
+String matchMode = "matchMode_example"; // String | 
+String specificMatchOn = "specificMatchOn_example"; // String | 
 try {
-    GeoEnrichResponse result = apiInstance.poisAutocomplete(longitude, latitude, searchText, searchRadius, searchRadiusUnit, travelTime, travelTimeUnit, travelDistance, travelDistanceUnit, travelMode, country, areaName1, areaName3, postcode1, postcode2, ipAddress, autoDetectLocation, type, categoryCode, sicCode, maxCandidates, sortBy, searchOnNameOnly);
+    GeoEnrichResponse result = apiInstance.poisAutocomplete(longitude, latitude, searchText, searchRadius, searchRadiusUnit, travelTime, travelTimeUnit, travelDistance, travelDistanceUnit, travelMode, country, areaName1, areaName3, postcode1, postcode2, ipAddress, autoDetectLocation, type, categoryCode, sicCode, maxCandidates, sortBy, searchOnNameOnly, matchMode, specificMatchOn);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlacesServiceApi#poisAutocomplete");
@@ -627,6 +641,8 @@ Name | Type | Description  | Notes
  **maxCandidates** | **String**| Maximum number of POIs that can be retrieved. | [optional]
  **sortBy** | **String**| Specifies the order in which POIs are retrieved. | [optional] [default to distance] [enum: distance, relevance]
  **searchOnNameOnly** | **String**| specifies search on name | [optional]
+ **matchMode** | **String**|  | [optional]
+ **specificMatchOn** | **String**|  | [optional]
 
 ### Return type
 

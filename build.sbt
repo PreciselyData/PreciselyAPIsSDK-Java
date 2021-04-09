@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
   settings(
     organization := "io.swagger",
     name := "PreciselyAPISJavaSDK",
-    version := "10.0.0",
+    version := "10.5.0",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),

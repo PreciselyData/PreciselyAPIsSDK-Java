@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getRouteByAddress"></a>
 # **getRouteByAddress**
-> GeoRouteResponse getRouteByAddress(startAddress, endAddress, db, country, intermediateAddresses, oip, destinationSrs, optimizeBy, returnDistance, distanceUnit, returnTime, timeUnit, language, directionsStyle, segmentGeometryStyle, primaryNameOnly, majorRoads, historicTrafficTimeBucket, returnDirectionGeometry, useCvr, looseningBarrierRestrictions, vehicleType, weight, weightUnit, height, heightUnit, length, lengthUnit, width, widthUnit)
+> GeoRouteResponse getRouteByAddress(startAddress, endAddress, db, country, intermediateAddresses, oip, destinationSrs, optimizeBy, returnDistance, distanceUnit, returnTime, timeUnit, language, directionsStyle, segmentGeometryStyle, primaryNameOnly, majorRoads, historicTrafficTimeBucket, returnDirectionGeometry, useCvr, looseningBarrierRestrictions, vehicleType, weight, weightUnit, height, heightUnit, length, lengthUnit, width, widthUnit, returnIntermediatePoints)
 
 Gets Route by Address
 
@@ -65,8 +65,9 @@ String length = "length_example"; // String | Specifies the maximum length of a 
 String lengthUnit = "ft"; // String | The unit of length eg. m(meter), km(kilometer), yd(yard), ft(foot), mi(mile)
 String width = "width_example"; // String | Specifies the maximum width of a vehicle. Any vehicles over this value will be restricted when determining the route.
 String widthUnit = "ft"; // String | The unit of width eg. m(meter), km(kilometer), yd(yard), ft(foot), mi(mile)
+String returnIntermediatePoints = "false"; // String | Specifies whether Intermediate points needs to be part of response.
 try {
-    GeoRouteResponse result = apiInstance.getRouteByAddress(startAddress, endAddress, db, country, intermediateAddresses, oip, destinationSrs, optimizeBy, returnDistance, distanceUnit, returnTime, timeUnit, language, directionsStyle, segmentGeometryStyle, primaryNameOnly, majorRoads, historicTrafficTimeBucket, returnDirectionGeometry, useCvr, looseningBarrierRestrictions, vehicleType, weight, weightUnit, height, heightUnit, length, lengthUnit, width, widthUnit);
+    GeoRouteResponse result = apiInstance.getRouteByAddress(startAddress, endAddress, db, country, intermediateAddresses, oip, destinationSrs, optimizeBy, returnDistance, distanceUnit, returnTime, timeUnit, language, directionsStyle, segmentGeometryStyle, primaryNameOnly, majorRoads, historicTrafficTimeBucket, returnDirectionGeometry, useCvr, looseningBarrierRestrictions, vehicleType, weight, weightUnit, height, heightUnit, length, lengthUnit, width, widthUnit, returnIntermediatePoints);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling RoutingServiceApi#getRouteByAddress");
@@ -108,6 +109,7 @@ Name | Type | Description  | Notes
  **lengthUnit** | **String**| The unit of length eg. m(meter), km(kilometer), yd(yard), ft(foot), mi(mile) | [optional] [default to ft] [enum: m, km, yd, ft, mi]
  **width** | **String**| Specifies the maximum width of a vehicle. Any vehicles over this value will be restricted when determining the route. | [optional] [enum: positive integer value]
  **widthUnit** | **String**| The unit of width eg. m(meter), km(kilometer), yd(yard), ft(foot), mi(mile) | [optional] [default to ft] [enum: m, km, yd, ft, mi]
+ **returnIntermediatePoints** | **String**| Specifies whether Intermediate points needs to be part of response. | [optional] [default to false] [enum: true, false]
 
 ### Return type
 
@@ -124,7 +126,7 @@ Name | Type | Description  | Notes
 
 <a name="getRouteByLocation"></a>
 # **getRouteByLocation**
-> GeoRouteResponse getRouteByLocation(startPoint, endPoint, db, intermediatePoints, oip, destinationSrs, optimizeBy, returnDistance, distanceUnit, returnTime, timeUnit, language, directionsStyle, segmentGeometryStyle, primaryNameOnly, majorRoads, historicTrafficTimeBucket, returnDirectionGeometry, useCvr, looseningBarrierRestrictions, vehicleType, weight, weightUnit, height, heightUnit, length, lengthUnit, width, widthUnit)
+> GeoRouteResponse getRouteByLocation(startPoint, endPoint, db, intermediatePoints, oip, destinationSrs, optimizeBy, returnDistance, distanceUnit, returnTime, timeUnit, language, directionsStyle, segmentGeometryStyle, primaryNameOnly, majorRoads, historicTrafficTimeBucket, returnDirectionGeometry, useCvr, looseningBarrierRestrictions, vehicleType, weight, weightUnit, height, heightUnit, length, lengthUnit, width, widthUnit, returnIntermediatePoints)
 
 Gets Route by Location
 
@@ -176,8 +178,9 @@ String length = "length_example"; // String | Specifies the maximum length of a 
 String lengthUnit = "ft"; // String | The unit of length eg. m(meter), km(kilometer), yd(yard), ft(foot), mi(mile)
 String width = "width_example"; // String | Specifies the maximum width of a vehicle. Any vehicles over this value will be restricted when determining the route.
 String widthUnit = "ft"; // String | The unit of width eg. m(meter), km(kilometer), yd(yard), ft(foot), mi(mile)
+String returnIntermediatePoints = "false"; // String | Specifies whether Intermediate points needs to be part of response.
 try {
-    GeoRouteResponse result = apiInstance.getRouteByLocation(startPoint, endPoint, db, intermediatePoints, oip, destinationSrs, optimizeBy, returnDistance, distanceUnit, returnTime, timeUnit, language, directionsStyle, segmentGeometryStyle, primaryNameOnly, majorRoads, historicTrafficTimeBucket, returnDirectionGeometry, useCvr, looseningBarrierRestrictions, vehicleType, weight, weightUnit, height, heightUnit, length, lengthUnit, width, widthUnit);
+    GeoRouteResponse result = apiInstance.getRouteByLocation(startPoint, endPoint, db, intermediatePoints, oip, destinationSrs, optimizeBy, returnDistance, distanceUnit, returnTime, timeUnit, language, directionsStyle, segmentGeometryStyle, primaryNameOnly, majorRoads, historicTrafficTimeBucket, returnDirectionGeometry, useCvr, looseningBarrierRestrictions, vehicleType, weight, weightUnit, height, heightUnit, length, lengthUnit, width, widthUnit, returnIntermediatePoints);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling RoutingServiceApi#getRouteByLocation");
@@ -218,6 +221,7 @@ Name | Type | Description  | Notes
  **lengthUnit** | **String**| The unit of length eg. m(meter), km(kilometer), yd(yard), ft(foot), mi(mile) | [optional] [default to ft] [enum: m, km, yd, ft, mi]
  **width** | **String**| Specifies the maximum width of a vehicle. Any vehicles over this value will be restricted when determining the route. | [optional] [enum: positive integer value]
  **widthUnit** | **String**| The unit of width eg. m(meter), km(kilometer), yd(yard), ft(foot), mi(mile) | [optional] [default to ft] [enum: m, km, yd, ft, mi]
+ **returnIntermediatePoints** | **String**| Specifies whether Intermediate points needs to be part of response. | [optional] [default to false] [enum: true, false]
 
 ### Return type
 

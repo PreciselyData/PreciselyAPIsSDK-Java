@@ -1,10 +1,11 @@
 
-# GeoIdentityResponse
+# BusinessId
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identities** | [**List&lt;Identity&gt;**](Identity.md) |  |  [optional]
+**type** | **String** |  |  [optional]
+**value** | **String** |  |  [optional]
 
 
 

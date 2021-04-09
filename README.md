@@ -91,7 +91,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>io.swagger</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>10.0.0</version>
+    <version>10.5.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -101,7 +101,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:PreciselyAPISJavaSDK:10.0.0"
+compile "io.swagger:PreciselyAPISJavaSDK:10.5.0"
 ```
 
 ### Others
@@ -112,7 +112,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-10.0.0.jar
+* target/PreciselyAPISJavaSDK-10.5.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -300,6 +300,7 @@ Class | Method | HTTP request | Description
  - [BoundaryBuffer](docs/BoundaryBuffer.md)
  - [BoundaryPoint](docs/BoundaryPoint.md)
  - [BufferRelation](docs/BufferRelation.md)
+ - [BusinessId](docs/BusinessId.md)
  - [Candidate](docs/Candidate.md)
  - [CandidateRange](docs/CandidateRange.md)
  - [CandidateRangeUnit](docs/CandidateRangeUnit.md)
@@ -482,6 +483,7 @@ Class | Method | HTTP request | Description
  - [IndividualValueVariableV2](docs/IndividualValueVariableV2.md)
  - [InputParameter](docs/InputParameter.md)
  - [Interest](docs/Interest.md)
+ - [IntermediatePoints](docs/IntermediatePoints.md)
  - [Intersection](docs/Intersection.md)
  - [IntersectionResponse](docs/IntersectionResponse.md)
  - [IpInfo](docs/IpInfo.md)
