@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="search"></a>
 # **search**
-> GeosearchLocations search(searchText, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType)
+> GeosearchLocations search(searchText, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType, searchOnAddressNumber)
 
 Typeahead Search
 
@@ -48,8 +48,9 @@ String postCode = "postCode_example"; // String | Postal Code of the input to be
 String returnAdminAreasOnly = "N"; // String | if value set 'Y' then it will only do a matching on postcode or areaName1, areaName2, areaName3 and areaName4 fields in the data
 String includeRangesDetails = "Y"; // String | if value set 'Y' then display all unit info of ranges, if value set 'N' then don't show ranges
 String searchType = "ADDRESS"; // String | Preference to control search type of interactive requests.
+String searchOnAddressNumber = "N"; // String | if value set 'Y' then display searchOnAddressNumber
 try {
-    GeosearchLocations result = apiInstance.search(searchText, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType);
+    GeosearchLocations result = apiInstance.search(searchText, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType, searchOnAddressNumber);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TypeaheadServiceApi#search");
@@ -77,6 +78,7 @@ Name | Type | Description  | Notes
  **returnAdminAreasOnly** | **String**| if value set &#39;Y&#39; then it will only do a matching on postcode or areaName1, areaName2, areaName3 and areaName4 fields in the data | [optional] [default to N] [enum: Y, N]
  **includeRangesDetails** | **String**| if value set &#39;Y&#39; then display all unit info of ranges, if value set &#39;N&#39; then don&#39;t show ranges | [optional] [default to Y] [enum: Y, N]
  **searchType** | **String**| Preference to control search type of interactive requests. | [optional] [default to ADDRESS] [enum: ADDRESS, POSTAL, CITY, STREET, GEOGRAPHY, STATE, ALL]
+ **searchOnAddressNumber** | **String**| if value set &#39;Y&#39; then display searchOnAddressNumber | [optional] [default to N] [enum: Y, N]
 
 ### Return type
 
@@ -89,5 +91,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
+ - **Accept**: application/json, application/xml
 
