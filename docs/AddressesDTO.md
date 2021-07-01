@@ -17,6 +17,11 @@ Name | Type | Description | Notes
 **postCode** | **String** |  |  [optional]
 **postCodeExt** | **String** |  |  [optional]
 **country** | **String** |  |  [optional]
+**geometry** | [**CommonGeometry**](CommonGeometry.md) |  |  [optional]
+**propertyType** | **String** |  |  [optional]
+**propertyTypeDescription** | **String** |  |  [optional]
+**parentPbKey** | **String** |  |  [optional]
+**geoId** | **String** |  |  [optional]
 
 
 

@@ -41,7 +41,7 @@
 
 * [Neighborhoods](https://developer.precisely.com/apis/neighborhoods): Neighborhood Insights. Integrate global neighborhood names and classification information into your applications and enrich other data. The Neighborhood API accepts latitude & longitude coordinates and returns the corresponding neighborhood name & type. Useful for a wide range of data enrichment use cases.
 
-* [Property Information](https://developer.precisely.com/apis/property): Property Insights. Integrate extensive residential & commercial property information into your applications. The Property Information API returns property parcel boundaries and hundreds of property attributes for millions of US properties with the input of Location Coordinates or Addresses. Useful for Real Estate use cases or those involving risk assessments.
+* [Property Information](https://developer.precisely.com/apis/property): Property Insights. Integrate extensive residential & commercial property information into your applications. The Property Information API returns property parcel boundaries and key property attributes for millions of US properties with the input of Location Coordinates or Addresses. Useful for Real Estate use cases or those involving risk assessments.
 
 * [Address Verification](https://developer.precisely.com/apis/addressverification): Real, accurate and complete address. Eliminate errors in address data, improve customer experience. The Address Verification API makes communication easier, faster and effortless by enriching customer details, keeping it up-to-date and maintaining its accuracy and consistency. It eliminates redundancy in reaching out to customers and makes it easy for distinct functional areas to work seamlessly in improving customer relationship.
 
@@ -91,7 +91,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>io.swagger</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>10.5.1</version>
+    <version>11.0.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -101,7 +101,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:PreciselyAPISJavaSDK:10.5.1"
+compile "io.swagger:PreciselyAPISJavaSDK:11.0.0"
 ```
 
 ### Others
@@ -112,7 +112,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-10.5.1.jar
+* target/PreciselyAPISJavaSDK-11.0.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -217,6 +217,8 @@ Class | Method | HTTP request | Description
 *PropertyInformationServiceApi* | [**getGeoPropertyByAddressBatch**](docs/PropertyInformationServiceApi.md#getGeoPropertyByAddressBatch) | **POST** /property/v1/all/attributes/byaddress | Post Property Attributes By Address
 *PropertyInformationServiceApi* | [**getParcelBoundaryByAddress**](docs/PropertyInformationServiceApi.md#getParcelBoundaryByAddress) | **GET** /property/v1/parcelboundary/byaddress | Get Parcel Boundary By Address
 *PropertyInformationServiceApi* | [**getParcelBoundaryByLocation**](docs/PropertyInformationServiceApi.md#getParcelBoundaryByLocation) | **GET** /property/v1/parcelboundary/bylocation | Get Parcel Boundary By Location
+*PropertyInformationServiceApi* | [**getPropertyAttributesByAddress**](docs/PropertyInformationServiceApi.md#getPropertyAttributesByAddress) | **GET** /property/v2/attributes/byaddress | PropertyV2 Attributes By Address.
+*PropertyInformationServiceApi* | [**getPropertyAttributesByAddressBatch**](docs/PropertyInformationServiceApi.md#getPropertyAttributesByAddressBatch) | **POST** /property/v2/attributes/byaddress | PropertyV2 Attributes By Address Batch.
 *RisksServiceApi* | [**getCrimeRiskByAddress**](docs/RisksServiceApi.md#getCrimeRiskByAddress) | **GET** /risks/v1/crime/byaddress | Get Crime Risk By Address
 *RisksServiceApi* | [**getCrimeRiskByAddressBatch**](docs/RisksServiceApi.md#getCrimeRiskByAddressBatch) | **POST** /risks/v1/crime/byaddress | Post Crime Risk By Address
 *RisksServiceApi* | [**getCrimeRiskByLocation**](docs/RisksServiceApi.md#getCrimeRiskByLocation) | **GET** /risks/v1/crime/bylocation | Get Crime Risk By Location
@@ -300,7 +302,9 @@ Class | Method | HTTP request | Description
  - [BoundaryBuffer](docs/BoundaryBuffer.md)
  - [BoundaryPoint](docs/BoundaryPoint.md)
  - [BufferRelation](docs/BufferRelation.md)
+ - [BuildingSqftSource](docs/BuildingSqftSource.md)
  - [BusinessId](docs/BusinessId.md)
+ - [CaExemptions](docs/CaExemptions.md)
  - [Candidate](docs/Candidate.md)
  - [CandidateRange](docs/CandidateRange.md)
  - [CandidateRangeUnit](docs/CandidateRangeUnit.md)
@@ -324,8 +328,10 @@ Class | Method | HTTP request | Description
  - [CommuterPatternsTheme](docs/CommuterPatternsTheme.md)
  - [ConfiguredDictionaryResponse](docs/ConfiguredDictionaryResponse.md)
  - [ConsistencyCode](docs/ConsistencyCode.md)
+ - [Construction](docs/Construction.md)
  - [ContactDetails](docs/ContactDetails.md)
  - [ContactPerson](docs/ContactPerson.md)
+ - [CoolingType](docs/CoolingType.md)
  - [Cost](docs/Cost.md)
  - [Costs](docs/Costs.md)
  - [CountrySupport](docs/CountrySupport.md)
@@ -381,6 +387,8 @@ Class | Method | HTTP request | Description
  - [Employment](docs/Employment.md)
  - [EmploymentTheme](docs/EmploymentTheme.md)
  - [End](docs/End.md)
+ - [ErrorCode](docs/ErrorCode.md)
+ - [ErrorInfo](docs/ErrorInfo.md)
  - [EthnicityTheme](docs/EthnicityTheme.md)
  - [EventsCount](docs/EventsCount.md)
  - [ExpenditureTheme](docs/ExpenditureTheme.md)
@@ -466,6 +474,7 @@ Class | Method | HTTP request | Description
  - [Greatschools](docs/Greatschools.md)
  - [Grid](docs/Grid.md)
  - [HealthTheme](docs/HealthTheme.md)
+ - [HeatingType](docs/HeatingType.md)
  - [HouseholdSizeTheme](docs/HouseholdSizeTheme.md)
  - [HouseholdsTheme](docs/HouseholdsTheme.md)
  - [HousingTheme](docs/HousingTheme.md)
@@ -490,6 +499,7 @@ Class | Method | HTTP request | Description
  - [Ipd](docs/Ipd.md)
  - [KeyLookupRequest](docs/KeyLookupRequest.md)
  - [Keys](docs/Keys.md)
+ - [LandUse](docs/LandUse.md)
  - [LatLongFields](docs/LatLongFields.md)
  - [LifeStyleTheme](docs/LifeStyleTheme.md)
  - [Location](docs/Location.md)
@@ -541,6 +551,11 @@ Class | Method | HTTP request | Description
  - [Profile](docs/Profile.md)
  - [Profiles](docs/Profiles.md)
  - [Properties](docs/Properties.md)
+ - [PropertyAttributes](docs/PropertyAttributes.md)
+ - [PropertyInfoAddressRequest](docs/PropertyInfoAddressRequest.md)
+ - [PropertyInfoPreferences](docs/PropertyInfoPreferences.md)
+ - [PropertyInfoResponse](docs/PropertyInfoResponse.md)
+ - [PropertyInfoResponses](docs/PropertyInfoResponses.md)
  - [Proxy](docs/Proxy.md)
  - [PurchasingBehaviorTheme](docs/PurchasingBehaviorTheme.md)
  - [RaceAndEthnicityTheme](docs/RaceAndEthnicityTheme.md)
@@ -554,6 +569,7 @@ Class | Method | HTTP request | Description
  - [Risk](docs/Risk.md)
  - [RiskAddress](docs/RiskAddress.md)
  - [Road](docs/Road.md)
+ - [RoofType](docs/RoofType.md)
  - [RouteBoundary](docs/RouteBoundary.md)
  - [RouteDelivery](docs/RouteDelivery.md)
  - [RouteDirection](docs/RouteDirection.md)
@@ -591,6 +607,7 @@ Class | Method | HTTP request | Description
  - [TaxCounty](docs/TaxCounty.md)
  - [TaxDistrictResponse](docs/TaxDistrictResponse.md)
  - [TaxDistrictResponseList](docs/TaxDistrictResponseList.md)
+ - [TaxExemption](docs/TaxExemption.md)
  - [TaxJurisdiction](docs/TaxJurisdiction.md)
  - [TaxLocationPreferences](docs/TaxLocationPreferences.md)
  - [TaxLocationRequest](docs/TaxLocationRequest.md)
