@@ -91,7 +91,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>io.swagger</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>11.0.0</version>
+    <version>11.0.1</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -101,7 +101,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:PreciselyAPISJavaSDK:11.0.0"
+compile "io.swagger:PreciselyAPISJavaSDK:11.0.1"
 ```
 
 ### Others
@@ -112,7 +112,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-11.0.0.jar
+* target/PreciselyAPISJavaSDK-11.0.1.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -213,8 +213,6 @@ Class | Method | HTTP request | Description
 *PlacesServiceApi* | [**getPOIsCount**](docs/PlacesServiceApi.md#getPOIsCount) | **POST** /places/v1/poicount | Point of Interests count By Geometry.
 *PlacesServiceApi* | [**getSICMetadata**](docs/PlacesServiceApi.md#getSICMetadata) | **GET** /places/v1/metadata/sic | Returns SIC Codes with their Industry Titles and Category Codes mapping
 *PlacesServiceApi* | [**poisAutocomplete**](docs/PlacesServiceApi.md#poisAutocomplete) | **GET** /places/v1/poi/autocomplete | Points of Interest Autocomplete.
-*PropertyInformationServiceApi* | [**getGeoPropertyByAddress**](docs/PropertyInformationServiceApi.md#getGeoPropertyByAddress) | **GET** /property/v1/all/attributes/byaddress | Get Property Attributes By Address
-*PropertyInformationServiceApi* | [**getGeoPropertyByAddressBatch**](docs/PropertyInformationServiceApi.md#getGeoPropertyByAddressBatch) | **POST** /property/v1/all/attributes/byaddress | Post Property Attributes By Address
 *PropertyInformationServiceApi* | [**getParcelBoundaryByAddress**](docs/PropertyInformationServiceApi.md#getParcelBoundaryByAddress) | **GET** /property/v1/parcelboundary/byaddress | Get Parcel Boundary By Address
 *PropertyInformationServiceApi* | [**getParcelBoundaryByLocation**](docs/PropertyInformationServiceApi.md#getParcelBoundaryByLocation) | **GET** /property/v1/parcelboundary/bylocation | Get Parcel Boundary By Location
 *PropertyInformationServiceApi* | [**getPropertyAttributesByAddress**](docs/PropertyInformationServiceApi.md#getPropertyAttributesByAddress) | **GET** /property/v2/attributes/byaddress | PropertyV2 Attributes By Address.
@@ -435,9 +433,6 @@ Class | Method | HTTP request | Description
  - [GeoLocationState](docs/GeoLocationState.md)
  - [GeoPos](docs/GeoPos.md)
  - [GeoPostGeometry](docs/GeoPostGeometry.md)
- - [GeoPropertyAddressRequest](docs/GeoPropertyAddressRequest.md)
- - [GeoPropertyResponse](docs/GeoPropertyResponse.md)
- - [GeoPropertyResponses](docs/GeoPropertyResponses.md)
  - [GeoRiskBoundaries](docs/GeoRiskBoundaries.md)
  - [GeoRiskCrimeTheme](docs/GeoRiskCrimeTheme.md)
  - [GeoRiskGeometry](docs/GeoRiskGeometry.md)
