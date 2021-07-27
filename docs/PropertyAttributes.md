@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **taxAmount** | **String** |  |  [optional]
 **taxExemptions** | [**List&lt;TaxExemption&gt;**](TaxExemption.md) |  |  [optional]
 **caExemptions** | [**CaExemptions**](CaExemptions.md) |  |  [optional]
+**stories** | [**Stories**](Stories.md) |  |  [optional]
 **salesDate** | **String** |  |  [optional]
 **priorSaleDate** | **String** |  |  [optional]
 **priorSalesPrice** | **String** |  |  [optional]

@@ -91,7 +91,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>io.swagger</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>11.0.1</version>
+    <version>11.0.2</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -101,7 +101,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:PreciselyAPISJavaSDK:11.0.1"
+compile "io.swagger:PreciselyAPISJavaSDK:11.0.2"
 ```
 
 ### Others
@@ -112,7 +112,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-11.0.1.jar
+* target/PreciselyAPISJavaSDK-11.0.2.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -592,6 +592,7 @@ Class | Method | HTTP request | Description
  - [Start](docs/Start.md)
  - [StartEndPoint](docs/StartEndPoint.md)
  - [Status](docs/Status.md)
+ - [Stories](docs/Stories.md)
  - [StudentEthnicity](docs/StudentEthnicity.md)
  - [SupplyAndDemandTheme](docs/SupplyAndDemandTheme.md)
  - [SupportLevel](docs/SupportLevel.md)
