@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>io.swagger</groupId>
+  <groupId>com.precisely.apis</groupId>
   <artifactId>PreciselyAPISJavaSDK</artifactId>
   <name>PreciselyAPISJavaSDK</name>
-  <version>11.5.0</version>
+  <version>11.6.0</version>
   <prerequisites>
     <maven>2.2.0</maven>
   </prerequisites>
@@ -98,7 +98,7 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <finalName>PreciselyAPISJavaSDK-11.5.0</finalName>
+              <finalName>PreciselyAPISJavaSDK-11.6.0</finalName>
             </configuration>
           </execution>
         </executions>

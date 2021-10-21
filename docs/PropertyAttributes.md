@@ -33,6 +33,13 @@ Name | Type | Description | Notes
 **salesDate** | **String** |  |  [optional]
 **priorSaleDate** | **String** |  |  [optional]
 **priorSalesPrice** | **String** |  |  [optional]
+**livingSqft** | **String** |  |  [optional]
+**roofFrameType** | [**RoofFrameType**](RoofFrameType.md) |  |  [optional]
+**foundation** | [**Foundation**](Foundation.md) |  |  [optional]
+**buildgCondition** | [**BuildgCondition**](BuildgCondition.md) |  |  [optional]
+**buildgCount** | **String** |  |  [optional]
+**buildgUnitNo** | **String** |  |  [optional]
+**buildgFeaturesSqft** | [**List&lt;BuildgFeaturesSqft&gt;**](BuildgFeaturesSqft.md) |  |  [optional]
 
 
 

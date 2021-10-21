@@ -89,9 +89,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-    <groupId>io.swagger</groupId>
+    <groupId>com.precisely.apis</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>11.5.0</version>
+    <version>11.6.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -101,7 +101,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:PreciselyAPISJavaSDK:11.5.0"
+compile "com.precisely.apis:PreciselyAPISJavaSDK:11.6.0"
 ```
 
 ### Others
@@ -112,7 +112,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-11.5.0.jar
+* target/PreciselyAPISJavaSDK-11.6.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -300,6 +300,8 @@ Class | Method | HTTP request | Description
  - [BoundaryBuffer](docs/BoundaryBuffer.md)
  - [BoundaryPoint](docs/BoundaryPoint.md)
  - [BufferRelation](docs/BufferRelation.md)
+ - [BuildgCondition](docs/BuildgCondition.md)
+ - [BuildgFeaturesSqft](docs/BuildgFeaturesSqft.md)
  - [BuildingSqftSource](docs/BuildingSqftSource.md)
  - [BusinessId](docs/BusinessId.md)
  - [CaExemptions](docs/CaExemptions.md)
@@ -420,6 +422,7 @@ Class | Method | HTTP request | Description
  - [FloodRiskResponse](docs/FloodRiskResponse.md)
  - [FloodRiskResponseList](docs/FloodRiskResponseList.md)
  - [FloodZone](docs/FloodZone.md)
+ - [Foundation](docs/Foundation.md)
  - [FreeOrReducedPriceLunches](docs/FreeOrReducedPriceLunches.md)
  - [GenderTheme](docs/GenderTheme.md)
  - [GeoEnrichMetadataResponse](docs/GeoEnrichMetadataResponse.md)
@@ -564,6 +567,7 @@ Class | Method | HTTP request | Description
  - [Risk](docs/Risk.md)
  - [RiskAddress](docs/RiskAddress.md)
  - [Road](docs/Road.md)
+ - [RoofFrameType](docs/RoofFrameType.md)
  - [RoofType](docs/RoofType.md)
  - [RouteBoundary](docs/RouteBoundary.md)
  - [RouteDelivery](docs/RouteDelivery.md)

@@ -1,8 +1,8 @@
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
-group = 'io.swagger'
-version = '11.5.0'
+group = 'com.precisely.apis'
+version = '11.6.0'
 
 buildscript {
     repositories {
