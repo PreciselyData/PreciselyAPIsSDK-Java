@@ -108,7 +108,7 @@ No authorization required
 
 <a name="getPropertyAttributesByAddress"></a>
 # **getPropertyAttributesByAddress**
-> PropertyInfoResponse getPropertyAttributesByAddress(address, attributeFilter)
+> PropertyInfoResponse getPropertyAttributesByAddress(address, attributes)
 
 PropertyV2 Attributes By Address.
 
@@ -132,9 +132,9 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 PropertyInformationServiceApi apiInstance = new PropertyInformationServiceApi();
 String address = "address_example"; // String | free form address text
-String attributeFilter = "attributeFilter_example"; // String | Case-insensitive comma separated values of property attributes. Response will contain only the input attributes.
+String attributes = "attributes_example"; // String | Case-insensitive comma separated values of property attributes. Response will contain only the input attributes.
 try {
-    PropertyInfoResponse result = apiInstance.getPropertyAttributesByAddress(address, attributeFilter);
+    PropertyInfoResponse result = apiInstance.getPropertyAttributesByAddress(address, attributes);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PropertyInformationServiceApi#getPropertyAttributesByAddress");
@@ -147,7 +147,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address** | **String**| free form address text | [optional]
- **attributeFilter** | **String**| Case-insensitive comma separated values of property attributes. Response will contain only the input attributes. | [optional]
+ **attributes** | **String**| Case-insensitive comma separated values of property attributes. Response will contain only the input attributes. | [optional]
 
 ### Return type
 

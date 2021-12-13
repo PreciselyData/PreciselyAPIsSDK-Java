@@ -4,7 +4,7 @@
   <groupId>com.precisely.apis</groupId>
   <artifactId>PreciselyAPISJavaSDK</artifactId>
   <name>PreciselyAPISJavaSDK</name>
-  <version>11.6.0</version>
+  <version>11.7.0</version>
   <prerequisites>
     <maven>2.2.0</maven>
   </prerequisites>
@@ -98,7 +98,7 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <finalName>PreciselyAPISJavaSDK-11.6.0</finalName>
+              <finalName>PreciselyAPISJavaSDK-11.7.0</finalName>
             </configuration>
           </execution>
         </executions>
