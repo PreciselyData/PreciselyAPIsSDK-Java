@@ -1,10 +1,7 @@
 
-
 # Candidate
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **precisionLevel** | **Integer** |  |  [optional]

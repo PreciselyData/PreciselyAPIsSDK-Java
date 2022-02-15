@@ -1,10 +1,7 @@
 
-
 # FireEvent
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fireStartDate** | **String** |  |  [optional]

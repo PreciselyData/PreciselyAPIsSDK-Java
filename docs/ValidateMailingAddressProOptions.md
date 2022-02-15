@@ -1,10 +1,7 @@
 
-
 # ValidateMailingAddressProOptions
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **outputAddressBlocks** | **String** | Specifies whether to return a formatted version of the address as it would be printed on a physical mail piece. |  [optional]

@@ -1,14 +1,11 @@
 
-
 # POIBoundaryAddressRequest
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**addresses** | [**List&lt;ZonesAddress&gt;**](ZonesAddress.md) |  | 
-**preferences** | [**POIBoundaryPreferences**](POIBoundaryPreferences.md) |  |  [optional]
+**addresses** | [**List&lt;CommonAddress&gt;**](CommonAddress.md) |  | 
+**preferences** | [**PoiBoundaryPreferences**](PoiBoundaryPreferences.md) |  |  [optional]
 
 
 

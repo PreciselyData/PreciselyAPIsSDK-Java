@@ -1,10 +1,7 @@
 
-
 # SpeedLimit
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **maxSpeed** | **String** |  |  [optional]
@@ -15,7 +12,7 @@ Name | Type | Description | Notes
 **offPeakAvgSpeed** | **String** |  |  [optional]
 **nightAvgSpeed** | **String** |  |  [optional]
 **weekAvgSpeed** | **String** |  |  [optional]
-**road** | [**Road**](Road.md) |  |  [optional]
+**road** | [**SpeedRoad**](SpeedRoad.md) |  |  [optional]
 
 
 

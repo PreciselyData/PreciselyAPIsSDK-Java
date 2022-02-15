@@ -1,10 +1,7 @@
 
-
 # PropertyAttributes
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pbKey** | **String** |  |  [optional]
@@ -17,7 +14,7 @@ Name | Type | Description | Notes
 **construction** | [**Construction**](Construction.md) |  |  [optional]
 **roofCoverType** | [**RoofCoverType**](RoofCoverType.md) |  |  [optional]
 **subdivision** | **String** |  |  [optional]
-**geometry** | [**PropertyGeometry**](PropertyGeometry.md) |  |  [optional]
+**geometry** | [**Geometry**](Geometry.md) |  |  [optional]
 **builtYear** | **String** |  |  [optional]
 **bedrooms** | **String** |  |  [optional]
 **baths** | **String** |  |  [optional]

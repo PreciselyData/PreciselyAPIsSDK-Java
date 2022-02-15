@@ -1,10 +1,7 @@
 
-
 # GeoLocationPlace
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **continent** | **String** |  |  [optional]

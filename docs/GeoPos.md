@@ -1,15 +1,12 @@
 
-
 # GeoPos
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** |  | 
+**type** | **String** |  |  [optional]
 **coordinates** | **List&lt;Double&gt;** |  |  [optional]
-**crs** | [**Crs**](Crs.md) |  | 
+**crs** | [**Crs**](Crs.md) |  |  [optional]
 
 
 

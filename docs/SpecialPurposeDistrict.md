@@ -1,10 +1,7 @@
 
-
 # SpecialPurposeDistrict
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **districtName** | **String** |  |  [optional]

@@ -19,38 +19,30 @@ Accepts addresses as input and returns Incumbent Local Exchange Carrier (ILEC) d
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.TelecommInfoServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.TelecommInfoServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    TelecommInfoServiceApi apiInstance = new TelecommInfoServiceApi(defaultClient);
-    String address = "address_example"; // String | The address to be searched
-    String country = "country_example"; // String | 3 letter ISO code of the country to be searched. Allowed values USA,CAN
-    String areaCodeInfo = "areaCodeInfo_example"; // String | Specifies whether area code information will be part of response.Allowed values True,False.
-    String level = "level_example"; // String | Level (basic/detail).Allowed values detail,basic.
-    try {
-      RateCenterResponse result = apiInstance.getRateCenterByAddress(address, country, areaCodeInfo, level);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling TelecommInfoServiceApi#getRateCenterByAddress");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+TelecommInfoServiceApi apiInstance = new TelecommInfoServiceApi();
+String address = "address_example"; // String | The address to be searched.
+String country = "USA"; // String | 3 letter ISO code of the country to be searched. Allowed values USA,CAN
+String areaCodeInfo = "False"; // String | Specifies whether area code information will be part of response.Allowed values True,False
+String level = "basic"; // String | Level (basic/detail).Allowed values detail,basic.
+try {
+    RateCenterResponse result = apiInstance.getRateCenterByAddress(address, country, areaCodeInfo, level);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TelecommInfoServiceApi#getRateCenterByAddress");
+    e.printStackTrace();
 }
 ```
 
@@ -58,10 +50,10 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | **String**| The address to be searched | [optional]
- **country** | **String**| 3 letter ISO code of the country to be searched. Allowed values USA,CAN | [optional]
- **areaCodeInfo** | **String**| Specifies whether area code information will be part of response.Allowed values True,False. | [optional]
- **level** | **String**| Level (basic/detail).Allowed values detail,basic. | [optional]
+ **address** | **String**| The address to be searched. |
+ **country** | **String**| 3 letter ISO code of the country to be searched. Allowed values USA,CAN | [optional] [default to USA] [enum: USA, CAN]
+ **areaCodeInfo** | **String**| Specifies whether area code information will be part of response.Allowed values True,False | [optional] [default to False] [enum: True, False]
+ **level** | **String**| Level (basic/detail).Allowed values detail,basic. | [optional] [default to basic] [enum: detail, basic]
 
 ### Return type
 
@@ -73,15 +65,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/xml, application/json
 
 <a name="getRateCenterByLocation"></a>
 # **getRateCenterByLocation**
@@ -94,38 +79,30 @@ Accepts latitude &amp; longitude as input and returns Incumbent Local Exchange C
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.TelecommInfoServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.TelecommInfoServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    TelecommInfoServiceApi apiInstance = new TelecommInfoServiceApi(defaultClient);
-    String longitude = "longitude_example"; // String | Longitude of the location
-    String latitude = "latitude_example"; // String | Latitude of the location
-    String areaCodeInfo = "areaCodeInfo_example"; // String | Specifies whether area code information will be part of response.Allowed values True,False.
-    String level = "level_example"; // String | Level (basic/detail).Allowed values detail,basic.
-    try {
-      RateCenterResponse result = apiInstance.getRateCenterByLocation(longitude, latitude, areaCodeInfo, level);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling TelecommInfoServiceApi#getRateCenterByLocation");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+TelecommInfoServiceApi apiInstance = new TelecommInfoServiceApi();
+String longitude = "longitude_example"; // String | Longitude of the location.
+String latitude = "latitude_example"; // String | Latitude of the location.
+String areaCodeInfo = "False"; // String | Specifies whether area code information will be part of response.Allowed values True,False.
+String level = "basic"; // String | Level (basic/detail).Allowed values detail,basic.
+try {
+    RateCenterResponse result = apiInstance.getRateCenterByLocation(longitude, latitude, areaCodeInfo, level);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TelecommInfoServiceApi#getRateCenterByLocation");
+    e.printStackTrace();
 }
 ```
 
@@ -133,10 +110,10 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **longitude** | **String**| Longitude of the location | [optional]
- **latitude** | **String**| Latitude of the location | [optional]
- **areaCodeInfo** | **String**| Specifies whether area code information will be part of response.Allowed values True,False. | [optional]
- **level** | **String**| Level (basic/detail).Allowed values detail,basic. | [optional]
+ **longitude** | **String**| Longitude of the location. |
+ **latitude** | **String**| Latitude of the location. |
+ **areaCodeInfo** | **String**| Specifies whether area code information will be part of response.Allowed values True,False. | [optional] [default to False] [enum: True, False]
+ **level** | **String**| Level (basic/detail).Allowed values detail,basic. | [optional] [default to basic] [enum: detail, basic]
 
 ### Return type
 
@@ -148,13 +125,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/xml, application/json
 

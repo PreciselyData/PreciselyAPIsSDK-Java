@@ -1,10 +1,7 @@
 
-
 # Proxy
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **anonymizerStatus** | **String** |  |  [optional]

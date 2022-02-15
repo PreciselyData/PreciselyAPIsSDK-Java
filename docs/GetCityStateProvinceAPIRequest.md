@@ -1,10 +1,7 @@
 
-
 # GetCityStateProvinceAPIRequest
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **options** | [**GetCityStateProvinceAPIOptions**](GetCityStateProvinceAPIOptions.md) |  |  [optional]

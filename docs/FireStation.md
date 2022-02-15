@@ -1,10 +1,7 @@
 
-
 # FireStation
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **numWithinDepartment** | **String** |  |  [optional]

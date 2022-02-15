@@ -1,15 +1,11 @@
 
-
 # FireStationContactDetails
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**RiskAddress**](RiskAddress.md) |  |  [optional]
+**address** | [**MatchedAddress**](MatchedAddress.md) |  |  [optional]
 **phone** | **String** |  |  [optional]
-**fax** | **String** |  |  [optional]
 
 
 

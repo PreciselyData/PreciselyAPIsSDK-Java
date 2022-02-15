@@ -23,35 +23,27 @@ GetCityStateProvince returns a city and state/province for a given input postal 
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.AddressVerificationServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.AddressVerificationServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    AddressVerificationServiceApi apiInstance = new AddressVerificationServiceApi(defaultClient);
-    GetCityStateProvinceAPIRequest inputAddress = new GetCityStateProvinceAPIRequest(); // GetCityStateProvinceAPIRequest | 
-    try {
-      GetCityStateProvinceAPIResponse result = apiInstance.getCityStateProvince(inputAddress);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AddressVerificationServiceApi#getCityStateProvince");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+AddressVerificationServiceApi apiInstance = new AddressVerificationServiceApi();
+GetCityStateProvinceAPIRequest inputAddress = new GetCityStateProvinceAPIRequest(); // GetCityStateProvinceAPIRequest | 
+try {
+    GetCityStateProvinceAPIResponse result = apiInstance.getCityStateProvince(inputAddress);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AddressVerificationServiceApi#getCityStateProvince");
+    e.printStackTrace();
 }
 ```
 
@@ -72,14 +64,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
+ - **Accept**: application/json
 
 <a name="getPostalCodes"></a>
 # **getPostalCodes**
@@ -92,35 +77,27 @@ GetPostalCodes takes a city and state as input for U.S. addresses and returns th
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.AddressVerificationServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.AddressVerificationServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    AddressVerificationServiceApi apiInstance = new AddressVerificationServiceApi(defaultClient);
-    GetPostalCodesAPIRequest inputAddress = new GetPostalCodesAPIRequest(); // GetPostalCodesAPIRequest | 
-    try {
-      GetPostalCodesAPIResponse result = apiInstance.getPostalCodes(inputAddress);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AddressVerificationServiceApi#getPostalCodes");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+AddressVerificationServiceApi apiInstance = new AddressVerificationServiceApi();
+GetPostalCodesAPIRequest inputAddress = new GetPostalCodesAPIRequest(); // GetPostalCodesAPIRequest | 
+try {
+    GetPostalCodesAPIResponse result = apiInstance.getPostalCodes(inputAddress);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AddressVerificationServiceApi#getPostalCodes");
+    e.printStackTrace();
 }
 ```
 
@@ -141,14 +118,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
+ - **Accept**: application/json
 
 <a name="validateMailingAddress"></a>
 # **validateMailingAddress**
@@ -161,35 +131,27 @@ ValidateMailingAddress analyses and compares the input addresses against the kno
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.AddressVerificationServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.AddressVerificationServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    AddressVerificationServiceApi apiInstance = new AddressVerificationServiceApi(defaultClient);
-    ValidateMailingAddressRequest inputAddress = new ValidateMailingAddressRequest(); // ValidateMailingAddressRequest | 
-    try {
-      ValidateMailingAddressResponse result = apiInstance.validateMailingAddress(inputAddress);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AddressVerificationServiceApi#validateMailingAddress");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+AddressVerificationServiceApi apiInstance = new AddressVerificationServiceApi();
+ValidateMailingAddressRequest inputAddress = new ValidateMailingAddressRequest(); // ValidateMailingAddressRequest | 
+try {
+    ValidateMailingAddressResponse result = apiInstance.validateMailingAddress(inputAddress);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AddressVerificationServiceApi#validateMailingAddress");
+    e.printStackTrace();
 }
 ```
 
@@ -210,14 +172,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
+ - **Accept**: application/json
 
 <a name="validateMailingAddressPremium"></a>
 # **validateMailingAddressPremium**
@@ -230,35 +185,27 @@ ValidateMailing AddressPremium expands on the ValidateMailingAddressPro service 
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.AddressVerificationServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.AddressVerificationServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    AddressVerificationServiceApi apiInstance = new AddressVerificationServiceApi(defaultClient);
-    ValidateMailingAddressPremiumRequest inputAddress = new ValidateMailingAddressPremiumRequest(); // ValidateMailingAddressPremiumRequest | 
-    try {
-      ValidateMailingAddressPremiumResponse result = apiInstance.validateMailingAddressPremium(inputAddress);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AddressVerificationServiceApi#validateMailingAddressPremium");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+AddressVerificationServiceApi apiInstance = new AddressVerificationServiceApi();
+ValidateMailingAddressPremiumRequest inputAddress = new ValidateMailingAddressPremiumRequest(); // ValidateMailingAddressPremiumRequest | 
+try {
+    ValidateMailingAddressPremiumResponse result = apiInstance.validateMailingAddressPremium(inputAddress);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AddressVerificationServiceApi#validateMailingAddressPremium");
+    e.printStackTrace();
 }
 ```
 
@@ -279,14 +226,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
+ - **Accept**: application/json
 
 <a name="validateMailingAddressPro"></a>
 # **validateMailingAddressPro**
@@ -299,35 +239,27 @@ ValidateMailingAddressPro builds upon the ValidateMailingAddress service by usin
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.AddressVerificationServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.AddressVerificationServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    AddressVerificationServiceApi apiInstance = new AddressVerificationServiceApi(defaultClient);
-    ValidateMailingAddressProRequest inputAddress = new ValidateMailingAddressProRequest(); // ValidateMailingAddressProRequest | 
-    try {
-      ValidateMailingAddressProResponse result = apiInstance.validateMailingAddressPro(inputAddress);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AddressVerificationServiceApi#validateMailingAddressPro");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+AddressVerificationServiceApi apiInstance = new AddressVerificationServiceApi();
+ValidateMailingAddressProRequest inputAddress = new ValidateMailingAddressProRequest(); // ValidateMailingAddressProRequest | 
+try {
+    ValidateMailingAddressProResponse result = apiInstance.validateMailingAddressPro(inputAddress);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AddressVerificationServiceApi#validateMailingAddressPro");
+    e.printStackTrace();
 }
 ```
 
@@ -348,14 +280,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
+ - **Accept**: application/json
 
 <a name="validateMailingAddressUSCAN"></a>
 # **validateMailingAddressUSCAN**
@@ -368,35 +293,27 @@ ValidateMailingAddressUSCAN analyses and compares the input addresses against th
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.AddressVerificationServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.AddressVerificationServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    AddressVerificationServiceApi apiInstance = new AddressVerificationServiceApi(defaultClient);
-    ValidateMailingAddressUSCANAPIRequest inputAddress = new ValidateMailingAddressUSCANAPIRequest(); // ValidateMailingAddressUSCANAPIRequest | 
-    try {
-      ValidateMailingAddressUSCANAPIResponse result = apiInstance.validateMailingAddressUSCAN(inputAddress);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AddressVerificationServiceApi#validateMailingAddressUSCAN");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+AddressVerificationServiceApi apiInstance = new AddressVerificationServiceApi();
+ValidateMailingAddressUSCANAPIRequest inputAddress = new ValidateMailingAddressUSCANAPIRequest(); // ValidateMailingAddressUSCANAPIRequest | 
+try {
+    ValidateMailingAddressUSCANAPIResponse result = apiInstance.validateMailingAddressUSCAN(inputAddress);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AddressVerificationServiceApi#validateMailingAddressUSCAN");
+    e.printStackTrace();
 }
 ```
 
@@ -417,12 +334,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
+ - **Accept**: application/json
 

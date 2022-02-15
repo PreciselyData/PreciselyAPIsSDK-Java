@@ -1,10 +1,7 @@
 
-
 # ReturnFieldsDescriptor
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **returnAllCustomFields** | **Boolean** |  |  [optional]

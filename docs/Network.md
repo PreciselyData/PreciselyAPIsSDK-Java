@@ -1,10 +1,7 @@
 
-
 # Network
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **connectionFromHome** | **String** |  |  [optional]

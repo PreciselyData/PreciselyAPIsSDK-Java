@@ -1,13 +1,10 @@
 
-
 # ValidateMailingAddressProInputRow
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**userFields** | [**List&lt;GetPostalCodesAPIOutputUserFields&gt;**](GetPostalCodesAPIOutputUserFields.md) | These fields are returned, unmodified, in the user_fields section of the response. |  [optional]
+**userFields** | [**List&lt;ValidateMailingAddressInputRowUserFields&gt;**](ValidateMailingAddressInputRowUserFields.md) | These fields are returned, unmodified, in the user_fields section of the response. |  [optional]
 **addressLine1** | **String** | The first address line. |  [optional]
 **addressLine2** | **String** | The second address line. |  [optional]
 **firmName** | **String** | The company or firm name. |  [optional]

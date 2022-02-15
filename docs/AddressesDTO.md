@@ -1,10 +1,7 @@
 
-
 # AddressesDTO
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pbKey** | **String** |  |  [optional]
@@ -20,7 +17,7 @@ Name | Type | Description | Notes
 **postCode** | **String** |  |  [optional]
 **postCodeExt** | **String** |  |  [optional]
 **country** | **String** |  |  [optional]
-**geometry** | [**Geometry**](Geometry.md) |  |  [optional]
+**geometry** | [**CommonGeometry**](CommonGeometry.md) |  |  [optional]
 **propertyType** | **String** |  |  [optional]
 **propertyTypeDescription** | **String** |  |  [optional]
 **parentPbKey** | **String** |  |  [optional]

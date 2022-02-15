@@ -1,15 +1,12 @@
 
-
 # GeocodeRequest
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** |  |  [optional]
+**type** | **String** | Type | 
 **preferences** | [**GeocodePreferences**](GeocodePreferences.md) |  |  [optional]
-**addresses** | [**List&lt;GeocodeAddress&gt;**](GeocodeAddress.md) |  | 
+**addresses** | [**List&lt;GeocodeRequestAddress&gt;**](GeocodeRequestAddress.md) |  | 
 
 
 

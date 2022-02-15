@@ -1,10 +1,7 @@
 
-
 # AHJPlusPSAPResponse
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ahjs** | [**AHJList**](AHJList.md) |  |  [optional]

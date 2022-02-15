@@ -1,14 +1,11 @@
 
-
 # IPDTaxByAddressBatchRequest
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**addresses** | [**List&lt;TaxRateMatchedAddress&gt;**](TaxRateMatchedAddress.md) |  | 
-**preferences** | [**LocalTaxPreferences**](LocalTaxPreferences.md) |  |  [optional]
+**addresses** | [**List&lt;TaxRateAddress&gt;**](TaxRateAddress.md) |  | 
+**preferences** | [**Preferences**](Preferences.md) |  |  [optional]
 
 
 

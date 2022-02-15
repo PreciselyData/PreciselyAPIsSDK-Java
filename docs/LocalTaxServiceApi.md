@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getBatchTaxRateByAddress**](LocalTaxServiceApi.md#getBatchTaxRateByAddress) | **POST** /localtax/v1/taxrate/{taxRateTypeId}/byaddress | Post Taxrate By Address
 [**getBatchTaxRateByLocation**](LocalTaxServiceApi.md#getBatchTaxRateByLocation) | **POST** /localtax/v1/taxrate/{taxRateTypeId}/bylocation | Post Taxrate By Location
 [**getIPDTaxByAddress**](LocalTaxServiceApi.md#getIPDTaxByAddress) | **GET** /localtax/v1/taxdistrict/ipd/byaddress | Get IPD Tax by Address
-[**getIPDTaxByAddressBatch**](LocalTaxServiceApi.md#getIPDTaxByAddressBatch) | **POST** /localtax/v1/taxdistrict/ipd/byaddress | Get IPD Tax for batch requests.
+[**getIPDTaxByAddressBatch**](LocalTaxServiceApi.md#getIPDTaxByAddressBatch) | **POST** /localtax/v1/taxdistrict/ipd/byaddress | Get IPD Tax for batch requests
 [**getSpecificTaxByAddress**](LocalTaxServiceApi.md#getSpecificTaxByAddress) | **GET** /localtax/v1/tax/{taxRateTypeId}/byaddress | Get Tax By Address
 [**getSpecificTaxByLocation**](LocalTaxServiceApi.md#getSpecificTaxByLocation) | **GET** /localtax/v1/tax/{taxRateTypeId}/bylocation | Get Tax By Location
 [**getSpecificTaxRateByAddress**](LocalTaxServiceApi.md#getSpecificTaxRateByAddress) | **GET** /localtax/v1/taxrate/{taxRateTypeId}/byaddress | Get Taxrate By Address
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="getBatchTaxByAddress"></a>
 # **getBatchTaxByAddress**
-> TaxResponses getBatchTaxByAddress(taxRateTypeId, taxAddressRequest)
+> TaxResponses getBatchTaxByAddress(taxRateTypeId, body)
 
 Post Tax By Address
 
@@ -27,36 +27,28 @@ This is a Batch offering for &#39;Tax By Address&#39; service. It accepts a sing
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.LocalTaxServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.LocalTaxServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    LocalTaxServiceApi apiInstance = new LocalTaxServiceApi(defaultClient);
-    String taxRateTypeId = "taxRateTypeId_example"; // String | 
-    TaxAddressRequest taxAddressRequest = new TaxAddressRequest(); // TaxAddressRequest | 
-    try {
-      TaxResponses result = apiInstance.getBatchTaxByAddress(taxRateTypeId, taxAddressRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling LocalTaxServiceApi#getBatchTaxByAddress");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+LocalTaxServiceApi apiInstance = new LocalTaxServiceApi();
+String taxRateTypeId = "taxRateTypeId_example"; // String | The tax rate id.
+TaxAddressRequest body = new TaxAddressRequest(); // TaxAddressRequest | TaxAddressRequest Class Object having tax request.
+try {
+    TaxResponses result = apiInstance.getBatchTaxByAddress(taxRateTypeId, body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling LocalTaxServiceApi#getBatchTaxByAddress");
+    e.printStackTrace();
 }
 ```
 
@@ -64,8 +56,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxRateTypeId** | **String**|  |
- **taxAddressRequest** | [**TaxAddressRequest**](TaxAddressRequest.md)|  |
+ **taxRateTypeId** | **String**| The tax rate id. | [enum: General, Auto, Medical, Construction]
+ **body** | [**TaxAddressRequest**](TaxAddressRequest.md)| TaxAddressRequest Class Object having tax request. |
 
 ### Return type
 
@@ -77,19 +69,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/xml, application/json
 
 <a name="getBatchTaxByLocation"></a>
 # **getBatchTaxByLocation**
-> TaxResponses getBatchTaxByLocation(taxRateTypeId, taxLocationRequest)
+> TaxLocationResponses getBatchTaxByLocation(taxRateTypeId, body)
 
 Post Tax By Location
 
@@ -98,36 +83,28 @@ This is a Batch offering for &#39;Tax By Location&#39; service. It accepts a sin
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.LocalTaxServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.LocalTaxServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    LocalTaxServiceApi apiInstance = new LocalTaxServiceApi(defaultClient);
-    String taxRateTypeId = "taxRateTypeId_example"; // String | 
-    TaxLocationRequest taxLocationRequest = new TaxLocationRequest(); // TaxLocationRequest | 
-    try {
-      TaxResponses result = apiInstance.getBatchTaxByLocation(taxRateTypeId, taxLocationRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling LocalTaxServiceApi#getBatchTaxByLocation");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+LocalTaxServiceApi apiInstance = new LocalTaxServiceApi();
+String taxRateTypeId = "taxRateTypeId_example"; // String | The tax rate id.
+TaxLocationRequest body = new TaxLocationRequest(); // TaxLocationRequest | TaxAddressRequest Class Object having tax request.
+try {
+    TaxLocationResponses result = apiInstance.getBatchTaxByLocation(taxRateTypeId, body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling LocalTaxServiceApi#getBatchTaxByLocation");
+    e.printStackTrace();
 }
 ```
 
@@ -135,12 +112,12 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxRateTypeId** | **String**|  |
- **taxLocationRequest** | [**TaxLocationRequest**](TaxLocationRequest.md)|  |
+ **taxRateTypeId** | **String**| The tax rate id. | [enum: General, Auto, Medical, Construction]
+ **body** | [**TaxLocationRequest**](TaxLocationRequest.md)| TaxAddressRequest Class Object having tax request. |
 
 ### Return type
 
-[**TaxResponses**](TaxResponses.md)
+[**TaxLocationResponses**](TaxLocationResponses.md)
 
 ### Authorization
 
@@ -148,19 +125,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/xml, application/json
 
 <a name="getBatchTaxRateByAddress"></a>
 # **getBatchTaxRateByAddress**
-> TaxResponses getBatchTaxRateByAddress(taxRateTypeId, taxRateAddressRequest)
+> TaxRateResponses getBatchTaxRateByAddress(taxRateTypeId, body)
 
 Post Taxrate By Address
 
@@ -169,36 +139,28 @@ This is a Batch offering for &#39;Taxrate By Address&#39; service. It accepts a 
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.LocalTaxServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.LocalTaxServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    LocalTaxServiceApi apiInstance = new LocalTaxServiceApi(defaultClient);
-    String taxRateTypeId = "taxRateTypeId_example"; // String | 
-    TaxRateAddressRequest taxRateAddressRequest = new TaxRateAddressRequest(); // TaxRateAddressRequest | 
-    try {
-      TaxResponses result = apiInstance.getBatchTaxRateByAddress(taxRateTypeId, taxRateAddressRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling LocalTaxServiceApi#getBatchTaxRateByAddress");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+LocalTaxServiceApi apiInstance = new LocalTaxServiceApi();
+String taxRateTypeId = "taxRateTypeId_example"; // String | The tax rate id.
+TaxRateAddressRequest body = new TaxRateAddressRequest(); // TaxRateAddressRequest | TaxRateAddressRequest Class Object having tax rate request.
+try {
+    TaxRateResponses result = apiInstance.getBatchTaxRateByAddress(taxRateTypeId, body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling LocalTaxServiceApi#getBatchTaxRateByAddress");
+    e.printStackTrace();
 }
 ```
 
@@ -206,12 +168,12 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxRateTypeId** | **String**|  |
- **taxRateAddressRequest** | [**TaxRateAddressRequest**](TaxRateAddressRequest.md)|  |
+ **taxRateTypeId** | **String**| The tax rate id. | [enum: General, Auto, Medical, Construction]
+ **body** | [**TaxRateAddressRequest**](TaxRateAddressRequest.md)| TaxRateAddressRequest Class Object having tax rate request. |
 
 ### Return type
 
-[**TaxResponses**](TaxResponses.md)
+[**TaxRateResponses**](TaxRateResponses.md)
 
 ### Authorization
 
@@ -219,19 +181,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
+ - **Content-Type**: application/xml, application/json
+ - **Accept**: application/xml, application/json
 
 <a name="getBatchTaxRateByLocation"></a>
 # **getBatchTaxRateByLocation**
-> TaxResponses getBatchTaxRateByLocation(taxRateTypeId, taxRateLocationRequest)
+> TaxRateLocationResponses getBatchTaxRateByLocation(taxRateTypeId, body)
 
 Post Taxrate By Location
 
@@ -240,36 +195,28 @@ This is a Batch offering for &#39;Taxrate By Location&#39; service. It accepts a
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.LocalTaxServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.LocalTaxServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    LocalTaxServiceApi apiInstance = new LocalTaxServiceApi(defaultClient);
-    String taxRateTypeId = "taxRateTypeId_example"; // String | 
-    TaxRateLocationRequest taxRateLocationRequest = new TaxRateLocationRequest(); // TaxRateLocationRequest | 
-    try {
-      TaxResponses result = apiInstance.getBatchTaxRateByLocation(taxRateTypeId, taxRateLocationRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling LocalTaxServiceApi#getBatchTaxRateByLocation");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+LocalTaxServiceApi apiInstance = new LocalTaxServiceApi();
+String taxRateTypeId = "taxRateTypeId_example"; // String | The tax rate id.
+TaxRateLocationRequest body = new TaxRateLocationRequest(); // TaxRateLocationRequest | TaxRateLocationRequest Class Object having tax rate request.
+try {
+    TaxRateLocationResponses result = apiInstance.getBatchTaxRateByLocation(taxRateTypeId, body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling LocalTaxServiceApi#getBatchTaxRateByLocation");
+    e.printStackTrace();
 }
 ```
 
@@ -277,12 +224,12 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxRateTypeId** | **String**|  |
- **taxRateLocationRequest** | [**TaxRateLocationRequest**](TaxRateLocationRequest.md)|  |
+ **taxRateTypeId** | **String**| The tax rate id. | [enum: General, Auto, Medical, Construction]
+ **body** | [**TaxRateLocationRequest**](TaxRateLocationRequest.md)| TaxRateLocationRequest Class Object having tax rate request. |
 
 ### Return type
 
-[**TaxResponses**](TaxResponses.md)
+[**TaxRateLocationResponses**](TaxRateLocationResponses.md)
 
 ### Authorization
 
@@ -290,15 +237,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
+ - **Content-Type**: application/xml, application/json
+ - **Accept**: application/xml, application/json
 
 <a name="getIPDTaxByAddress"></a>
 # **getIPDTaxByAddress**
@@ -306,42 +246,34 @@ Name | Type | Description  | Notes
 
 Get IPD Tax by Address
 
-Retrieves IPD (Insurance Premium District) tax rates applicable to a specific address. This service accepts address as input and returns one or many IPD tax rate details for that region in which address falls.
+This will accept &#39;address&#39; as a parameter and will return one or many IPDs details for that region in which address will fall.
 
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.LocalTaxServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.LocalTaxServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    LocalTaxServiceApi apiInstance = new LocalTaxServiceApi(defaultClient);
-    String address = "address_example"; // String | The address to be searched.
-    String returnLatLongFields = "returnLatLongFields_example"; // String | Y or N (default is N) - Returns Latitude Longitude Fields.
-    String latLongFormat = "latLongFormat_example"; // String | (default is Decimal) - Returns Desired Latitude Longitude Format.
-    try {
-      TaxDistrictResponse result = apiInstance.getIPDTaxByAddress(address, returnLatLongFields, latLongFormat);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling LocalTaxServiceApi#getIPDTaxByAddress");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+LocalTaxServiceApi apiInstance = new LocalTaxServiceApi();
+String address = "address_example"; // String | The address to be searched.
+String returnLatLongFields = "returnLatLongFields_example"; // String | Y or N (default is N) - Returns Latitude Longitude Fields
+String latLongFormat = "latLongFormat_example"; // String | (default is Decimal) - Returns Desired Latitude Longitude Format
+try {
+    TaxDistrictResponse result = apiInstance.getIPDTaxByAddress(address, returnLatLongFields, latLongFormat);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling LocalTaxServiceApi#getIPDTaxByAddress");
+    e.printStackTrace();
 }
 ```
 
@@ -350,8 +282,8 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address** | **String**| The address to be searched. |
- **returnLatLongFields** | **String**| Y or N (default is N) - Returns Latitude Longitude Fields. | [optional]
- **latLongFormat** | **String**| (default is Decimal) - Returns Desired Latitude Longitude Format. | [optional]
+ **returnLatLongFields** | **String**| Y or N (default is N) - Returns Latitude Longitude Fields | [optional] [enum: Y, N]
+ **latLongFormat** | **String**| (default is Decimal) - Returns Desired Latitude Longitude Format | [optional] [enum: PreZero, PreZeroDecimal, Decimal, DecimalAssumed]
 
 ### Return type
 
@@ -363,56 +295,41 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
 
 <a name="getIPDTaxByAddressBatch"></a>
 # **getIPDTaxByAddressBatch**
-> TaxDistrictResponseList getIPDTaxByAddressBatch(ipDTaxByAddressBatchRequest)
+> TaxDistrictResponseList getIPDTaxByAddressBatch(body)
 
-Get IPD Tax for batch requests.
+Get IPD Tax for batch requests
 
-This is a Batch offering for &#39;IPD Tax rates By Address&#39;. It accepts multiple addresses as parameters along with geocoding and matching preferences and returns one or many IPD tax rate details for each address.
+Get IPD Tax for batch requests
 
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.LocalTaxServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.LocalTaxServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    LocalTaxServiceApi apiInstance = new LocalTaxServiceApi(defaultClient);
-    IPDTaxByAddressBatchRequest ipDTaxByAddressBatchRequest = new IPDTaxByAddressBatchRequest(); // IPDTaxByAddressBatchRequest | 
-    try {
-      TaxDistrictResponseList result = apiInstance.getIPDTaxByAddressBatch(ipDTaxByAddressBatchRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling LocalTaxServiceApi#getIPDTaxByAddressBatch");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+LocalTaxServiceApi apiInstance = new LocalTaxServiceApi();
+IPDTaxByAddressBatchRequest body = new IPDTaxByAddressBatchRequest(); // IPDTaxByAddressBatchRequest | IPDTaxByAddressBatchRequest Class Object having IPD tax request
+try {
+    TaxDistrictResponseList result = apiInstance.getIPDTaxByAddressBatch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling LocalTaxServiceApi#getIPDTaxByAddressBatch");
+    e.printStackTrace();
 }
 ```
 
@@ -420,7 +337,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ipDTaxByAddressBatchRequest** | [**IPDTaxByAddressBatchRequest**](IPDTaxByAddressBatchRequest.md)|  |
+ **body** | [**IPDTaxByAddressBatchRequest**](IPDTaxByAddressBatchRequest.md)| IPDTaxByAddressBatchRequest Class Object having IPD tax request |
 
 ### Return type
 
@@ -432,19 +349,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
 
 <a name="getSpecificTaxByAddress"></a>
 # **getSpecificTaxByAddress**
-> TaxRateResponse getSpecificTaxByAddress(taxRateTypeId, address, purchaseAmount)
+> TaxResponse getSpecificTaxByAddress(taxRateTypeId, address, purchaseAmount)
 
 Get Tax By Address
 
@@ -453,37 +363,29 @@ This service calculates and returns taxes applicable at a specific address. Addr
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.LocalTaxServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.LocalTaxServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    LocalTaxServiceApi apiInstance = new LocalTaxServiceApi(defaultClient);
-    String taxRateTypeId = "taxRateTypeId_example"; // String | The tax rate id
-    String address = "address_example"; // String | The address to be searched.
-    String purchaseAmount = "purchaseAmount_example"; // String | The amount on which tax to be calculated
-    try {
-      TaxRateResponse result = apiInstance.getSpecificTaxByAddress(taxRateTypeId, address, purchaseAmount);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling LocalTaxServiceApi#getSpecificTaxByAddress");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+LocalTaxServiceApi apiInstance = new LocalTaxServiceApi();
+String taxRateTypeId = "taxRateTypeId_example"; // String | The tax rate id.
+String address = "address_example"; // String | The address to be searched.
+String purchaseAmount = "purchaseAmount_example"; // String | The amount on which tax to be calculated.
+try {
+    TaxResponse result = apiInstance.getSpecificTaxByAddress(taxRateTypeId, address, purchaseAmount);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling LocalTaxServiceApi#getSpecificTaxByAddress");
+    e.printStackTrace();
 }
 ```
 
@@ -491,13 +393,13 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxRateTypeId** | **String**| The tax rate id |
+ **taxRateTypeId** | **String**| The tax rate id. | [enum: General, Auto, Medical, Construction]
  **address** | **String**| The address to be searched. |
- **purchaseAmount** | **String**| The amount on which tax to be calculated |
+ **purchaseAmount** | **String**| The amount on which tax to be calculated. |
 
 ### Return type
 
-[**TaxRateResponse**](TaxRateResponse.md)
+[**TaxResponse**](TaxResponse.md)
 
 ### Authorization
 
@@ -505,19 +407,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
 
 <a name="getSpecificTaxByLocation"></a>
 # **getSpecificTaxByLocation**
-> TaxRateResponse getSpecificTaxByLocation(taxRateTypeId, latitude, longitude, purchaseAmount)
+> TaxResponse getSpecificTaxByLocation(taxRateTypeId, latitude, longitude, purchaseAmount)
 
 Get Tax By Location
 
@@ -526,38 +421,30 @@ This service calculates and returns tax applicable at a specific location. Longi
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.LocalTaxServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.LocalTaxServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    LocalTaxServiceApi apiInstance = new LocalTaxServiceApi(defaultClient);
-    String taxRateTypeId = "taxRateTypeId_example"; // String | The tax rate id
-    String latitude = "latitude_example"; // String | Latitude of the location
-    String longitude = "longitude_example"; // String | Longitude of the location
-    String purchaseAmount = "purchaseAmount_example"; // String | The amount on which tax to be calculated
-    try {
-      TaxRateResponse result = apiInstance.getSpecificTaxByLocation(taxRateTypeId, latitude, longitude, purchaseAmount);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling LocalTaxServiceApi#getSpecificTaxByLocation");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+LocalTaxServiceApi apiInstance = new LocalTaxServiceApi();
+String taxRateTypeId = "taxRateTypeId_example"; // String | The tax rate id.
+String latitude = "latitude_example"; // String | Latitude of the location.
+String longitude = "longitude_example"; // String | Longitude of the location.
+String purchaseAmount = "purchaseAmount_example"; // String | The amount on which tax to be calculated.
+try {
+    TaxResponse result = apiInstance.getSpecificTaxByLocation(taxRateTypeId, latitude, longitude, purchaseAmount);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling LocalTaxServiceApi#getSpecificTaxByLocation");
+    e.printStackTrace();
 }
 ```
 
@@ -565,14 +452,14 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxRateTypeId** | **String**| The tax rate id |
- **latitude** | **String**| Latitude of the location |
- **longitude** | **String**| Longitude of the location |
- **purchaseAmount** | **String**| The amount on which tax to be calculated |
+ **taxRateTypeId** | **String**| The tax rate id. | [enum: General, Auto, Medical, Construction]
+ **latitude** | **String**| Latitude of the location. |
+ **longitude** | **String**| Longitude of the location. |
+ **purchaseAmount** | **String**| The amount on which tax to be calculated. |
 
 ### Return type
 
-[**TaxRateResponse**](TaxRateResponse.md)
+[**TaxResponse**](TaxResponse.md)
 
 ### Authorization
 
@@ -580,15 +467,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
 
 <a name="getSpecificTaxRateByAddress"></a>
 # **getSpecificTaxRateByAddress**
@@ -601,36 +481,28 @@ Retrieves tax rates applicable to a specific address. This service accepts addre
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.LocalTaxServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.LocalTaxServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    LocalTaxServiceApi apiInstance = new LocalTaxServiceApi(defaultClient);
-    String taxRateTypeId = "taxRateTypeId_example"; // String | The tax rate id
-    String address = "address_example"; // String | The address to be searched.
-    try {
-      TaxRateResponse result = apiInstance.getSpecificTaxRateByAddress(taxRateTypeId, address);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling LocalTaxServiceApi#getSpecificTaxRateByAddress");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+LocalTaxServiceApi apiInstance = new LocalTaxServiceApi();
+String taxRateTypeId = "taxRateTypeId_example"; // String | The tax rate id.
+String address = "address_example"; // String | The address to be searched.
+try {
+    TaxRateResponse result = apiInstance.getSpecificTaxRateByAddress(taxRateTypeId, address);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling LocalTaxServiceApi#getSpecificTaxRateByAddress");
+    e.printStackTrace();
 }
 ```
 
@@ -638,7 +510,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxRateTypeId** | **String**| The tax rate id |
+ **taxRateTypeId** | **String**| The tax rate id. | [enum: General, Auto, Medical, Construction]
  **address** | **String**| The address to be searched. |
 
 ### Return type
@@ -651,15 +523,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
 
 <a name="getSpecificTaxRateByLocation"></a>
 # **getSpecificTaxRateByLocation**
@@ -672,37 +537,29 @@ Retrieves tax rates applicable to a specific location. This service accepts long
 ### Example
 ```java
 // Import classes:
-import com.precisely.ApiClient;
-import com.precisely.ApiException;
-import com.precisely.Configuration;
-import com.precisely.auth.*;
-import com.precisely.models.*;
-import com.precisely.apis.LocalTaxServiceApi;
+//import com.precisely.ApiClient;
+//import com.precisely.ApiException;
+//import com.precisely.Configuration;
+//import com.precisely.auth.*;
+//import com.precisely.apis.LocalTaxServiceApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.precisely.com");
-    
-    // Configure OAuth2 access token for authorization: oAuth2Password
-    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
-    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    LocalTaxServiceApi apiInstance = new LocalTaxServiceApi(defaultClient);
-    String taxRateTypeId = "taxRateTypeId_example"; // String | The tax rate id
-    String latitude = "latitude_example"; // String | Latitude of the location
-    String longitude = "longitude_example"; // String | Longitude of the location
-    try {
-      TaxRateResponse result = apiInstance.getSpecificTaxRateByLocation(taxRateTypeId, latitude, longitude);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling LocalTaxServiceApi#getSpecificTaxRateByLocation");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+// Configure API_KEY and SECRET for authorization: oAuth2Password
+ ApiClient defaultClient = Configuration.getDefaultApiClient();
+ defaultClient.setoAuthApiKey("<YOUR API KEY>");
+ defaultClient.setoAuthSecret("<YOUR SECRET>");
+
+LocalTaxServiceApi apiInstance = new LocalTaxServiceApi();
+String taxRateTypeId = "taxRateTypeId_example"; // String | The tax rate id.
+String latitude = "latitude_example"; // String | Latitude of the location.
+String longitude = "longitude_example"; // String | Longitude of the location.
+try {
+    TaxRateResponse result = apiInstance.getSpecificTaxRateByLocation(taxRateTypeId, latitude, longitude);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling LocalTaxServiceApi#getSpecificTaxRateByLocation");
+    e.printStackTrace();
 }
 ```
 
@@ -710,9 +567,9 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxRateTypeId** | **String**| The tax rate id |
- **latitude** | **String**| Latitude of the location |
- **longitude** | **String**| Longitude of the location |
+ **taxRateTypeId** | **String**| The tax rate id. | [enum: General, Auto, Medical, Construction]
+ **latitude** | **String**| Latitude of the location. |
+ **longitude** | **String**| Longitude of the location. |
 
 ### Return type
 
@@ -724,13 +581,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**400** | Bad Request |  -  |
-**500** | Internal Server Error |  -  |
 

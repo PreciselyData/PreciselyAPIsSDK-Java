@@ -1,10 +1,7 @@
 
-
 # AHJ
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ahjType** | **String** |  |  [optional]

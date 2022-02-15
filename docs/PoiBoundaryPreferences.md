@@ -1,10 +1,7 @@
 
-
-# POIBoundaryPreferences
-
+# PoiBoundaryPreferences
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **categoryCode** | **String** |  |  [optional]

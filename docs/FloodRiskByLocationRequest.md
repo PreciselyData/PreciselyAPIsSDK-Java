@@ -1,13 +1,10 @@
 
-
 # FloodRiskByLocationRequest
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**locations** | [**List&lt;RiskLocations&gt;**](RiskLocations.md) |  | 
+**locations** | [**List&lt;GeoRiskLocations&gt;**](GeoRiskLocations.md) |  | 
 **preferences** | [**FloodRiskPreferences**](FloodRiskPreferences.md) |  |  [optional]
 
 

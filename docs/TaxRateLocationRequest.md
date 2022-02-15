@@ -1,14 +1,11 @@
 
-
 # TaxRateLocationRequest
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**preferences** | [**LocalTaxPreferences**](LocalTaxPreferences.md) |  |  [optional]
-**locations** | [**List&lt;TaxLocations&gt;**](TaxLocations.md) |  | 
+**preferences** | [**TaxLocationPreferences**](TaxLocationPreferences.md) |  |  [optional]
+**locations** | [**List&lt;GeoTaxRateLocations&gt;**](GeoTaxRateLocations.md) |  | 
 
 
 

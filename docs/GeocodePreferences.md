@@ -1,38 +1,25 @@
 
-
 # GeocodePreferences
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**returnAllCandidateInfo** | **Boolean** |  | 
-**fallbackToGeographic** | **String** |  | 
-**fallbackToPostal** | **String** |  | 
-**maxReturnedCandidates** | **String** |  | 
-**distance** | **String** |  | 
-**streetOffset** | **String** |  | 
-**cornerOffset** | **String** |  | 
+**returnAllCandidateInfo** | **Boolean** |  |  [optional]
+**fallbackToGeographic** | **Boolean** |  |  [optional]
+**fallbackToPostal** | **Boolean** |  |  [optional]
+**maxReturnedCandidates** | **String** |  |  [optional]
+**streetOffset** | **String** |  |  [optional]
+**cornerOffset** | **String** |  |  [optional]
 **matchMode** | **String** |  |  [optional]
 **clientLocale** | **String** |  |  [optional]
 **clientCoordSysName** | **String** |  |  [optional]
-**distanceUnits** | **String** |  |  [optional]
 **streetOffsetUnits** | **String** |  |  [optional]
 **cornerOffsetUnits** | **String** |  |  [optional]
 **mustMatchFields** | [**FieldsMatching**](FieldsMatching.md) |  |  [optional]
 **returnFieldsDescriptor** | [**ReturnFieldsDescriptor**](ReturnFieldsDescriptor.md) |  |  [optional]
 **outputRecordType** | **String** |  |  [optional]
-**customPreferences** | **Map&lt;String, Object&gt;** |  |  [optional]
+**customPreferences** | [**GeocodeCustomPreferences**](GeocodeCustomPreferences.md) |  |  [optional]
 **preferredDictionaryOrders** | **List&lt;String&gt;** |  |  [optional]
-**outputCasing** | **String** |  |  [optional]
-**latLongOffset** | **String** |  |  [optional]
-**squeeze** | **String** |  |  [optional]
-**returnLatLongFields** | **String** |  |  [optional]
-**useGeoTaxAuxiliaryFile** | **String** |  |  [optional]
-**latLongFormat** | **String** |  |  [optional]
-**defaultBufferWidth** | **String** |  |  [optional]
-**returnCensusFields** | **String** |  |  [optional]
 
 
 

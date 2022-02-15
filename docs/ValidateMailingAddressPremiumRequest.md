@@ -1,10 +1,7 @@
 
-
 # ValidateMailingAddressPremiumRequest
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **options** | [**ValidateMailingAddressPremiumOptions**](ValidateMailingAddressPremiumOptions.md) |  |  [optional]

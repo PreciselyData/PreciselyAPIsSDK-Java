@@ -1,10 +1,7 @@
 
-
 # LifeStyleTheme
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **boundaryRef** | **String** |  |  [optional]

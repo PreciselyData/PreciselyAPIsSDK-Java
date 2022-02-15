@@ -1,14 +1,10 @@
 
-
 # LocationTime
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**geometry** | [**TimezoneGeometry**](TimezoneGeometry.md) |  | 
-**purchaseAmount** | **String** |  |  [optional]
+**geometry** | [**Geometry**](Geometry.md) |  | 
 **objectId** | **String** |  |  [optional]
 **timestamp** | **String** |  |  [optional]
 

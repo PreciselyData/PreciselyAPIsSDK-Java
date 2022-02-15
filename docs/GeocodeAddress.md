@@ -1,13 +1,9 @@
 
-
 # GeocodeAddress
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objectId** | **String** |  |  [optional]
 **mainAddressLine** | **String** |  |  [optional]
 **addressLastLine** | **String** |  |  [optional]
 **placeName** | **String** |  |  [optional]

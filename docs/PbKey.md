@@ -1,15 +1,12 @@
 
-
-# Pbkey
-
+# PbKey
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **objectId** | **String** |  |  [optional]
 **key** | **String** |  |  [optional]
-**matchedAddress** | [**Address**](Address.md) |  |  [optional]
+**matchedAddress** | [**MatchedAddress**](MatchedAddress.md) |  |  [optional]
 
 
 

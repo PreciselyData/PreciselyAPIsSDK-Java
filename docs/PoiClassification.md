@@ -1,10 +1,7 @@
 
-
 # PoiClassification
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **sic** | [**Sic**](Sic.md) |  |  [optional]

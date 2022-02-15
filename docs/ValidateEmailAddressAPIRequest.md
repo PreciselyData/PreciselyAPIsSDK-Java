@@ -1,13 +1,10 @@
 
-
 # ValidateEmailAddressAPIRequest
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | **Object** |  |  [optional]
+**options** | [**ValidateEmailAddressOptions**](ValidateEmailAddressOptions.md) |  |  [optional]
 **input** | [**ValidateEmailAddressInput**](ValidateEmailAddressInput.md) |  |  [optional]
 
 

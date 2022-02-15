@@ -1,13 +1,10 @@
 
-
 # EarthquakeEvent
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dateTime** | [**EarthquakeDateTime**](EarthquakeDateTime.md) |  |  [optional]
+**dateTime** | [**DateTimeEarthQuake**](DateTimeEarthQuake.md) |  |  [optional]
 **seismicRegionNumber** | **Integer** |  |  [optional]
 **depth** | [**Depth**](Depth.md) |  |  [optional]
 **magnitude** | [**Magnitude**](Magnitude.md) |  |  [optional]

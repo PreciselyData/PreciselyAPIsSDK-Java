@@ -1,10 +1,7 @@
 
-
 # TypeaheadUnit
 
-
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **unitInfo** | **String** |  |  [optional]
