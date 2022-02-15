@@ -1,7 +1,10 @@
 
+
 # TimezoneAddressRequest
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **preferences** | [**PreferencTimeZone**](PreferencTimeZone.md) |  |  [optional]

@@ -9,38 +9,46 @@ Method | HTTP request | Description
 
 <a name="getPlaceByLocation"></a>
 # **getPlaceByLocation**
-> PlaceByLocations getPlaceByLocation(longitude, latitude, levelHint)
+> NeighborhoodsResponse getPlaceByLocation(longitude, latitude, levelHint)
 
 Place By Location.
 
-Identifies and retrieves the nearest neighborhood around a specific location. This Places service accepts latitude &amp; longitude as input and returns a place name.
+Identifies and retrieves the nearest neighborhood around a specific location. This service accepts latitude &amp; longitude as input and returns a place name.
 
 ### Example
 ```java
 // Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.NeighborhoodsServiceApi;
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.NeighborhoodsServiceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
 
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-NeighborhoodsServiceApi apiInstance = new NeighborhoodsServiceApi();
-String longitude = "longitude_example"; // String | Longitude of the location.
-String latitude = "latitude_example"; // String | Latitude of the location.
-String levelHint = "levelHint_example"; // String | Numeric code of geographic hierarchy level which is classified at six levels.Allowed values 1,2,3,4,5,6
-try {
-    PlaceByLocations result = apiInstance.getPlaceByLocation(longitude, latitude, levelHint);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling NeighborhoodsServiceApi#getPlaceByLocation");
-    e.printStackTrace();
+    NeighborhoodsServiceApi apiInstance = new NeighborhoodsServiceApi(defaultClient);
+    String longitude = "longitude_example"; // String | Longitude of the location.
+    String latitude = "latitude_example"; // String | Latitude of the location.
+    String levelHint = "levelHint_example"; // String | Numeric code of geographic hierarchy level which is classified at six levels.Allowed values 1,2,3,4,5,6
+    try {
+      NeighborhoodsResponse result = apiInstance.getPlaceByLocation(longitude, latitude, levelHint);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NeighborhoodsServiceApi#getPlaceByLocation");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -48,13 +56,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **longitude** | **String**| Longitude of the location. |
- **latitude** | **String**| Latitude of the location. |
- **levelHint** | **String**| Numeric code of geographic hierarchy level which is classified at six levels.Allowed values 1,2,3,4,5,6 | [optional] [enum: 1, 2, 3, 4, 5, 6]
+ **longitude** | **String**| Longitude of the location. | [optional]
+ **latitude** | **String**| Latitude of the location. | [optional]
+ **levelHint** | **String**| Numeric code of geographic hierarchy level which is classified at six levels.Allowed values 1,2,3,4,5,6 | [optional]
 
 ### Return type
 
-[**PlaceByLocations**](PlaceByLocations.md)
+[**NeighborhoodsResponse**](NeighborhoodsResponse.md)
 
 ### Authorization
 
@@ -62,6 +70,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
 

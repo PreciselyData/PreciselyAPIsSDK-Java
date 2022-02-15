@@ -1,7 +1,10 @@
 
+
 # PoiCountRequest
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  |  [optional]
@@ -9,7 +12,9 @@ Name | Type | Description | Notes
 **categoryCode** | **String** |  |  [optional]
 **sicCode** | **String** |  |  [optional]
 **fuzzyOnName** | **String** |  |  [optional]
-**geometry** | [**CommonGeometry**](CommonGeometry.md) |  |  [optional]
+**matchMode** | **String** |  |  [optional]
+**specificMatchOn** | **String** |  |  [optional]
+**geometry** | [**Geometry**](Geometry.md) |  |  [optional]
 **geometryAsText** | **String** |  |  [optional]
 
 

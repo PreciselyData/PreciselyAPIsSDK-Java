@@ -1,7 +1,10 @@
 
+
 # PropertyInfoAddressRequest
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **preferences** | [**PropertyInfoPreferences**](PropertyInfoPreferences.md) |  | 

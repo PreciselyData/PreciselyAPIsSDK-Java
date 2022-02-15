@@ -1,11 +1,14 @@
 
+
 # AddressesByBoundaryRequest
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **preferences** | [**AddressesPreferences**](AddressesPreferences.md) |  |  [optional]
-**geometry** | [**CommonGeometry**](CommonGeometry.md) |  |  [optional]
+**geometry** | [**Geometry**](Geometry.md) |  |  [optional]
 **geometryAsText** | **String** |  |  [optional]
 **latitude** | **Double** |  |  [optional]
 **longitude** | **Double** |  |  [optional]

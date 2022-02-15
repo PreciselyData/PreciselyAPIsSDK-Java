@@ -1,7 +1,10 @@
 
+
 # ValidateMailingAddressUSCANAPIOptions
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **outputAddressBlocks** | **String** | Specifies whether to return a formatted version of the address. |  [optional]
@@ -15,11 +18,11 @@ Name | Type | Description | Notes
 **maximumResults** | **String** | Specifies a number between 1 and 10 that indicates the maximum number of addresses to be returned. |  [optional]
 **outputRecordType** | **String** | Specifies the type of the output record. |  [optional]
 **outputFieldLevelReturnCodes** | **String** | Identifies which output addresses are candidate addresses as value if Y for OutputFieldLevelReturnCodes. |  [optional]
-**dPVDetermineNoStat** | **String** | Determines the no stat status of an address which means it exists but cannot receive mails. |  [optional]
+**dpVDetermineNoStat** | **String** | Determines the no stat status of an address which means it exists but cannot receive mails. |  [optional]
 **streetMatchingStrictness** | **String** | Specifies the algorithm to determe if an input address matches in the postal database. |  [optional]
 **canFrenchApartmentLabel** | **String** | Specifies the default apartment label for the output if there is no apartment label in the input address. This is specific to French address.  |  [optional]
 **outputAbbreviatedAlias** | **String** | Specifies whether to use a street&#39;s abbreviated alias in the output if the output address line is longer than 31 characters. |  [optional]
-**dPVSuccessfulStatusCondition** | **String** | Selecting the match condition where a DPV result does NOT cause a record to fail. |  [optional]
+**dpVSuccessfulStatusCondition** | **String** | Selecting the match condition where a DPV result does NOT cause a record to fail. |  [optional]
 **standardAddressPMBLine** | **String** | Specifies where Private Mailbox (PMB) information is placed. |  [optional]
 **firmMatchingStrictness** | **String** | Specifies the algorithm to determining if an input address matches in the postal database. |  [optional]
 **canRuralRouteFormat** | **String** | Specifies where to place rural route delivery information. |  [optional]
@@ -44,7 +47,7 @@ Name | Type | Description | Notes
 **extractUrb** | **String** | Specifies whether to extract the urbanization name from AddressLine1 through AddressLine4 and place it in the USUrbanName output field.  |  [optional]
 **standardAddressFormat** | **String** | Specifies where to place secondary address information for U.S. addresses. |  [optional]
 **canFrenchFormat** | **String** | Specifies how to determine the language (English or French) to use to format the address and directional. |  [optional]
-**dPVDetermineVacancy** | **String** | Determines if the location has been unoccupied for at least 90 days. |  [optional]
+**dpVDetermineVacancy** | **String** | Determines if the location has been unoccupied for at least 90 days. |  [optional]
 **canEnglishApartmentLabel** | **String** | Specifies the default apartment label to use in the output if there is no apartment label in the input address. rhis is specific to English addresses. |  [optional]
 **suppressZplusPhantomCarrierR777** | **String** | Specifies whether to supress addresses with Carrier Route R777. |  [optional]
 **canOutputCityAlias** | **String** | Specifies whether or not to return the city alias when the alias is in the input address. |  [optional]

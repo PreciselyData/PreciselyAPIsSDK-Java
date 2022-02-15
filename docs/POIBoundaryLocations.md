@@ -1,10 +1,14 @@
 
+
 # POIBoundaryLocations
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**geometry** | [**Geometry**](Geometry.md) |  | 
+**geometry** | [**ZonesGeometry**](ZonesGeometry.md) |  | 
+**purchaseAmount** | **String** |  |  [optional]
 **objectId** | **String** |  |  [optional]
 
 

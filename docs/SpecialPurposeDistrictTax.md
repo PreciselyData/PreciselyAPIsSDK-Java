@@ -1,7 +1,10 @@
 
+
 # SpecialPurposeDistrictTax
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **districtNumber** | **String** |  |  [optional]

@@ -1,7 +1,10 @@
 
+
 # GetCityStateProvinceAPIOptions
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **outputVanityCity** | **String** | Output VanityCity. |  [optional]

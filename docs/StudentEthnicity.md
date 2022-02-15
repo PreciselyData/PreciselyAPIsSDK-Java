@@ -1,7 +1,10 @@
 
+
 # StudentEthnicity
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **indianAlaskaNative** | **String** |  |  [optional]

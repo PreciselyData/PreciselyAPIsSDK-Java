@@ -18,28 +18,36 @@ This service accepts a phone number as input and returns details distinguishing 
 ### Example
 ```java
 // Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.PhoneVerificationServiceApi;
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.PhoneVerificationServiceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
 
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-PhoneVerificationServiceApi apiInstance = new PhoneVerificationServiceApi();
-String phoneNumber = "phoneNumber_example"; // String | E.164 formatted phone number. Accepts digits only. Country Code (1) optional for USA & CAN.
-String includeNetworkInfo = "includeNetworkInfo_example"; // String | Y or N (default is Y) – if it is N, then network/carrier details will not be added in the response.
-try {
-    PhoneVerification result = apiInstance.phoneVerification(phoneNumber, includeNetworkInfo);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling PhoneVerificationServiceApi#phoneVerification");
-    e.printStackTrace();
+    PhoneVerificationServiceApi apiInstance = new PhoneVerificationServiceApi(defaultClient);
+    String phoneNumber = "phoneNumber_example"; // String | E.164 formatted phone number. Accepts digits only. Country Code (1) optional for USA & CAN.
+    String includeNetworkInfo = "includeNetworkInfo_example"; // String | Y or N (default is Y) – if it is N, then network/carrier details will not be added in the response.
+    try {
+      PhoneVerification result = apiInstance.phoneVerification(phoneNumber, includeNetworkInfo);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling PhoneVerificationServiceApi#phoneVerification");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -60,6 +68,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml
+ - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
 

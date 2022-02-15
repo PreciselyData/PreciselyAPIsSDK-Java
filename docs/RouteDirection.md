@@ -1,13 +1,16 @@
 
+
 # RouteDirection
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**distance** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
+**distance** | **BigDecimal** |  |  [optional]
 **distanceUnit** | **String** |  |  [optional]
 **timeUnit** | **String** |  |  [optional]
-**time** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
+**time** | **BigDecimal** |  |  [optional]
 **instruction** | **String** |  |  [optional]
 **directionGeometry** | [**RouteGeometry**](RouteGeometry.md) |  |  [optional]
 

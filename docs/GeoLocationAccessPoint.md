@@ -1,10 +1,13 @@
 
+
 # GeoLocationAccessPoint
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**geometry** | [**Geometry**](Geometry.md) |  |  [optional]
+**geometry** | [**GeolocationGeometry**](GeolocationGeometry.md) |  |  [optional]
 **accuracy** | [**Accuracy**](Accuracy.md) |  |  [optional]
 
 

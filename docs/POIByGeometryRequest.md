@@ -1,7 +1,10 @@
 
+
 # POIByGeometryRequest
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  |  [optional]
@@ -13,7 +16,7 @@ Name | Type | Description | Notes
 **page** | **String** |  |  [optional]
 **matchMode** | **String** |  |  [optional]
 **specificMatchOn** | **String** |  |  [optional]
-**geometry** | [**CommonGeometry**](CommonGeometry.md) |  |  [optional]
+**geometry** | [**Geometry**](Geometry.md) |  |  [optional]
 **geometryAsText** | **String** |  |  [optional]
 
 

@@ -1,7 +1,10 @@
 
+
 # CandidateRangeUnit
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **placeName** | **String** |  |  [optional]

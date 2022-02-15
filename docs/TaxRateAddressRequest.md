@@ -1,10 +1,13 @@
 
+
 # TaxRateAddressRequest
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**preferences** | [**Preferences**](Preferences.md) |  |  [optional]
+**preferences** | [**LocalTaxPreferences**](LocalTaxPreferences.md) |  |  [optional]
 **taxRateAddresses** | [**List&lt;TaxRateAddress&gt;**](TaxRateAddress.md) |  | 
 
 
