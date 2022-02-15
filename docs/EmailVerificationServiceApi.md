@@ -18,27 +18,35 @@ Confirm that your customer’s mailing address exists and that mail and packages
 ### Example
 ```java
 // Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.EmailVerificationServiceApi;
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.EmailVerificationServiceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
 
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-EmailVerificationServiceApi apiInstance = new EmailVerificationServiceApi();
-ValidateEmailAddressAPIRequest inputEmailAddress = new ValidateEmailAddressAPIRequest(); // ValidateEmailAddressAPIRequest | 
-try {
-    ValidateEmailAddressAPIResponse result = apiInstance.validateEmailAddress(inputEmailAddress);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EmailVerificationServiceApi#validateEmailAddress");
-    e.printStackTrace();
+    EmailVerificationServiceApi apiInstance = new EmailVerificationServiceApi(defaultClient);
+    ValidateEmailAddressAPIRequest inputEmailAddress = new ValidateEmailAddressAPIRequest(); // ValidateEmailAddressAPIRequest | 
+    try {
+      ValidateEmailAddressAPIResponse result = apiInstance.validateEmailAddress(inputEmailAddress);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EmailVerificationServiceApi#validateEmailAddress");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -59,5 +67,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: application/json, application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
 

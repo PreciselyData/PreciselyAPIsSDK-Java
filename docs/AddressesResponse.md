@@ -1,7 +1,10 @@
 
+
 # AddressesResponse
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **String** |  |  [optional]

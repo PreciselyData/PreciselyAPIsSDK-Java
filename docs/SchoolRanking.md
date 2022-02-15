@@ -1,7 +1,10 @@
 
+
 # SchoolRanking
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **current** | **String** |  |  [optional]

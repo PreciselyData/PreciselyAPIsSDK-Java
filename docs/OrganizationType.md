@@ -1,7 +1,10 @@
 
+
 # OrganizationType
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **naicsCode** | **String** |  |  [optional]

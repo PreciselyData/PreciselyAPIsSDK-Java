@@ -1,7 +1,10 @@
 
+
 # SchoolProfile
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **blueRibbon** | **String** |  |  [optional]

@@ -1,9 +1,27 @@
 
+
 # AHJmailingAddress
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**objectId** | **String** |  |  [optional]
+**displayName** | **String** |  |  [optional]
+**streetSide** | **String** |  |  [optional]
+**businessName** | **String** |  |  [optional]
+**addressLine1** | **String** |  |  [optional]
+**addressLine2** | **String** |  |  [optional]
+**addressLine3** | **String** |  |  [optional]
+**city** | **String** |  |  [optional]
+**stateProvince** | **String** |  |  [optional]
+**county** | **String** |  |  [optional]
+**postalCode** | **String** |  |  [optional]
+**latitude** | **String** |  |  [optional]
+**longitude** | **String** |  |  [optional]
+**status** | **String** |  |  [optional]
+**urbanizationName** | **String** |  |  [optional]
 **formattedAddress** | **String** |  |  [optional]
 **mainAddressLine** | **String** |  |  [optional]
 **addressLastLine** | **String** |  |  [optional]

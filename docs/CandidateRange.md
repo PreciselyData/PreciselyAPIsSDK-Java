@@ -1,7 +1,10 @@
 
+
 # CandidateRange
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **placeName** | **String** |  |  [optional]
@@ -13,8 +16,9 @@ Name | Type | Description | Notes
 **customValues** | **Map&lt;String, Object&gt;** |  |  [optional]
 
 
-<a name="SideEnum"></a>
+
 ## Enum: SideEnum
+
 Name | Value
 ---- | -----
 UNKNOWN | &quot;UNKNOWN&quot;
@@ -23,8 +27,9 @@ RIGHT | &quot;RIGHT&quot;
 BOTH | &quot;BOTH&quot;
 
 
-<a name="OddEvenIndicatorEnum"></a>
+
 ## Enum: OddEvenIndicatorEnum
+
 Name | Value
 ---- | -----
 UNKNOWN | &quot;UNKNOWN&quot;

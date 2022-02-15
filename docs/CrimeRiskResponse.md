@@ -1,12 +1,16 @@
 
+
 # CrimeRiskResponse
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**themes** | [**List&lt;GeoRiskCrimeTheme&gt;**](GeoRiskCrimeTheme.md) |  |  [optional]
-**boundaries** | [**GeoRiskBoundaries**](GeoRiskBoundaries.md) |  |  [optional]
-**matchedAddress** | [**MatchedAddress**](MatchedAddress.md) |  |  [optional]
+**objectId** | **String** |  |  [optional]
+**themes** | [**List&lt;RisksCrimeTheme&gt;**](RisksCrimeTheme.md) |  |  [optional]
+**boundaries** | [**RisksBoundaries**](RisksBoundaries.md) |  |  [optional]
+**matchedAddress** | [**RiskAddress**](RiskAddress.md) |  |  [optional]
 
 
 

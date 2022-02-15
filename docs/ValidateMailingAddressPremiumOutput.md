@@ -1,10 +1,13 @@
 
+
 # ValidateMailingAddressPremiumOutput
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**userFields** | [**List&lt;ValidateMailingAddressInputRowUserFields&gt;**](ValidateMailingAddressInputRowUserFields.md) | These fields are returned, unmodified, in the user_fields section of the response. |  [optional]
+**userFields** | [**List&lt;GetPostalCodesAPIOutputUserFields&gt;**](GetPostalCodesAPIOutputUserFields.md) | These fields are returned, unmodified, in the user_fields section of the response. |  [optional]
 **status** | **String** | Reports the success or failure of the match attempt. |  [optional]
 **statusCode** | **String** | Reason for failure, if there is one. |  [optional]
 **statusDescription** | **String** | Description of the problem, if there is one. |  [optional]
@@ -37,7 +40,7 @@ Name | Type | Description | Notes
 **apartmentLabel2** | **String** | Secondary apartment designator. |  [optional]
 **apartmentNumber2** | **String** | Secondary apartment number. |  [optional]
 **RRHC** | **String** | Rural Route/Highway Contract indicator. |  [optional]
-**pOBox** | **String** | Post office box number. |  [optional]
+**poBox** | **String** | Post office box number. |  [optional]
 **privateMailbox** | **String** | Private mailbox indicator. |  [optional]
 **privateMailboxType** | **String** | The type of private mailbox. |  [optional]
 **houseNumberInput** | **String** | House number. |  [optional]
@@ -47,8 +50,8 @@ Name | Type | Description | Notes
 **trailingDirectionalInput** | **String** | Trailing directional. |  [optional]
 **apartmentLabelInput** | **String** | Apartment designator (such as STE or APT). |  [optional]
 **apartmentNumberInput** | **String** | Apartment number. |  [optional]
-**rRHCInput** | **String** | Rural Route/Highway Contract indicator. |  [optional]
-**pOBoxInput** | **String** | Post office box number. |  [optional]
+**rrHCInput** | **String** | Rural Route/Highway Contract indicator. |  [optional]
+**poBoxInput** | **String** | Post office box number. |  [optional]
 **privateMailboxInput** | **String** | Private mailbox indicator. |  [optional]
 **privateMailboxTypeInput** | **String** | The type of private mailbox. |  [optional]
 **cityInput** | **String** | Validated city name. |  [optional]
@@ -67,9 +70,9 @@ Name | Type | Description | Notes
 **apartmentNumberResult** | **String** | The field-level result indicator for ApartmentNumber. |  [optional]
 **apartmentLabel2Result** | **String** | The field-level result indicator for ApartmentLabel2. |  [optional]
 **apartmentNumber2Result** | **String** | The field-level result indicator for ApartmentNumber2. |  [optional]
-**rRHCResult** | **String** | The field-level result indicator for RRHC. |  [optional]
-**rRHCType** | **String** | The field-level result indicator for RRHC Type. |  [optional]
-**pOBoxResult** | **String** | The field-level result indicator for POBox. |  [optional]
+**rrHCResult** | **String** | The field-level result indicator for RRHC. |  [optional]
+**rrHCType** | **String** | The field-level result indicator for RRHC Type. |  [optional]
+**poBoxResult** | **String** | The field-level result indicator for POBox. |  [optional]
 **cityResult** | **String** | The field-level result indicator for City. |  [optional]
 **stateProvinceResult** | **String** | The field-level result indicator for StateProvince. |  [optional]
 **postalCodeResult** | **String** | The field-level result indicator for PostalCode. |  [optional]

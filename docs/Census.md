@@ -1,7 +1,10 @@
 
+
 # Census
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cbsa** | [**Cbsa**](Cbsa.md) |  |  [optional]

@@ -1,7 +1,10 @@
 
+
 # BoundaryBuffer
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bufferRelation** | [**BufferRelation**](BufferRelation.md) |  |  [optional]

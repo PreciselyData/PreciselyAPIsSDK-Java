@@ -1,7 +1,10 @@
 
+
 # SchoolDistrict
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ncesDistrictId** | **String** |  |  [optional]

@@ -1,15 +1,18 @@
 
+
 # PoiBoundary
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **objectId** | **String** |  |  [optional]
-**center** | [**GeoZoneGeometry**](GeoZoneGeometry.md) |  |  [optional]
+**center** | [**Center**](Center.md) |  |  [optional]
 **countyfips** | **String** |  |  [optional]
-**geometry** | [**CommonGeometry**](CommonGeometry.md) |  |  [optional]
-**poiList** | [**List&lt;Poi&gt;**](Poi.md) |  |  [optional]
-**matchedAddress** | [**MatchedAddress**](MatchedAddress.md) |  |  [optional]
+**geometry** | [**ZonesPoiGeometry**](ZonesPoiGeometry.md) |  |  [optional]
+**poiList** | [**List&lt;ZonesPoi&gt;**](ZonesPoi.md) |  |  [optional]
+**matchedAddress** | [**ZonesAddress**](ZonesAddress.md) |  |  [optional]
 **id** | **String** |  |  [optional]
 
 

@@ -1,7 +1,10 @@
 
+
 # DemographicsThemesV2
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **boundaryId** | **String** |  |  [optional]
@@ -9,7 +12,7 @@ Name | Type | Description | Notes
 **raceAndEthnicityTheme** | [**RaceAndEthnicityTheme**](RaceAndEthnicityTheme.md) |  |  [optional]
 **healthTheme** | [**HealthTheme**](HealthTheme.md) |  |  [optional]
 **educationTheme** | [**EducationTheme**](EducationTheme.md) |  |  [optional]
-**incomeTheme** | [**IncomeThemeV2**](IncomeThemeV2.md) |  |  [optional]
+**incomeTheme** | [**IncomeTheme**](IncomeTheme.md) |  |  [optional]
 **assetsAndWealthTheme** | [**AssetsAndWealthTheme**](AssetsAndWealthTheme.md) |  |  [optional]
 **householdsTheme** | [**HouseholdsTheme**](HouseholdsTheme.md) |  |  [optional]
 **housingTheme** | [**HousingTheme**](HousingTheme.md) |  |  [optional]

@@ -1,10 +1,13 @@
 
+
 # TravelBoundary
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**costs** | [**Costs**](Costs.md) |  |  [optional]
+**costs** | [**List&lt;Cost&gt;**](Cost.md) |  |  [optional]
 
 
 

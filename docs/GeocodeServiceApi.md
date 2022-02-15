@@ -4,67 +4,67 @@ All URIs are relative to *https://api.precisely.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**geocode**](GeocodeServiceApi.md#geocode) | **GET** /geocode/v1/{datapackBundle}/geocode | Get Forward Geocode
+[**geocode**](GeocodeServiceApi.md#geocode) | **GET** /geocode/v1/{datapackBundle}/geocode | Get Forward Geocode(Basic/Premium/Advanced)
 [**geocodeBatch**](GeocodeServiceApi.md#geocodeBatch) | **POST** /geocode/v1/{datapackBundle}/geocode | Post Forward Geocode
-[**getCapabilities**](GeocodeServiceApi.md#getCapabilities) | **GET** /geocode/v1/{datapackBundle}/capabilities | Get Capabilities
-[**getDictionaries**](GeocodeServiceApi.md#getDictionaries) | **GET** /geocode/v1/{datapackBundle}/dictionaries | Get installed Dictionaries
-[**getPreciselyID**](GeocodeServiceApi.md#getPreciselyID) | **GET** /geocode/v1/key/byaddress | Get PreciselyID By Address
-[**getPreciselyIDs**](GeocodeServiceApi.md#getPreciselyIDs) | **POST** /geocode/v1/key/byaddress | Post PreciselyID By Address
+[**getPBKey**](GeocodeServiceApi.md#getPBKey) | **GET** /geocode/v1/key/byaddress | Get PreciselyID By Address
+[**getPBKeys**](GeocodeServiceApi.md#getPBKeys) | **POST** /geocode/v1/key/byaddress | Post PreciselyID By Address
 [**keyLookup**](GeocodeServiceApi.md#keyLookup) | **GET** /geocode/v1/keylookup | Get Key Lookup
 [**keyLookupBatch**](GeocodeServiceApi.md#keyLookupBatch) | **POST** /geocode/v1/keylookup | Post Key Lookup
 [**reverseGeocodBatch**](GeocodeServiceApi.md#reverseGeocodBatch) | **POST** /geocode/v1/{datapackBundle}/reverseGeocode | Post Reverse Geocode
-[**reverseGeocode**](GeocodeServiceApi.md#reverseGeocode) | **GET** /geocode/v1/{datapackBundle}/reverseGeocode | Get Reverse Geocode
+[**reverseGeocode**](GeocodeServiceApi.md#reverseGeocode) | **GET** /geocode/v1/{datapackBundle}/reverseGeocode | Get Reverse Geocode(Basic/Premium/Advanced)
 
 
 <a name="geocode"></a>
 # **geocode**
-> GeocodeServiceResponse geocode(datapackBundle, country, placeName, mainAddress, lastLine, areaName1, areaName2, areaName3, areaName4, postalCode, matchMode, fallbackGeo, fallbackPostal, maxCands, streetOffset, streetOffsetUnits, cornerOffset, cornerOffsetUnits)
+> GeocodeServiceResponse geocode(datapackBundle, country, mainAddress, matchMode, fallbackGeo, fallbackPostal, maxCands, streetOffset, streetOffsetUnits, cornerOffset, cornerOffsetUnits, removeAccentMarks)
 
-Get Forward Geocode
+Get Forward Geocode(Basic/Premium/Advanced)
 
-This service accepts an address and returns the location coordinates corresponding to that address. Premium offers the best accuracy and is a high precision geocoder leveraging Master Location Data - geocodes to Street or building level.
+This service accepts an address and returns the location coordinates corresponding to that address. Premium offers the best accuracy and is a high precision geocoder leveraging Master Location Data - geocodes to Street or building level. Advanced offers advanced accuracy and geocodes to Street level.Basic offering will geocode to a Place or Postal level. Good accuracy.
 
 ### Example
 ```java
 // Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.GeocodeServiceApi;
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.GeocodeServiceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
 
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-GeocodeServiceApi apiInstance = new GeocodeServiceApi();
-String datapackBundle = "datapackBundle_example"; // String | value of datapackBundle
-String country = "USA"; // String | Country name or ISO code.
-String placeName = "placeName_example"; // String | Building name, place name, Point of Interest (POI), company or firm name associated with the input address.
-String mainAddress = "4750 Walnut St., Boulder CO, 80301"; // String | Single line input, treated as collection of field elements.
-String lastLine = "lastLine_example"; // String | The last line of the address.
-String areaName1 = "areaName1_example"; // String | Specifies the largest geographical area, typically a state or province.
-String areaName2 = "areaName2_example"; // String | Specifies the secondary geographic area, typically a county or district.
-String areaName3 = "areaName3_example"; // String | Specifies a city or town name.
-String areaName4 = "areaName4_example"; // String | Specifies a city subdivision or locality.
-Integer postalCode = 56; // Integer | The postal code in the appropriate format for the country.
-String matchMode = "Standard"; // String | Match modes determine the leniency used to make a match between the input address and the reference data.
-Boolean fallbackGeo = true; // Boolean | Specifies whether to attempt to determine a geographic region centroid when an address-level geocode cannot be determined.
-Boolean fallbackPostal = true; // Boolean | Specifies whether to attempt to determine a post code centroid when an address-level geocode cannot be determined.
-Integer maxCands = 1; // Integer | The maximum number of candidates to return.
-Integer streetOffset = 7; // Integer | Indicates the offset distance from the street segments to use in street-level geocoding.
-String streetOffsetUnits = "METERS"; // String | Specifies the unit of measurement for the street offset.
-Integer cornerOffset = 7; // Integer | Specifies the distance to offset the street end points in street-level matching.
-String cornerOffsetUnits = "METERS"; // String | Specifies the unit of measurement for the corner offset.
-try {
-    GeocodeServiceResponse result = apiInstance.geocode(datapackBundle, country, placeName, mainAddress, lastLine, areaName1, areaName2, areaName3, areaName4, postalCode, matchMode, fallbackGeo, fallbackPostal, maxCands, streetOffset, streetOffsetUnits, cornerOffset, cornerOffsetUnits);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling GeocodeServiceApi#geocode");
-    e.printStackTrace();
+    GeocodeServiceApi apiInstance = new GeocodeServiceApi(defaultClient);
+    String datapackBundle = "premium"; // String | datapackBundle
+    String country = "USA"; // String | Country name or ISO code.
+    String mainAddress = "4750 Walnut St., Boulder CO, 80301"; // String | Single line input, treated as collection of field elements.
+    String matchMode = "Exact"; // String | Match modes determine the leniency used to make a match between the input address and the reference data.
+    String fallbackGeo = "true"; // String | Specifies whether to attempt to determine a geographic region centroid when an address-level geocode cannot be determined.
+    String fallbackPostal = "true"; // String | Specifies whether to attempt to determine a post code centroid when an address-level geocode cannot be determined.
+    String maxCands = "1"; // String | The maximum number of candidates to return.
+    String streetOffset = "7"; // String | Indicates the offset distance from the street segments to use in street-level geocoding.
+    String streetOffsetUnits = "METERS"; // String | Specifies the unit of measurement for the street offset.
+    String cornerOffset = "7"; // String | Specifies the distance to offset the street end points in street-level matching.
+    String cornerOffsetUnits = "METERS"; // String | Specifies the unit of measurement for the corner offset.
+    String removeAccentMarks = "false"; // String | Specifies whether to Suppress accents and other diacritical marks.
+    try {
+      GeocodeServiceResponse result = apiInstance.geocode(datapackBundle, country, mainAddress, matchMode, fallbackGeo, fallbackPostal, maxCands, streetOffset, streetOffsetUnits, cornerOffset, cornerOffsetUnits, removeAccentMarks);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GeocodeServiceApi#geocode");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -72,24 +72,18 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datapackBundle** | **String**| value of datapackBundle | [enum: basic, premium, advanced]
+ **datapackBundle** | **String**| datapackBundle | [enum: premium, basic, advanced]
  **country** | **String**| Country name or ISO code. | [optional] [default to USA]
- **placeName** | **String**| Building name, place name, Point of Interest (POI), company or firm name associated with the input address. | [optional]
  **mainAddress** | **String**| Single line input, treated as collection of field elements. | [optional] [default to 4750 Walnut St., Boulder CO, 80301]
- **lastLine** | **String**| The last line of the address. | [optional]
- **areaName1** | **String**| Specifies the largest geographical area, typically a state or province. | [optional]
- **areaName2** | **String**| Specifies the secondary geographic area, typically a county or district. | [optional]
- **areaName3** | **String**| Specifies a city or town name. | [optional]
- **areaName4** | **String**| Specifies a city subdivision or locality. | [optional]
- **postalCode** | **Integer**| The postal code in the appropriate format for the country. | [optional]
- **matchMode** | **String**| Match modes determine the leniency used to make a match between the input address and the reference data. | [optional] [default to Standard] [enum: Exact, Standard, Relaxed, Custom, Interactive, CASS]
- **fallbackGeo** | **Boolean**| Specifies whether to attempt to determine a geographic region centroid when an address-level geocode cannot be determined. | [optional] [default to true]
- **fallbackPostal** | **Boolean**| Specifies whether to attempt to determine a post code centroid when an address-level geocode cannot be determined. | [optional] [default to true]
- **maxCands** | **Integer**| The maximum number of candidates to return. | [optional] [default to 1]
- **streetOffset** | **Integer**| Indicates the offset distance from the street segments to use in street-level geocoding. | [optional] [default to 7]
+ **matchMode** | **String**| Match modes determine the leniency used to make a match between the input address and the reference data. | [optional] [default to Standard] [enum: Exact, Standard, Relaxed, Custom, Interactive(USA Only), CASS(USA Only)]
+ **fallbackGeo** | **String**| Specifies whether to attempt to determine a geographic region centroid when an address-level geocode cannot be determined. | [optional] [default to true]
+ **fallbackPostal** | **String**| Specifies whether to attempt to determine a post code centroid when an address-level geocode cannot be determined. | [optional] [default to true]
+ **maxCands** | **String**| The maximum number of candidates to return. | [optional] [default to 1]
+ **streetOffset** | **String**| Indicates the offset distance from the street segments to use in street-level geocoding. | [optional] [default to 7]
  **streetOffsetUnits** | **String**| Specifies the unit of measurement for the street offset. | [optional] [default to METERS] [enum: METERS, FEET]
- **cornerOffset** | **Integer**| Specifies the distance to offset the street end points in street-level matching. | [optional] [default to 7]
+ **cornerOffset** | **String**| Specifies the distance to offset the street end points in street-level matching. | [optional] [default to 7]
  **cornerOffsetUnits** | **String**| Specifies the unit of measurement for the corner offset. | [optional] [default to METERS] [enum: METERS, FEET]
+ **removeAccentMarks** | **String**| Specifies whether to Suppress accents and other diacritical marks. | [optional] [default to false]
 
 ### Return type
 
@@ -101,42 +95,57 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
 
 <a name="geocodeBatch"></a>
 # **geocodeBatch**
-> GeocodeServiceResponseList geocodeBatch(body, datapackBundle)
+> GeocodeServiceResponseList geocodeBatch(datapackBundle, geocodeRequest)
 
 Post Forward Geocode
 
-This is a Batch offering for geocode service. It accepts a single address or a list of addresses and returns location coordinates.
+This is a Batch offering for geocode service. It accepts a single address or a list of addresses and returns location coordinates
 
 ### Example
 ```java
 // Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.GeocodeServiceApi;
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.GeocodeServiceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
 
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-GeocodeServiceApi apiInstance = new GeocodeServiceApi();
-GeocodeRequest body = new GeocodeRequest(); // GeocodeRequest | Geocode Request Object
-String datapackBundle = "datapackBundle_example"; // String | value of datapackBundle
-try {
-    GeocodeServiceResponseList result = apiInstance.geocodeBatch(body, datapackBundle);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling GeocodeServiceApi#geocodeBatch");
-    e.printStackTrace();
+    GeocodeServiceApi apiInstance = new GeocodeServiceApi(defaultClient);
+    String datapackBundle = "datapackBundle_example"; // String | 
+    GeocodeRequest geocodeRequest = new GeocodeRequest(); // GeocodeRequest | 
+    try {
+      GeocodeServiceResponseList result = apiInstance.geocodeBatch(datapackBundle, geocodeRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GeocodeServiceApi#geocodeBatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -144,8 +153,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**GeocodeRequest**](GeocodeRequest.md)| Geocode Request Object |
- **datapackBundle** | **String**| value of datapackBundle | [enum: basic, premium, advanced]
+ **datapackBundle** | **String**|  |
+ **geocodeRequest** | [**GeocodeRequest**](GeocodeRequest.md)|  |
 
 ### Return type
 
@@ -157,156 +166,57 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json, application/xml
 
-<a name="getCapabilities"></a>
-# **getCapabilities**
-> GeocodeCapabilitiesResponse getCapabilities(datapackBundle, operation, country)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
 
-Get Capabilities
-
-Get Capabilities  of Geocode API
-
-### Example
-```java
-// Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.GeocodeServiceApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-GeocodeServiceApi apiInstance = new GeocodeServiceApi();
-String datapackBundle = "datapackBundle_example"; // String | value of datapackBundle
-String operation = "geocode"; // String | Geocode or ReverseGeocode Operation.
-String country = "USA"; // String | Country name or ISO code.
-try {
-    GeocodeCapabilitiesResponse result = apiInstance.getCapabilities(datapackBundle, operation, country);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling GeocodeServiceApi#getCapabilities");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **datapackBundle** | **String**| value of datapackBundle | [enum: basic, premium, advanced]
- **operation** | **String**| Geocode or ReverseGeocode Operation. | [optional] [default to geocode] [enum: geocode, reverseGeocode]
- **country** | **String**| Country name or ISO code. | [optional] [default to USA]
-
-### Return type
-
-[**GeocodeCapabilitiesResponse**](GeocodeCapabilitiesResponse.md)
-
-### Authorization
-
-[oAuth2Password](../README.md#oAuth2Password)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
-
-<a name="getDictionaries"></a>
-# **getDictionaries**
-> ConfiguredDictionaryResponse getDictionaries(datapackBundle, country)
-
-Get installed Dictionaries
-
-Get installed Dictionaries
-
-### Example
-```java
-// Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.GeocodeServiceApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-GeocodeServiceApi apiInstance = new GeocodeServiceApi();
-String datapackBundle = "datapackBundle_example"; // String | value of datapackBundle
-String country = "USA"; // String | Three Letter ISO Country code
-try {
-    ConfiguredDictionaryResponse result = apiInstance.getDictionaries(datapackBundle, country);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling GeocodeServiceApi#getDictionaries");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **datapackBundle** | **String**| value of datapackBundle | [enum: basic, premium, advanced]
- **country** | **String**| Three Letter ISO Country code | [optional] [default to USA]
-
-### Return type
-
-[**ConfiguredDictionaryResponse**](ConfiguredDictionaryResponse.md)
-
-### Authorization
-
-[oAuth2Password](../README.md#oAuth2Password)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
-
-<a name="getPreciselyID"></a>
-# **getPreciselyID**
-> PBKeyResponse getPreciselyID(address, country)
+<a name="getPBKey"></a>
+# **getPBKey**
+> PBKeyResponse getPBKey(address, country)
 
 Get PreciselyID By Address
 
-This service accepts an address and returns the corresponding PreciselyID.
+This service accepts an address and returns the corresponding PreciselyID
 
 ### Example
 ```java
 // Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.GeocodeServiceApi;
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.GeocodeServiceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
 
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-GeocodeServiceApi apiInstance = new GeocodeServiceApi();
-String address = "address_example"; // String | free form address text
-String country = "country_example"; // String | Country ISO code.
-try {
-    PBKeyResponse result = apiInstance.getPreciselyID(address, country);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling GeocodeServiceApi#getPreciselyID");
-    e.printStackTrace();
+    GeocodeServiceApi apiInstance = new GeocodeServiceApi(defaultClient);
+    String address = "address_example"; // String | The address to be searched.
+    String country = "country_example"; // String | 3 letter ISO code of the country to be searched.
+    try {
+      PBKeyResponse result = apiInstance.getPBKey(address, country);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GeocodeServiceApi#getPBKey");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -314,8 +224,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | **String**| free form address text |
- **country** | **String**| Country ISO code. | [optional]
+ **address** | **String**| The address to be searched. |
+ **country** | **String**| 3 letter ISO code of the country to be searched. | [optional]
 
 ### Return type
 
@@ -327,12 +237,19 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/xml
 
-<a name="getPreciselyIDs"></a>
-# **getPreciselyIDs**
-> PBKeyResponseList getPreciselyIDs(body)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
+
+<a name="getPBKeys"></a>
+# **getPBKeys**
+> PBKeyResponseList getPBKeys(pbKeyAddressRequest)
 
 Post PreciselyID By Address
 
@@ -341,27 +258,35 @@ This is a Batch offering for &#39;PreciselyID By Address&#39; service. It accept
 ### Example
 ```java
 // Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.GeocodeServiceApi;
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.GeocodeServiceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
 
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-GeocodeServiceApi apiInstance = new GeocodeServiceApi();
-PBKeyAddressRequest body = new PBKeyAddressRequest(); // PBKeyAddressRequest | 
-try {
-    PBKeyResponseList result = apiInstance.getPreciselyIDs(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling GeocodeServiceApi#getPreciselyIDs");
-    e.printStackTrace();
+    GeocodeServiceApi apiInstance = new GeocodeServiceApi(defaultClient);
+    PBKeyAddressRequest pbKeyAddressRequest = new PBKeyAddressRequest(); // PBKeyAddressRequest | 
+    try {
+      PBKeyResponseList result = apiInstance.getPBKeys(pbKeyAddressRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GeocodeServiceApi#getPBKeys");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -369,7 +294,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PBKeyAddressRequest**](PBKeyAddressRequest.md)|  |
+ **pbKeyAddressRequest** | [**PBKeyAddressRequest**](PBKeyAddressRequest.md)|  |
 
 ### Return type
 
@@ -381,8 +306,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json, application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
 
 <a name="keyLookup"></a>
 # **keyLookup**
@@ -395,29 +327,37 @@ This service accepts a PreciselyID and returns the corresponding address associa
 ### Example
 ```java
 // Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.GeocodeServiceApi;
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.GeocodeServiceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
 
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-GeocodeServiceApi apiInstance = new GeocodeServiceApi();
-String key = "key_example"; // String | free form text
-String type = "type_example"; // String | 
-String country = "country_example"; // String | 
-try {
-    GeocodeServiceResponse result = apiInstance.keyLookup(key, type, country);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling GeocodeServiceApi#keyLookup");
-    e.printStackTrace();
+    GeocodeServiceApi apiInstance = new GeocodeServiceApi(defaultClient);
+    String key = "key_example"; // String | PreciselyID which maps to a unique address.
+    String type = "type_example"; // String | Specifies the key type - PreciselyID and GNAF_PID for Aus.
+    String country = "country_example"; // String | 3 letter ISO code of the country to be searched.
+    try {
+      GeocodeServiceResponse result = apiInstance.keyLookup(key, type, country);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GeocodeServiceApi#keyLookup");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -425,9 +365,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **String**| free form text |
- **type** | **String**|  | [optional]
- **country** | **String**|  | [optional]
+ **key** | **String**| PreciselyID which maps to a unique address. |
+ **type** | **String**| Specifies the key type - PreciselyID and GNAF_PID for Aus. |
+ **country** | **String**| 3 letter ISO code of the country to be searched. | [optional]
 
 ### Return type
 
@@ -439,12 +379,19 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml
+ - **Content-Type**: Not defined
  - **Accept**: application/json, application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
 
 <a name="keyLookupBatch"></a>
 # **keyLookupBatch**
-> GeocodeServiceResponseList keyLookupBatch(body)
+> GeocodeServiceResponseList keyLookupBatch(keyLookupRequest)
 
 Post Key Lookup
 
@@ -453,27 +400,35 @@ This service accepts batches of PreciselyID&#39;s and returns the corresponding 
 ### Example
 ```java
 // Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.GeocodeServiceApi;
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.GeocodeServiceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
 
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-GeocodeServiceApi apiInstance = new GeocodeServiceApi();
-KeyLookupRequest body = new KeyLookupRequest(); // KeyLookupRequest | 
-try {
-    GeocodeServiceResponseList result = apiInstance.keyLookupBatch(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling GeocodeServiceApi#keyLookupBatch");
-    e.printStackTrace();
+    GeocodeServiceApi apiInstance = new GeocodeServiceApi(defaultClient);
+    KeyLookupRequest keyLookupRequest = new KeyLookupRequest(); // KeyLookupRequest | 
+    try {
+      GeocodeServiceResponseList result = apiInstance.keyLookupBatch(keyLookupRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GeocodeServiceApi#keyLookupBatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -481,7 +436,78 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**KeyLookupRequest**](KeyLookupRequest.md)|  | [optional]
+ **keyLookupRequest** | [**KeyLookupRequest**](KeyLookupRequest.md)|  |
+
+### Return type
+
+[**GeocodeServiceResponseList**](GeocodeServiceResponseList.md)
+
+### Authorization
+
+[oAuth2Password](../README.md#oAuth2Password)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
+
+<a name="reverseGeocodBatch"></a>
+# **reverseGeocodBatch**
+> GeocodeServiceResponseList reverseGeocodBatch(datapackBundle, reverseGeocodeRequest)
+
+Post Reverse Geocode
+
+This is a Batch offering for geocode service. It accepts a single address or a list of addresses and returns location coordinates
+
+### Example
+```java
+// Import classes:
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.GeocodeServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+
+    GeocodeServiceApi apiInstance = new GeocodeServiceApi(defaultClient);
+    String datapackBundle = "datapackBundle_example"; // String | 
+    ReverseGeocodeRequest reverseGeocodeRequest = new ReverseGeocodeRequest(); // ReverseGeocodeRequest | 
+    try {
+      GeocodeServiceResponseList result = apiInstance.reverseGeocodBatch(datapackBundle, reverseGeocodeRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GeocodeServiceApi#reverseGeocodBatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datapackBundle** | **String**|  |
+ **reverseGeocodeRequest** | [**ReverseGeocodeRequest**](ReverseGeocodeRequest.md)|  |
 
 ### Return type
 
@@ -496,100 +522,59 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
 
-<a name="reverseGeocodBatch"></a>
-# **reverseGeocodBatch**
-> GeocodeServiceResponseList reverseGeocodBatch(datapackBundle, body)
-
-Post Reverse Geocode
-
-It accepts a single location coordinate or a list of location coordinates and returns addresses.
-
-### Example
-```java
-// Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.GeocodeServiceApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-GeocodeServiceApi apiInstance = new GeocodeServiceApi();
-String datapackBundle = "datapackBundle_example"; // String | value of datapackBundle
-ReverseGeocodeRequest body = new ReverseGeocodeRequest(); // ReverseGeocodeRequest | Request for Reverse Geocode
-try {
-    GeocodeServiceResponseList result = apiInstance.reverseGeocodBatch(datapackBundle, body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling GeocodeServiceApi#reverseGeocodBatch");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **datapackBundle** | **String**| value of datapackBundle | [enum: basic, premium, advanced]
- **body** | [**ReverseGeocodeRequest**](ReverseGeocodeRequest.md)| Request for Reverse Geocode | [optional]
-
-### Return type
-
-[**GeocodeServiceResponseList**](GeocodeServiceResponseList.md)
-
-### Authorization
-
-[oAuth2Password](../README.md#oAuth2Password)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
 
 <a name="reverseGeocode"></a>
 # **reverseGeocode**
 > GeocodeServiceResponse reverseGeocode(datapackBundle, x, y, country, coordSysName, distance, distanceUnits)
 
-Get Reverse Geocode
+Get Reverse Geocode(Basic/Premium/Advanced)
 
 This service accepts location coordinate and returns an address.
 
 ### Example
 ```java
 // Import classes:
-//import com.precisely.ApiClient;
-//import com.precisely.ApiException;
-//import com.precisely.Configuration;
-//import com.precisely.auth.*;
-//import com.precisely.apis.GeocodeServiceApi;
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.GeocodeServiceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
 
-// Configure API_KEY and SECRET for authorization: oAuth2Password
- ApiClient defaultClient = Configuration.getDefaultApiClient();
- defaultClient.setoAuthApiKey("<YOUR API KEY>");
- defaultClient.setoAuthSecret("<YOUR SECRET>");
-
-GeocodeServiceApi apiInstance = new GeocodeServiceApi();
-String datapackBundle = "datapackBundle_example"; // String | value of datapackBundle
-BigDecimal x = new BigDecimal(); // BigDecimal | Longitude of the location.
-BigDecimal y = new BigDecimal(); // BigDecimal | Latitude of the location.
-String country = "country_example"; // String | Country name or ISO code.
-String coordSysName = "EPSG:4326"; // String | Coordinate system to convert geometry to in format codespace:code.
-Integer distance = 150; // Integer | Radius in which search is performed.
-String distanceUnits = "METERS"; // String | Unit of measurement.
-try {
-    GeocodeServiceResponse result = apiInstance.reverseGeocode(datapackBundle, x, y, country, coordSysName, distance, distanceUnits);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling GeocodeServiceApi#reverseGeocode");
-    e.printStackTrace();
+    GeocodeServiceApi apiInstance = new GeocodeServiceApi(defaultClient);
+    String datapackBundle = "premium"; // String | datapackBundle
+    String x = "-105.240976"; // String | Longitude of the location.
+    String y = "40.018301"; // String | Latitude of the location.
+    String country = "country_example"; // String | Country name or ISO code.
+    String coordSysName = "EPSG:4326"; // String | Coordinate system to convert geometry to in format codespace:code.
+    String distance = "Radius in which search is performed."; // String | Radius in which search is performed.
+    String distanceUnits = "METERS"; // String | Unit of measurement.
+    try {
+      GeocodeServiceResponse result = apiInstance.reverseGeocode(datapackBundle, x, y, country, coordSysName, distance, distanceUnits);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GeocodeServiceApi#reverseGeocode");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -597,12 +582,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datapackBundle** | **String**| value of datapackBundle | [enum: basic, premium, advanced]
- **x** | **BigDecimal**| Longitude of the location. | [default to -105.240976]
- **y** | **BigDecimal**| Latitude of the location. | [default to 40.018301]
+ **datapackBundle** | **String**| datapackBundle | [enum: premium, basic, advanced]
+ **x** | **String**| Longitude of the location. | [default to -105.240976]
+ **y** | **String**| Latitude of the location. | [default to 40.018301]
  **country** | **String**| Country name or ISO code. | [optional]
  **coordSysName** | **String**| Coordinate system to convert geometry to in format codespace:code. | [optional] [default to EPSG:4326]
- **distance** | **Integer**| Radius in which search is performed. | [optional] [default to 150]
+ **distance** | **String**| Radius in which search is performed. | [optional] [default to Radius in which search is performed.]
  **distanceUnits** | **String**| Unit of measurement. | [optional] [default to METERS] [enum: METERS, FEET]
 
 ### Return type
@@ -615,6 +600,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
 

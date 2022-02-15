@@ -1,10 +1,13 @@
 
+
 # ValidateEmailAddressOutput
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**userFields** | [**List&lt;ValidateMailingAddressInputRowUserFields&gt;**](ValidateMailingAddressInputRowUserFields.md) | These fields are returned, unmodified, in the user_fields section of the response. |  [optional]
+**userFields** | [**List&lt;GetPostalCodesAPIOutputUserFields&gt;**](GetPostalCodesAPIOutputUserFields.md) | These fields are returned, unmodified, in the user_fields section of the response. |  [optional]
 **EMAIL** | **String** | The email address submitted for verification. |  [optional]
 **FINDING** | **String** | One character code indicating the validity of the submitted email address. |  [optional]
 **COMMENT** | **String** | The comment string pertaining to the result of the submitted email address. |  [optional]
