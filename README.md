@@ -9,7 +9,7 @@
 
 * [Geocode](https://developer.precisely.com/apis/geocode): Accurate Geocoding. Convert individual or batch collections of addresses to latitude & longitude coordinates and vice versa. Useful for enhancing & enriching your customer addresses.
 
-* [Address Autocomplete](https://developer.precisely.com/apis/typeahead): Address Autocomplete. Build Address Autocomplete into your websites. The Address Autocomplete API returns an autocompleted list of addresses based on the input of a partial address. Useful for any local search, checkout, shipping, or billing experiences on your website. Increase e-commerce conversion by 3-6%!
+* [Typeahead](https://developer.precisely.com/apis/typeahead): Address Autocomplete. Build Address typeahead into your websites. The Typeahead API returns an autocompleted list of addresses based on the input of a partial address. Useful for any local search, checkout, shipping, or billing experiences on your website. Increase e-commerce conversion by 3-6%!
 
 * [Maps](https://developer.precisely.com/apis/maps): Beautiful Visualization. Add your data and/or Precisely data atop beautiful maps for visualizations. Choose from three map styles - Bronze, Iron, and Steel.
 
@@ -54,8 +54,7 @@ The following platforms are supported by Precisely SDKs:
 *	[NodeJS](https://developer.precisely.com/apis/docs/index.html#NodeJS/node.js_sdk.html) 
 *	[iOS](https://developer.precisely.com/apis/docs/index.html#iOS%20SDK/ios_intro.html)
 *	[Java](https://developer.precisely.com/apis/docs/index.html#Java%20SDK/java_intro.html)
-*	[C#](https://developer.precisely.com/apis/docs/index.html#C_sdk/java_intro.html)
-*   Python  
+*	[C#](https://developer.precisely.com/apis/docs/index.html#C_sdk/java_intro.html)  
 
 [Click here](https://developer.precisely.com/apis/docs/index.html ) for detailed Documentation on Precisely APIs 
 
@@ -90,7 +89,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.precisely.apis</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>11.9.3</version>
+    <version>11.9.2</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -100,7 +99,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
- implementation "com.precisely.apis:PreciselyAPISJavaSDK:11.9.3"
+ implementation "com.precisely.apis:PreciselyAPISJavaSDK:11.9.2"
 ```
 
 ### Others
@@ -111,7 +110,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-11.9.3.jar
+* target/PreciselyAPISJavaSDK-11.9.2.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -157,7 +156,6 @@ All URIs are relative to *https://api.precisely.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AddressAutocompleteServiceApi* | [**searchV2**](docs/AddressAutocompleteServiceApi.md#searchV2) | **GET** /typeahead/v1/locations | Address Autocomplete Search
 *AddressVerificationServiceApi* | [**getCityStateProvince**](docs/AddressVerificationServiceApi.md#getCityStateProvince) | **POST** /addressverification/v1/getcitystateprovince/results.json | GetCityStateProvince
 *AddressVerificationServiceApi* | [**getPostalCodes**](docs/AddressVerificationServiceApi.md#getPostalCodes) | **POST** /addressverification/v1/getpostalcodes/results.json | GetPostalCodes
 *AddressVerificationServiceApi* | [**validateMailingAddress**](docs/AddressVerificationServiceApi.md#validateMailingAddress) | **POST** /addressverification/v1/validatemailingaddress/results.json | ValidateMailingAddress
@@ -253,6 +251,7 @@ Class | Method | HTTP request | Description
 *TimeZoneServiceApi* | [**getTimezoneByAddress**](docs/TimeZoneServiceApi.md#getTimezoneByAddress) | **GET** /timezone/v1/timezone/byaddress | Timezone By Address.
 *TimeZoneServiceApi* | [**getTimezoneByAddressBatch**](docs/TimeZoneServiceApi.md#getTimezoneByAddressBatch) | **POST** /timezone/v1/timezone/byaddress | Timezone Batch by Address.
 *TimeZoneServiceApi* | [**getTimezoneByLocation**](docs/TimeZoneServiceApi.md#getTimezoneByLocation) | **GET** /timezone/v1/timezone/bylocation | Timezone By Location.
+*TypeaheadServiceApi* | [**searchV2**](docs/TypeaheadServiceApi.md#searchV2) | **GET** /typeahead/v1/locations | Typeahead Search
 *ZonesServiceApi* | [**getBasicBoundaryByAddress**](docs/ZonesServiceApi.md#getBasicBoundaryByAddress) | **GET** /zones/v1/basicboundary/byaddress | Gets Basic Boundary by Address.
 *ZonesServiceApi* | [**getBasicBoundaryByLocation**](docs/ZonesServiceApi.md#getBasicBoundaryByLocation) | **GET** /zones/v1/basicboundary/bylocation | Gets Basic Boundary by Location.
 *ZonesServiceApi* | [**getPOIBoundaryByAddress**](docs/ZonesServiceApi.md#getPOIBoundaryByAddress) | **GET** /zones/v1/poiboundary/byaddress | Gets Point of Interests Boundary by Address.
@@ -623,5 +622,6 @@ Authentication schemes defined for the API:
 It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
 
 ## Author
+
 
 

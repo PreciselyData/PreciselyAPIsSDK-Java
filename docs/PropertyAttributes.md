@@ -1,0 +1,67 @@
+
+
+# PropertyAttributes
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**pbKey** | **String** |  |  [optional]
+**propApn** | **String** |  |  [optional]
+**propType** | **String** |  |  [optional]
+**propSqFt** | **String** |  |  [optional]
+**buildgSqFt** | **String** |  |  [optional]
+**buildgSqFtSource** | [**BuildingSqftSource**](BuildingSqftSource.md) |  |  [optional]
+**landUse** | [**LandUse**](LandUse.md) |  |  [optional]
+**construction** | [**Construction**](Construction.md) |  |  [optional]
+**roofCoverType** | [**RoofCoverType**](RoofCoverType.md) |  |  [optional]
+**subdivision** | **String** |  |  [optional]
+**geometry** | [**PropertyGeometry**](PropertyGeometry.md) |  |  [optional]
+**builtYear** | **String** |  |  [optional]
+**bedrooms** | **String** |  |  [optional]
+**baths** | **String** |  |  [optional]
+**pool** | **String** |  |  [optional]
+**fireplace** | **String** |  |  [optional]
+**mobileHome** | **String** |  |  [optional]
+**heatingType** | [**HeatingType**](HeatingType.md) |  |  [optional]
+**coolingType** | [**CoolingType**](CoolingType.md) |  |  [optional]
+**assessedValue** | **String** |  |  [optional]
+**marketValue** | **String** |  |  [optional]
+**appraisedValue** | **String** |  |  [optional]
+**taxAmount** | **String** |  |  [optional]
+**taxExemptions** | [**List&lt;TaxExemption&gt;**](TaxExemption.md) |  |  [optional]
+**caExemptions** | [**CaExemptions**](CaExemptions.md) |  |  [optional]
+**salesDate** | **String** |  |  [optional]
+**priorSaleDate** | **String** |  |  [optional]
+**priorSalesPrice** | **String** |  |  [optional]
+**stories** | [**Stories**](Stories.md) |  |  [optional]
+**livingSqFt** | **String** |  |  [optional]
+**roofFrameType** | [**RoofFrameType**](RoofFrameType.md) |  |  [optional]
+**foundation** | [**Foundation**](Foundation.md) |  |  [optional]
+**buildgCondition** | [**BuildgCondition**](BuildgCondition.md) |  |  [optional]
+**buildgCount** | **String** |  |  [optional]
+**buildgUnitNo** | **String** |  |  [optional]
+**buildgFeaturesSqFt** | [**List&lt;BuildgFeaturesSqft&gt;**](BuildgFeaturesSqft.md) |  |  [optional]
+**businessName** | **String** |  |  [optional]
+**taxAddress** | **String** |  |  [optional]
+**vacancy** | [**Vacancy**](Vacancy.md) |  |  [optional]
+**owners** | [**List&lt;Owners&gt;**](Owners.md) |  |  [optional]
+**appraisedValueImp** | **String** |  |  [optional]
+**assessedValueImp** | **String** |  |  [optional]
+**buildgType** | [**BuildgType**](BuildgType.md) |  |  [optional]
+**basementType** | [**BasementType**](BasementType.md) |  |  [optional]
+**effectiveBuiltYear** | **String** |  |  [optional]
+**exteriorWalls** | [**ExteriorWalls**](ExteriorWalls.md) |  |  [optional]
+**garageType** | [**GarageType**](GarageType.md) |  |  [optional]
+**lastUpdated** | **String** |  |  [optional]
+**marketValueImp** | **String** |  |  [optional]
+**absenteeOwner** | [**AbsenteeOwner**](AbsenteeOwner.md) |  |  [optional]
+**parkingSqFt** | **String** |  |  [optional]
+**replacementCost** | **String** |  |  [optional]
+**roofShapeType** | [**RoofShapeType**](RoofShapeType.md) |  |  [optional]
+**buildgStyle** | [**BuildgStyle**](BuildgStyle.md) |  |  [optional]
+**basementSqFt** | **String** |  |  [optional]
+
+
+

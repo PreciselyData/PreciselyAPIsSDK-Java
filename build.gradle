@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
 
 group = 'com.precisely.apis'
-version = '11.9.3'
+version = '11.9.2'
 
 buildscript {
     repositories {
