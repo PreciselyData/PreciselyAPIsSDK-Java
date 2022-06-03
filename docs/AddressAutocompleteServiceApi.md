@@ -1,17 +1,17 @@
-# TypeaheadServiceApi
+# AddressAutocompleteServiceApi
 
 All URIs are relative to *https://api.precisely.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**searchV2**](TypeaheadServiceApi.md#searchV2) | **GET** /typeahead/v1/locations | Typeahead Search
+[**searchV2**](AddressAutocompleteServiceApi.md#searchV2) | **GET** /typeahead/v1/locations | Address Autocomplete Search
 
 
 <a name="searchV2"></a>
 # **searchV2**
 > TypeaheadLocations searchV2(searchText, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType, searchOnAddressNumber)
 
-Typeahead Search
+Address Autocomplete Search
 
 Performs search to retrieve list of places by input text and location vicinity.
 
@@ -23,7 +23,7 @@ import com.precisely.ApiException;
 import com.precisely.Configuration;
 import com.precisely.auth.*;
 import com.precisely.models.*;
-import com.precisely.apis.TypeaheadServiceApi;
+import com.precisely.apis.AddressAutocompleteServiceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -34,7 +34,7 @@ public class Example {
     OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
     oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
 
-    TypeaheadServiceApi apiInstance = new TypeaheadServiceApi(defaultClient);
+    AddressAutocompleteServiceApi apiInstance = new AddressAutocompleteServiceApi(defaultClient);
     String searchText = "searchText_example"; // String | The input to be searched.
     String latitude = "latitude_example"; // String | Latitude of the location. We need to make sure that either Lat/Lng or Country is provided to API
     String longitude = "longitude_example"; // String | Longitude of the location. We need to make sure that either Lat/Lng or Country is provided to API
@@ -56,7 +56,7 @@ public class Example {
       TypeaheadLocations result = apiInstance.searchV2(searchText, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType, searchOnAddressNumber);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TypeaheadServiceApi#searchV2");
+      System.err.println("Exception when calling AddressAutocompleteServiceApi#searchV2");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
