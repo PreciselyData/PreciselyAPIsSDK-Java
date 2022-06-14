@@ -57,7 +57,7 @@ The following platforms are supported by Precisely SDKs:
 *	[C#](https://docs.precisely.com/docs/sftw/precisely-apis/main/en-us/webhelp/apis/C_sdk/java_intro.html)
 *   Python  
 
-[Click here](https://developer.precisely.com/apis/docs/index.html ) for detailed Documentation on Precisely APIs 
+[Click here](https://docs.precisely.com/docs/sftw/precisely-apis/main/en-us/webhelp/apis/About%20Document/about_this_doc.html ) for detailed Documentation on Precisely APIs 
 
 
 # PreciselyAPISJavaSDK
