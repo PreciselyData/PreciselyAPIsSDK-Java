@@ -50,11 +50,11 @@
 * [Phone Verification](https://developer.precisely.com/apis/phoneverification): The Phone Verification API accepts any phone number as input and returns verification information, Service Provider name, and more. Useful to verify if phone numbers exist to reduce fraud and improve communications.
 
 The following platforms are supported by Precisely SDKs:
-*	[Android](https://developer.precisely.com/apis/docs/index.html#Android%20SDK/android_intro.html)
-*	[NodeJS](https://developer.precisely.com/apis/docs/index.html#NodeJS/node.js_sdk.html) 
-*	[iOS](https://developer.precisely.com/apis/docs/index.html#iOS%20SDK/ios_intro.html)
-*	[Java](https://developer.precisely.com/apis/docs/index.html#Java%20SDK/java_intro.html)
-*	[C#](https://developer.precisely.com/apis/docs/index.html#C_sdk/java_intro.html)
+*	[Android](https://docs.precisely.com/docs/sftw/precisely-apis/main/en-us/webhelp/apis/Android%20SDK/android_intro.html)
+*	[NodeJS](https://docs.precisely.com/docs/sftw/precisely-apis/main/en-us/webhelp/apis/NodeJS/node.js_sdk.html) 
+*	[iOS](https://docs.precisely.com/docs/sftw/precisely-apis/main/en-us/webhelp/apis/iOS%20SDK/ios_intro.html)
+*	[Java](https://docs.precisely.com/docs/sftw/precisely-apis/main/en-us/webhelp/apis/Java%20SDK/java_intro.html)
+*	[C#](https://docs.precisely.com/docs/sftw/precisely-apis/main/en-us/webhelp/apis/C_sdk/java_intro.html)
 *   Python  
 
 [Click here](https://developer.precisely.com/apis/docs/index.html ) for detailed Documentation on Precisely APIs 
@@ -90,7 +90,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.precisely.apis</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>11.9.3</version>
+    <version>11.9.3.1</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -100,7 +100,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
- implementation "com.precisely.apis:PreciselyAPISJavaSDK:11.9.3"
+ implementation "com.precisely.apis:PreciselyAPISJavaSDK:11.9.3.1"
 ```
 
 ### Others
@@ -111,7 +111,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-11.9.3.jar
+* target/PreciselyAPISJavaSDK-11.9.3.1.jar
 * target/lib/*.jar
 
 ## Getting Started
