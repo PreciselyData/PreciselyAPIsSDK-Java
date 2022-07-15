@@ -39,7 +39,7 @@
 
 * [Neighborhoods](https://developer.precisely.com/apis/neighborhoods): Neighborhood Insights. Integrate global neighborhood names and classification information into your applications and enrich other data. The Neighborhood API accepts latitude & longitude coordinates and returns the corresponding neighborhood name & type. Useful for a wide range of data enrichment use cases.
 
-* [Property Information](https://developer.precisely.com/apis/property): Property Insights. Integrate extensive residential & commercial property information into your applications. The Property Information API returns property parcel boundaries and key property attributes for millions of US properties with the input of Location Coordinates or Addresses. Useful for Real Estate use cases or those involving risk assessments.
+* [Property Information](https://developer.precisely.com/apis/property): Property Insights. Integrate extensive residential & commercial property information into your applications. The Property Information API returns key property attributes for millions of US properties with the input of Location Coordinates or Addresses. Useful for Real Estate use cases or those involving risk assessments.
 
 * [Address Verification](https://developer.precisely.com/apis/addressverification): Real, accurate and complete address. Eliminate errors in address data, improve customer experience. The Address Verification API makes communication easier, faster and effortless by enriching customer details, keeping it up-to-date and maintaining its accuracy and consistency. It eliminates redundancy in reaching out to customers and makes it easy for distinct functional areas to work seamlessly in improving customer relationship.
 
