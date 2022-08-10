@@ -55,7 +55,7 @@ The following platforms are supported by Precisely SDKs:
 *	[iOS](https://docs.precisely.com/docs/sftw/precisely-apis/main/en-us/webhelp/apis/iOS%20SDK/ios_intro.html)
 *	[Java](https://docs.precisely.com/docs/sftw/precisely-apis/main/en-us/webhelp/apis/Java%20SDK/java_intro.html)
 *	[C#](https://docs.precisely.com/docs/sftw/precisely-apis/main/en-us/webhelp/apis/C_sdk/java_intro.html)
-*   Python  
+*   [Python ](https://docs.precisely.com/docs/sftw/precisely-apis/main/en-us/webhelp/apis/Python%20SDK/PythonSdk.html)
 
 [Click here](https://docs.precisely.com/docs/sftw/precisely-apis/main/en-us/webhelp/apis/About%20Document/about_this_doc.html ) for detailed Documentation on Precisely APIs 
 
@@ -90,7 +90,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.precisely.apis</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>11.9.4</version>
+    <version>12.0.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -100,7 +100,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
- implementation "com.precisely.apis:PreciselyAPISJavaSDK:11.9.4"
+ implementation "com.precisely.apis:PreciselyAPISJavaSDK:12.0.0"
 ```
 
 ### Others
@@ -111,7 +111,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-11.9.4.jar
+* target/PreciselyAPISJavaSDK-12.0.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -277,6 +277,7 @@ Class | Method | HTTP request | Description
  - [AddressesDTO](docs/AddressesDTO.md)
  - [AddressesPreferences](docs/AddressesPreferences.md)
  - [AddressesResponse](docs/AddressesResponse.md)
+ - [Amenities](docs/Amenities.md)
  - [Area](docs/Area.md)
  - [AreaCodeInfo](docs/AreaCodeInfo.md)
  - [AssetsAndWealthTheme](docs/AssetsAndWealthTheme.md)
@@ -288,10 +289,15 @@ Class | Method | HTTP request | Description
  - [BoundaryBuffer](docs/BoundaryBuffer.md)
  - [BoundaryPoint](docs/BoundaryPoint.md)
  - [BufferRelation](docs/BufferRelation.md)
+ - [BuildgClass](docs/BuildgClass.md)
  - [BuildgCondition](docs/BuildgCondition.md)
  - [BuildgFeaturesSqft](docs/BuildgFeaturesSqft.md)
+ - [BuildgImprovArea](docs/BuildgImprovArea.md)
+ - [BuildgImproveType](docs/BuildgImproveType.md)
+ - [BuildgQuality](docs/BuildgQuality.md)
  - [BuildgStyle](docs/BuildgStyle.md)
  - [BuildgType](docs/BuildgType.md)
+ - [BuildgView](docs/BuildgView.md)
  - [BuildingSqftSource](docs/BuildingSqftSource.md)
  - [BusinessId](docs/BusinessId.md)
  - [CaExemptions](docs/CaExemptions.md)
@@ -351,11 +357,13 @@ Class | Method | HTTP request | Description
  - [EducationTheme](docs/EducationTheme.md)
  - [EmployeeCount](docs/EmployeeCount.md)
  - [EmploymentTheme](docs/EmploymentTheme.md)
+ - [EnergyType](docs/EnergyType.md)
  - [ErrorCode](docs/ErrorCode.md)
  - [ErrorInfo](docs/ErrorInfo.md)
  - [EventsCount](docs/EventsCount.md)
  - [ExpenditureTheme](docs/ExpenditureTheme.md)
  - [ExteriorWalls](docs/ExteriorWalls.md)
+ - [ExtraFeatureSqft](docs/ExtraFeatureSqft.md)
  - [Field](docs/Field.md)
  - [FieldsMatching](docs/FieldsMatching.md)
  - [FireDepartment](docs/FireDepartment.md)
@@ -370,6 +378,7 @@ Class | Method | HTTP request | Description
  - [FireStation](docs/FireStation.md)
  - [FireStationContactDetails](docs/FireStationContactDetails.md)
  - [FireStations](docs/FireStations.md)
+ - [FireplaceType](docs/FireplaceType.md)
  - [FloodHazardPreferences](docs/FloodHazardPreferences.md)
  - [FloodRiskByAddressRequest](docs/FloodRiskByAddressRequest.md)
  - [FloodRiskByLocationRequest](docs/FloodRiskByLocationRequest.md)
@@ -377,8 +386,11 @@ Class | Method | HTTP request | Description
  - [FloodRiskResponse](docs/FloodRiskResponse.md)
  - [FloodRiskResponseList](docs/FloodRiskResponseList.md)
  - [FloodZone](docs/FloodZone.md)
+ - [FloorType](docs/FloorType.md)
+ - [FormattedTaxAddress](docs/FormattedTaxAddress.md)
  - [Foundation](docs/Foundation.md)
  - [FreeOrReducedPriceLunches](docs/FreeOrReducedPriceLunches.md)
+ - [FuelType](docs/FuelType.md)
  - [GarageType](docs/GarageType.md)
  - [GeoLocationAccessPoint](docs/GeoLocationAccessPoint.md)
  - [GeoLocationCountry](docs/GeoLocationCountry.md)
@@ -422,6 +434,7 @@ Class | Method | HTTP request | Description
  - [IncomeTheme](docs/IncomeTheme.md)
  - [IndexVariable](docs/IndexVariable.md)
  - [IndividualValueVariable](docs/IndividualValueVariable.md)
+ - [InteriorWall](docs/InteriorWall.md)
  - [IntermediatePoints](docs/IntermediatePoints.md)
  - [Intersection](docs/Intersection.md)
  - [IntersectionResponse](docs/IntersectionResponse.md)
@@ -432,6 +445,7 @@ Class | Method | HTTP request | Description
  - [LandUse](docs/LandUse.md)
  - [LatLongFields](docs/LatLongFields.md)
  - [LifeStyleTheme](docs/LifeStyleTheme.md)
+ - [LocCode](docs/LocCode.md)
  - [LocalTaxGeometry](docs/LocalTaxGeometry.md)
  - [LocalTaxPreferences](docs/LocalTaxPreferences.md)
  - [Location](docs/Location.md)
@@ -446,6 +460,8 @@ Class | Method | HTTP request | Description
  - [NeighborhoodsResponse](docs/NeighborhoodsResponse.md)
  - [Network](docs/Network.md)
  - [OrganizationType](docs/OrganizationType.md)
+ - [OtherRooms](docs/OtherRooms.md)
+ - [OwnerVestType](docs/OwnerVestType.md)
  - [Owners](docs/Owners.md)
  - [PBKeyAddressRequest](docs/PBKeyAddressRequest.md)
  - [PBKeyResponse](docs/PBKeyResponse.md)
@@ -468,9 +484,12 @@ Class | Method | HTTP request | Description
  - [PoiCount](docs/PoiCount.md)
  - [PoiCountRequest](docs/PoiCountRequest.md)
  - [Points](docs/Points.md)
+ - [PoolType](docs/PoolType.md)
  - [PopulationTheme](docs/PopulationTheme.md)
  - [PreferencTimeZone](docs/PreferencTimeZone.md)
  - [PrimaryZone](docs/PrimaryZone.md)
+ - [PriorSaleCode](docs/PriorSaleCode.md)
+ - [PropSiteInfluene](docs/PropSiteInfluene.md)
  - [Properties](docs/Properties.md)
  - [PropertyAttributes](docs/PropertyAttributes.md)
  - [PropertyGeometry](docs/PropertyGeometry.md)
@@ -513,6 +532,7 @@ Class | Method | HTTP request | Description
  - [Sic](docs/Sic.md)
  - [SicMetadata](docs/SicMetadata.md)
  - [SiteDetails](docs/SiteDetails.md)
+ - [SitusAddress](docs/SitusAddress.md)
  - [SpecialPurposeDistrict](docs/SpecialPurposeDistrict.md)
  - [SpecialPurposeDistrictTax](docs/SpecialPurposeDistrictTax.md)
  - [SpeedLimit](docs/SpeedLimit.md)
@@ -527,6 +547,7 @@ Class | Method | HTTP request | Description
  - [TaxCounty](docs/TaxCounty.md)
  - [TaxDistrictResponse](docs/TaxDistrictResponse.md)
  - [TaxDistrictResponseList](docs/TaxDistrictResponseList.md)
+ - [TaxDocType](docs/TaxDocType.md)
  - [TaxExemption](docs/TaxExemption.md)
  - [TaxGeometry](docs/TaxGeometry.md)
  - [TaxJurisdiction](docs/TaxJurisdiction.md)
@@ -539,6 +560,7 @@ Class | Method | HTTP request | Description
  - [TaxRateMatchedAddress](docs/TaxRateMatchedAddress.md)
  - [TaxRateResponse](docs/TaxRateResponse.md)
  - [TaxResponses](docs/TaxResponses.md)
+ - [TaxSalesPriceCode](docs/TaxSalesPriceCode.md)
  - [TaxState](docs/TaxState.md)
  - [Time](docs/Time.md)
  - [TimezoneAddressRequest](docs/TimezoneAddressRequest.md)
