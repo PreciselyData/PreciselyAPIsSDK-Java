@@ -90,7 +90,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.precisely.apis</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>12.0.0</version>
+    <version>12.0.1</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -100,7 +100,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
- implementation "com.precisely.apis:PreciselyAPISJavaSDK:12.0.0"
+ implementation "com.precisely.apis:PreciselyAPISJavaSDK:12.0.1"
 ```
 
 ### Others
@@ -111,7 +111,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-12.0.0.jar
+* target/PreciselyAPISJavaSDK-12.0.1.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -292,7 +292,7 @@ Class | Method | HTTP request | Description
  - [BuildgClass](docs/BuildgClass.md)
  - [BuildgCondition](docs/BuildgCondition.md)
  - [BuildgFeaturesSqft](docs/BuildgFeaturesSqft.md)
- - [BuildgImprovArea](docs/BuildgImprovArea.md)
+ - [BuildgImproveArea](docs/BuildgImproveArea.md)
  - [BuildgImproveType](docs/BuildgImproveType.md)
  - [BuildgQuality](docs/BuildgQuality.md)
  - [BuildgStyle](docs/BuildgStyle.md)

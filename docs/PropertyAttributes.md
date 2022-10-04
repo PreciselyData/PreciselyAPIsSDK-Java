@@ -52,7 +52,6 @@ Name | Type | Description | Notes
 **buildgCount** | **String** |  |  [optional]
 **buildgUnitNo** | **String** |  |  [optional]
 **buildgFeaturesSqFt** | [**List&lt;BuildgFeaturesSqft&gt;**](BuildgFeaturesSqft.md) |  |  [optional]
-**businessName** | **String** |  |  [optional]
 **taxAddress** | **String** |  |  [optional]
 **formattedTaxAddress** | [**FormattedTaxAddress**](FormattedTaxAddress.md) |  |  [optional]
 **situsAddress** | [**SitusAddress**](SitusAddress.md) |  |  [optional]
@@ -78,7 +77,6 @@ Name | Type | Description | Notes
 **elevator** | **String** |  |  [optional]
 **propApnSequence** | **String** |  |  [optional]
 **fipsCode** | **String** |  |  [optional]
-**propCensusTract** | **String** |  |  [optional]
 **propZoning** | **String** |  |  [optional]
 **locCode** | [**LocCode**](LocCode.md) |  |  [optional]
 **legalMapRef** | **String** |  |  [optional]
@@ -119,7 +117,7 @@ Name | Type | Description | Notes
 **waterType** | **String** |  |  [optional]
 **amenities** | [**Amenities**](Amenities.md) |  |  [optional]
 **extraFeatureSqft** | [**List&lt;ExtraFeatureSqft&gt;**](ExtraFeatureSqft.md) |  |  [optional]
-**buildgImprovArea** | [**List&lt;BuildgImprovArea&gt;**](BuildgImprovArea.md) |  |  [optional]
+**buildgImproveArea** | [**List&lt;BuildgImproveArea&gt;**](BuildgImproveArea.md) |  |  [optional]
 **taxAccountNumber** | **String** |  |  [optional]
 **taxTapeCutDate** | **String** |  |  [optional]
 **taxDocType** | [**TaxDocType**](TaxDocType.md) |  |  [optional]
@@ -136,6 +134,8 @@ Name | Type | Description | Notes
 **marketValueLand** | **String** |  |  [optional]
 **appraisedValueLand** | **String** |  |  [optional]
 **taxRateCode** | **String** |  |  [optional]
+**propLinkId** | **String** |  |  [optional]
+**geoId** | **String** |  |  [optional]
 
 
 
