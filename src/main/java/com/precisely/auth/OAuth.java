@@ -83,6 +83,10 @@ public void applyToParams(List<Pair> queryParams, Map<String, String> headerPara
 
     try {
     Response response = client.newCall(authRequest).execute();
+    if (!response.isSuccessful()) {
+        String results = response.body().string();
+        throw new ApiException(results);
+    }
     Gson gson = new Gson();
     OAuthServiceResponce fromJson = gson.fromJson(response.body().string(),OAuthServiceResponce.class );
     setApiKey(apiKey);
