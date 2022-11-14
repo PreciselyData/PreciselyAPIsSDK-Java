@@ -59,7 +59,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <finalName>PreciselyAPISJavaSDK-12.0.1</finalName>
+                            <finalName>PreciselyAPISJavaSDK-12.0.3</finalName>
                         </configuration>
                     </execution>
                 </executions>
