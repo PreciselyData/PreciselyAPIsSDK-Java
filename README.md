@@ -90,7 +90,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.precisely.apis</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>14.0.0</version>
+    <version>15.0.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -100,7 +100,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
- implementation "com.precisely.apis:PreciselyAPISJavaSDK:14.0.0"
+ implementation "com.precisely.apis:PreciselyAPISJavaSDK:15.0.0"
 ```
 
 ### Others
@@ -111,7 +111,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-14.0.0.jar
+* target/PreciselyAPISJavaSDK-15.0.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -197,7 +197,7 @@ Class | Method | HTTP request | Description
 *LocalTaxServiceApi* | [**getSpecificTaxRateByAddress**](docs/LocalTaxServiceApi.md#getSpecificTaxRateByAddress) | **GET** /localtax/v1/taxrate/{taxRateTypeId}/byaddress | Get Taxrate By Address
 *LocalTaxServiceApi* | [**getSpecificTaxRateByLocation**](docs/LocalTaxServiceApi.md#getSpecificTaxRateByLocation) | **GET** /localtax/v1/taxrate/{taxRateTypeId}/bylocation | Get Taxrate By Location
 *NeighborhoodsServiceApi* | [**getPlaceByLocation**](docs/NeighborhoodsServiceApi.md#getPlaceByLocation) | **GET** /neighborhoods/v1/place/bylocation | Place By Location.
-*PhoneVerificationServiceApi* | [**phoneVerification**](docs/PhoneVerificationServiceApi.md#phoneVerification) | **GET** /phoneverification/v1/phoneverification | Phone verification.
+*PhoneVerificationServiceApi* | [**validatephonenumber**](docs/PhoneVerificationServiceApi.md#validatephonenumber) | **POST** /phoneverification/v2/validatephonenumber/results.json | Phone verification.
 *PlacesServiceApi* | [**getCategoryCodeMetadata**](docs/PlacesServiceApi.md#getCategoryCodeMetadata) | **GET** /places/v1/metadata/category | Category Code Metadata.
 *PlacesServiceApi* | [**getPOIById**](docs/PlacesServiceApi.md#getPOIById) | **GET** /places/v1/poi/{id} | Points Of Interest Details By Id
 *PlacesServiceApi* | [**getPOIsByAddress**](docs/PlacesServiceApi.md#getPOIsByAddress) | **GET** /places/v1/poi/byaddress | Get POIs By Address.
@@ -336,7 +336,6 @@ Class | Method | HTTP request | Description
  - [DemographicsGeometryCRC](docs/DemographicsGeometryCRC.md)
  - [DemographicsThemesV2](docs/DemographicsThemesV2.md)
  - [Depth](docs/Depth.md)
- - [DeviceStatusNetwork](docs/DeviceStatusNetwork.md)
  - [DirectionGeometry](docs/DirectionGeometry.md)
  - [Distance](docs/Distance.md)
  - [DistanceToBorder](docs/DistanceToBorder.md)
@@ -394,7 +393,6 @@ Class | Method | HTTP request | Description
  - [GarageType](docs/GarageType.md)
  - [GeoLocationAccessPoint](docs/GeoLocationAccessPoint.md)
  - [GeoLocationCountry](docs/GeoLocationCountry.md)
- - [GeoLocationFixedLineCountry](docs/GeoLocationFixedLineCountry.md)
  - [GeoLocationIpAddr](docs/GeoLocationIpAddr.md)
  - [GeoLocationPlace](docs/GeoLocationPlace.md)
  - [GeoLocationState](docs/GeoLocationState.md)
@@ -476,6 +474,7 @@ Class | Method | HTTP request | Description
  - [ParentBusiness](docs/ParentBusiness.md)
  - [Pbkey](docs/Pbkey.md)
  - [PhoneVerification](docs/PhoneVerification.md)
+ - [PhoneVerificationOutput](docs/PhoneVerificationOutput.md)
  - [Place](docs/Place.md)
  - [PlacesResponse](docs/PlacesResponse.md)
  - [Poi](docs/Poi.md)
@@ -608,6 +607,9 @@ Class | Method | HTTP request | Description
  - [ValidateMailingAddressUSCANAPIOutput](docs/ValidateMailingAddressUSCANAPIOutput.md)
  - [ValidateMailingAddressUSCANAPIRequest](docs/ValidateMailingAddressUSCANAPIRequest.md)
  - [ValidateMailingAddressUSCANAPIResponse](docs/ValidateMailingAddressUSCANAPIResponse.md)
+ - [ValidatePhoneNumberAPIRequest](docs/ValidatePhoneNumberAPIRequest.md)
+ - [ValidatePhoneNumberAPIRequestInput](docs/ValidatePhoneNumberAPIRequestInput.md)
+ - [ValidatePhoneNumberAPIRequestInputRow](docs/ValidatePhoneNumberAPIRequestInputRow.md)
  - [WaterBody](docs/WaterBody.md)
  - [WaterBodyResponse](docs/WaterBodyResponse.md)
  - [ZonesAddress](docs/ZonesAddress.md)

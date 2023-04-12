@@ -4,7 +4,7 @@
   <groupId>com.precisely.apis</groupId>
   <artifactId>PreciselyAPISJavaSDK</artifactId>
   <name>PreciselyAPISJavaSDK</name>
-  <version>14.0.0</version>
+  <version>15.0.0</version>
   <description>OpenAPI Java</description>
   <url>https://github.com/openapitools/openapi-generator</url>
   <developers>
@@ -52,7 +52,7 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <finalName>PreciselyAPISJavaSDK-14.0.0</finalName>
+              <finalName>PreciselyAPISJavaSDK-15.0.0</finalName>
             </configuration>
           </execution>
         </executions>
