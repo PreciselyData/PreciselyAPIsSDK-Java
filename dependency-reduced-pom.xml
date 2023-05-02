@@ -4,7 +4,7 @@
   <groupId>com.precisely.apis</groupId>
   <artifactId>PreciselyAPISJavaSDK</artifactId>
   <name>PreciselyAPISJavaSDK</name>
-  <version>15.0.0</version>
+  <version>16.0.0</version>
   <description>OpenAPI Java</description>
   <url>https://github.com/openapitools/openapi-generator</url>
   <developers>
@@ -52,7 +52,7 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <finalName>PreciselyAPISJavaSDK-15.0.0</finalName>
+              <finalName>PreciselyAPISJavaSDK-16.0.0</finalName>
             </configuration>
           </execution>
         </executions>
@@ -284,7 +284,7 @@
     <gson-fire-version>1.8.5</gson-fire-version>
     <threetenbp-version>1.5.0</threetenbp-version>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <okhttp-version>4.9.2</okhttp-version>
+    <okhttp-version>4.11.0</okhttp-version>
     <junit-version>4.13.2</junit-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jackson-databind-nullable-version>0.2.2</jackson-databind-nullable-version>

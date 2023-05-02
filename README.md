@@ -11,6 +11,8 @@
 
 * [Address Autocomplete](https://developer.precisely.com/apis/typeahead): Address Autocomplete. Build Address Autocomplete into your websites. The Address Autocomplete API returns an autocompleted list of addresses based on the input of a partial address. Useful for any local search, checkout, shipping, or billing experiences on your website. Increase e-commerce conversion by 3-6%!
 
+* [Address Autocomplete Enterprise](https://developer.precisely.com/apis/autocomplete) :Build Address Autocomplete Enterprise into your websites. The Address Autocomplete Enterprise API returns an autocompleted list of addresses based on the input of a partial address. It is useful for any local search, checkout, shipping, or billing experiences on your website.
+
 * [Maps](https://developer.precisely.com/apis/maps): Beautiful Visualization. Add your data and/or Precisely data atop beautiful maps for visualizations. Choose from three map styles - Bronze, Iron, and Steel.
 
 * [Zones](https://developer.precisely.com/apis/zones): Smart Zones. The Zones API returns geographic zones by Radius, Drive Distance, Drive Time and highly localized geofence zones with the input of Location Coordinates or Addresses. Useful for anyone wanting to create smarter geofence zones for Local Engagement and Analysis.
@@ -90,7 +92,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.precisely.apis</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>15.0.0</version>
+    <version>16.0.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -100,7 +102,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
- implementation "com.precisely.apis:PreciselyAPISJavaSDK:15.0.0"
+ implementation "com.precisely.apis:PreciselyAPISJavaSDK:16.0.0"
 ```
 
 ### Others
@@ -111,7 +113,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-15.0.0.jar
+* target/PreciselyAPISJavaSDK-16.0.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -157,6 +159,8 @@ All URIs are relative to *https://api.precisely.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AddressAutocompleteEnterpriseServiceApi* | [**listLocations**](docs/AddressAutocompleteEnterpriseServiceApi.md#listLocations) | **GET** /typeahead/v1/list/locations | 
+*AddressAutocompleteEnterpriseServiceApi* | [**listSelect**](docs/AddressAutocompleteEnterpriseServiceApi.md#listSelect) | **GET** /typeahead/v1/list/select | 
 *AddressAutocompleteServiceApi* | [**searchV2**](docs/AddressAutocompleteServiceApi.md#searchV2) | **GET** /typeahead/v1/locations | Address Autocomplete Search
 *AddressVerificationServiceApi* | [**getCityStateProvince**](docs/AddressVerificationServiceApi.md#getCityStateProvince) | **POST** /addressverification/v1/getcitystateprovince/results.json | GetCityStateProvince
 *AddressVerificationServiceApi* | [**getPostalCodes**](docs/AddressVerificationServiceApi.md#getPostalCodes) | **POST** /addressverification/v1/getpostalcodes/results.json | GetPostalCodes
