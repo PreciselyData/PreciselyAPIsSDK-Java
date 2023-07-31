@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dataset** | **String** |  |  [optional]
 **match** | [**Match**](Match.md) |  |  [optional]
-**address** | [**Address**](Address.md) |  |  [optional]
+**address** | [**Address1**](Address1.md) |  |  [optional]
 **poi** | [**Poi**](Poi.md) |  |  [optional]
 **distance** | [**Distance**](Distance.md) |  |  [optional]
 **unitTemp** | **String** |  |  [optional]
