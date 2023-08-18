@@ -92,7 +92,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.precisely.apis</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>16.0.1</version>
+    <version>16.0.3</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -102,7 +102,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
- implementation "com.precisely.apis:PreciselyAPISJavaSDK:16.0.1"
+ implementation "com.precisely.apis:PreciselyAPISJavaSDK:16.0.3"
 ```
 
 ### Others
@@ -113,7 +113,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-16.0.1.jar
+* target/PreciselyAPISJavaSDK-16.0.3.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -217,6 +217,7 @@ Class | Method | HTTP request | Description
 *Psap911ServiceApi* | [**getAHJPlusPSAPByLocation**](docs/Psap911ServiceApi.md#getAHJPlusPSAPByLocation) | **GET** /911/v1/ahj-psap/bylocation | AHJ &amp; PSAP By Location
 *Psap911ServiceApi* | [**getPSAPByAddress**](docs/Psap911ServiceApi.md#getPSAPByAddress) | **GET** /911/v1/psap/byaddress | PSAP By Address.
 *Psap911ServiceApi* | [**getPSAPByLocation**](docs/Psap911ServiceApi.md#getPSAPByLocation) | **GET** /911/v1/psap/bylocation | PSAP By Location.
+*Psap911ServiceApi* | [**searchByFccId**](docs/Psap911ServiceApi.md#searchByFccId) | **GET** /911/v1/ahj-psap/byfccid | AHJ &amp; PSAP By Fccid
 *RisksServiceApi* | [**getCrimeRiskByAddress**](docs/RisksServiceApi.md#getCrimeRiskByAddress) | **GET** /risks/v1/crime/byaddress | Get Crime Risk By Address
 *RisksServiceApi* | [**getCrimeRiskByAddressBatch**](docs/RisksServiceApi.md#getCrimeRiskByAddressBatch) | **POST** /risks/v1/crime/byaddress | Post Crime Risk By Address
 *RisksServiceApi* | [**getCrimeRiskByLocation**](docs/RisksServiceApi.md#getCrimeRiskByLocation) | **GET** /risks/v1/crime/bylocation | Get Crime Risk By  Location
