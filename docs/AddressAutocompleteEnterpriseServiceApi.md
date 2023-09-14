@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="listLocations"></a>
 # **listLocations**
-> TypeaheadLocations listLocations(searchText, transactionId, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType, searchOnAddressNumber)
+> TypeaheadLocations listLocations(searchText, transactionId, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType, searchOnAddressNumber, searchOnUnitInfo)
 
 
 
@@ -52,8 +52,9 @@ public class Example {
     String includeRangesDetails = "includeRangesDetails_example"; // String | if value set 'Y' then display all unit info of ranges, if value set 'N' then don't show ranges
     String searchType = "searchType_example"; // String | Preference to control search type of interactive requests.
     String searchOnAddressNumber = "searchOnAddressNumber_example"; // String | Preference to search on address number.
+    String searchOnUnitInfo = "searchOnUnitInfo_example"; // String | Preference to search on unit info.
     try {
-      TypeaheadLocations result = apiInstance.listLocations(searchText, transactionId, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType, searchOnAddressNumber);
+      TypeaheadLocations result = apiInstance.listLocations(searchText, transactionId, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType, searchOnAddressNumber, searchOnUnitInfo);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AddressAutocompleteEnterpriseServiceApi#listLocations");
@@ -88,6 +89,7 @@ Name | Type | Description  | Notes
  **includeRangesDetails** | **String**| if value set &#39;Y&#39; then display all unit info of ranges, if value set &#39;N&#39; then don&#39;t show ranges | [optional]
  **searchType** | **String**| Preference to control search type of interactive requests. | [optional]
  **searchOnAddressNumber** | **String**| Preference to search on address number. | [optional]
+ **searchOnUnitInfo** | **String**| Preference to search on unit info. | [optional]
 
 ### Return type
 

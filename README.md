@@ -92,7 +92,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.precisely.apis</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>16.0.3</version>
+    <version>17.0.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -102,7 +102,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
- implementation "com.precisely.apis:PreciselyAPISJavaSDK:16.0.3"
+ implementation "com.precisely.apis:PreciselyAPISJavaSDK:17.0.0"
 ```
 
 ### Others
@@ -113,7 +113,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-16.0.3.jar
+* target/PreciselyAPISJavaSDK-17.0.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -211,6 +211,9 @@ Class | Method | HTTP request | Description
 *PlacesServiceApi* | [**getPOIsCount**](docs/PlacesServiceApi.md#getPOIsCount) | **POST** /places/v1/poicount | Points Of Interest Count
 *PlacesServiceApi* | [**getSICMetadata**](docs/PlacesServiceApi.md#getSICMetadata) | **GET** /places/v1/metadata/sic | Get SIC Metadata
 *PlacesServiceApi* | [**poisAutocomplete**](docs/PlacesServiceApi.md#poisAutocomplete) | **GET** /places/v1/poi/autocomplete | Points Of Interest Autocomplete
+*PropertyInformationServiceApi* | [**getParcelBoundaryByAddress**](docs/PropertyInformationServiceApi.md#getParcelBoundaryByAddress) | **GET** /property/v2/parcelboundary/byaddress | Get Parcel Boundary By Address
+*PropertyInformationServiceApi* | [**getParcelBoundaryByLocation**](docs/PropertyInformationServiceApi.md#getParcelBoundaryByLocation) | **GET** /property/v2/parcelboundary/bylocation | Get Parcel Boundary By Location
+*PropertyInformationServiceApi* | [**getParcelBoundaryByPreciselyID**](docs/PropertyInformationServiceApi.md#getParcelBoundaryByPreciselyID) | **GET** /property/v2/parcelboundary/bypreciselyID | Get Parcel Boundary By PreciselyID
 *PropertyInformationServiceApi* | [**getPropertyAttributesByAddress**](docs/PropertyInformationServiceApi.md#getPropertyAttributesByAddress) | **GET** /property/v2/attributes/byaddress | PropertyV2 Attributes By Address.
 *PropertyInformationServiceApi* | [**getPropertyAttributesByAddressBatch**](docs/PropertyInformationServiceApi.md#getPropertyAttributesByAddressBatch) | **POST** /property/v2/attributes/byaddress | PropertyV2 Attributes By Address Batch.
 *Psap911ServiceApi* | [**getAHJPlusPSAPByAddress**](docs/Psap911ServiceApi.md#getAHJPlusPSAPByAddress) | **GET** /911/v1/ahj-psap/byaddress | AHJ &amp; PSAP By Address.
@@ -477,6 +480,8 @@ Class | Method | HTTP request | Description
  - [POIBoundaryResponse](docs/POIBoundaryResponse.md)
  - [POIByGeometryRequest](docs/POIByGeometryRequest.md)
  - [PSAPResponse](docs/PSAPResponse.md)
+ - [ParcelBoundaryV2](docs/ParcelBoundaryV2.md)
+ - [ParcelV2](docs/ParcelV2.md)
  - [ParentBusiness](docs/ParentBusiness.md)
  - [Pbkey](docs/Pbkey.md)
  - [PhoneVerification](docs/PhoneVerification.md)
@@ -502,6 +507,8 @@ Class | Method | HTTP request | Description
  - [PropertyInfoPreferences](docs/PropertyInfoPreferences.md)
  - [PropertyInfoResponse](docs/PropertyInfoResponse.md)
  - [PropertyInfoResponses](docs/PropertyInfoResponses.md)
+ - [PropertyInformationGeometry](docs/PropertyInformationGeometry.md)
+ - [PropertyInformationGeometryCRC](docs/PropertyInformationGeometryCRC.md)
  - [Proxy](docs/Proxy.md)
  - [RaceAndEthnicityTheme](docs/RaceAndEthnicityTheme.md)
  - [RangeVariable](docs/RangeVariable.md)
