@@ -18,10 +18,15 @@ Method | HTTP request | Description
 [**getEarthquakeRiskByLocation**](RisksServiceApi.md#getEarthquakeRiskByLocation) | **GET** /risks/v1/earthquake/bylocation | Get Earthquake Risk By Location
 [**getEarthquakeRiskByLocationBatch**](RisksServiceApi.md#getEarthquakeRiskByLocationBatch) | **POST** /risks/v1/earthquake/bylocation | Post Earthquake Risk By Location
 [**getFireHistory**](RisksServiceApi.md#getFireHistory) | **GET** /risks/v1/firehistory | Get Fire History
+[**getFireHistoryV2**](RisksServiceApi.md#getFireHistoryV2) | **GET** /risks/v2/firehistory | Get Fire History
 [**getFireRiskByAddress**](RisksServiceApi.md#getFireRiskByAddress) | **GET** /risks/v1/fire/byaddress | Get Fire Risk By Address
 [**getFireRiskByAddressBatch**](RisksServiceApi.md#getFireRiskByAddressBatch) | **POST** /risks/v1/fire/byaddress | Post Fire Risk By Address
 [**getFireRiskByLocation**](RisksServiceApi.md#getFireRiskByLocation) | **GET** /risks/v1/fire/bylocation | Get Fire Risk By Location
 [**getFireRiskByLocationBatch**](RisksServiceApi.md#getFireRiskByLocationBatch) | **POST** /risks/v1/fire/bylocation | Post Fire Risk By Location
+[**getFireRiskV2ByAddress**](RisksServiceApi.md#getFireRiskV2ByAddress) | **GET** /risks/v2/fire/byaddress | Get Fire Risk By Address
+[**getFireRiskV2ByAddressBatch**](RisksServiceApi.md#getFireRiskV2ByAddressBatch) | **POST** /risks/v2/fire/byaddress | Post Fire Risk By Address
+[**getFireRiskV2ByLocation**](RisksServiceApi.md#getFireRiskV2ByLocation) | **GET** /risks/v2/fire/bylocation | Get Fire Risk By Location
+[**getFireRiskV2ByLocationBatch**](RisksServiceApi.md#getFireRiskV2ByLocationBatch) | **POST** /risks/v2/fire/bylocation | Post Fire Risk By Location
 [**getFireStationByAddress**](RisksServiceApi.md#getFireStationByAddress) | **GET** /risks/v1/firestation/byaddress | Get Fire Station By Address
 [**getFireStationByLocation**](RisksServiceApi.md#getFireStationByLocation) | **GET** /risks/v1/firestation/bylocation | Get Fire Station By Location
 [**getFloodRiskByAddress**](RisksServiceApi.md#getFloodRiskByAddress) | **GET** /risks/v1/flood/byaddress | Get Flood Risk By Address
@@ -1050,6 +1055,81 @@ Name | Type | Description  | Notes
 **400** | Bad Request |  -  |
 **500** | Internal Server Error |  -  |
 
+<a name="getFireHistoryV2"></a>
+# **getFireHistoryV2**
+> FireHistoryV2 getFireHistoryV2(postCode, startDate, endDate, maxCandidates)
+
+Get Fire History
+
+Accepts postcode as input and Returns fire event details for a particular postcode.
+
+### Example
+```java
+// Import classes:
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.RisksServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+
+    RisksServiceApi apiInstance = new RisksServiceApi(defaultClient);
+    String postCode = "postCode_example"; // String | 5 digit Postal code to search
+    String startDate = "startDate_example"; // String | Start time in milliseconds(UTC)
+    String endDate = "endDate_example"; // String | End time in milliseconds(UTC)
+    String maxCandidates = "maxCandidates_example"; // String | Maximum response events
+    try {
+      FireHistoryV2 result = apiInstance.getFireHistoryV2(postCode, startDate, endDate, maxCandidates);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RisksServiceApi#getFireHistoryV2");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **postCode** | **String**| 5 digit Postal code to search |
+ **startDate** | **String**| Start time in milliseconds(UTC) | [optional]
+ **endDate** | **String**| End time in milliseconds(UTC) | [optional]
+ **maxCandidates** | **String**| Maximum response events | [optional]
+
+### Return type
+
+[**FireHistoryV2**](FireHistoryV2.md)
+
+### Authorization
+
+[oAuth2Password](../README.md#oAuth2Password)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
+
 <a name="getFireRiskByAddress"></a>
 # **getFireRiskByAddress**
 > FireRiskResponse getFireRiskByAddress(address, includeGeometry)
@@ -1324,6 +1404,288 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json, application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
+
+<a name="getFireRiskV2ByAddress"></a>
+# **getFireRiskV2ByAddress**
+> FireRiskV2Response getFireRiskV2ByAddress(address, includeGeometry)
+
+Get Fire Risk By Address
+
+Accepts addresses as input and Returns fire risk data by risk types.
+
+### Example
+```java
+// Import classes:
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.RisksServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+
+    RisksServiceApi apiInstance = new RisksServiceApi(defaultClient);
+    String address = "address_example"; // String | Free form address text
+    String includeGeometry = "includeGeometry_example"; // String | Flag to return Geometry default is N
+    try {
+      FireRiskV2Response result = apiInstance.getFireRiskV2ByAddress(address, includeGeometry);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RisksServiceApi#getFireRiskV2ByAddress");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address** | **String**| Free form address text |
+ **includeGeometry** | **String**| Flag to return Geometry default is N | [optional]
+
+### Return type
+
+[**FireRiskV2Response**](FireRiskV2Response.md)
+
+### Authorization
+
+[oAuth2Password](../README.md#oAuth2Password)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
+
+<a name="getFireRiskV2ByAddressBatch"></a>
+# **getFireRiskV2ByAddressBatch**
+> FireRiskV2ResponseList getFireRiskV2ByAddressBatch(fireRiskByAddressRequest)
+
+Post Fire Risk By Address
+
+This is a Batch offering for &#39;Fire Risk By Address&#39; service. It accepts a single address or a list of addresses and retrieve fire risk data by risk types.
+
+### Example
+```java
+// Import classes:
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.RisksServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+
+    RisksServiceApi apiInstance = new RisksServiceApi(defaultClient);
+    FireRiskByAddressRequest fireRiskByAddressRequest = new FireRiskByAddressRequest(); // FireRiskByAddressRequest | 
+    try {
+      FireRiskV2ResponseList result = apiInstance.getFireRiskV2ByAddressBatch(fireRiskByAddressRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RisksServiceApi#getFireRiskV2ByAddressBatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fireRiskByAddressRequest** | [**FireRiskByAddressRequest**](FireRiskByAddressRequest.md)|  |
+
+### Return type
+
+[**FireRiskV2ResponseList**](FireRiskV2ResponseList.md)
+
+### Authorization
+
+[oAuth2Password](../README.md#oAuth2Password)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
+
+<a name="getFireRiskV2ByLocation"></a>
+# **getFireRiskV2ByLocation**
+> FireRiskV2Response getFireRiskV2ByLocation(longitude, latitude, includeGeometry)
+
+Get Fire Risk By Location
+
+Accepts latitude &amp; longitude as input and Returns fire risk data by risk types.
+
+### Example
+```java
+// Import classes:
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.RisksServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+
+    RisksServiceApi apiInstance = new RisksServiceApi(defaultClient);
+    String longitude = "longitude_example"; // String | Longitude of Location
+    String latitude = "latitude_example"; // String | Latitude of Location
+    String includeGeometry = "includeGeometry_example"; // String | Flag to return Geometry default is N
+    try {
+      FireRiskV2Response result = apiInstance.getFireRiskV2ByLocation(longitude, latitude, includeGeometry);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RisksServiceApi#getFireRiskV2ByLocation");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **longitude** | **String**| Longitude of Location |
+ **latitude** | **String**| Latitude of Location |
+ **includeGeometry** | **String**| Flag to return Geometry default is N | [optional]
+
+### Return type
+
+[**FireRiskV2Response**](FireRiskV2Response.md)
+
+### Authorization
+
+[oAuth2Password](../README.md#oAuth2Password)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**500** | Internal Server Error |  -  |
+
+<a name="getFireRiskV2ByLocationBatch"></a>
+# **getFireRiskV2ByLocationBatch**
+> FireRiskV2ResponseList getFireRiskV2ByLocationBatch(fireRiskByLocationRequest)
+
+Post Fire Risk By Location
+
+This is a Batch offering for &#39;Fire Risk By Location&#39; service. It accepts a single location coordinate or a list of location coordinates and retrieve fire risk data by risk types.
+
+### Example
+```java
+// Import classes:
+import com.precisely.ApiClient;
+import com.precisely.ApiException;
+import com.precisely.Configuration;
+import com.precisely.auth.*;
+import com.precisely.models.*;
+import com.precisely.apis.RisksServiceApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.precisely.com");
+    
+    // Configure OAuth2 access token for authorization: oAuth2Password
+    OAuth oAuth2Password = (OAuth) defaultClient.getAuthentication("oAuth2Password");
+    oAuth2Password.setAccessToken("YOUR ACCESS TOKEN");
+
+    RisksServiceApi apiInstance = new RisksServiceApi(defaultClient);
+    FireRiskByLocationRequest fireRiskByLocationRequest = new FireRiskByLocationRequest(); // FireRiskByLocationRequest | 
+    try {
+      FireRiskV2ResponseList result = apiInstance.getFireRiskV2ByLocationBatch(fireRiskByLocationRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RisksServiceApi#getFireRiskV2ByLocationBatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fireRiskByLocationRequest** | [**FireRiskByLocationRequest**](FireRiskByLocationRequest.md)|  |
+
+### Return type
+
+[**FireRiskV2ResponseList**](FireRiskV2ResponseList.md)
+
+### Authorization
+
+[oAuth2Password](../README.md#oAuth2Password)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

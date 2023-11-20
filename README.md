@@ -92,7 +92,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.precisely.apis</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>17.0.0</version>
+    <version>17.1.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -102,7 +102,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
- implementation "com.precisely.apis:PreciselyAPISJavaSDK:17.0.0"
+ implementation "com.precisely.apis:PreciselyAPISJavaSDK:17.1.0"
 ```
 
 ### Others
@@ -113,7 +113,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-17.0.0.jar
+* target/PreciselyAPISJavaSDK-17.1.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -235,10 +235,15 @@ Class | Method | HTTP request | Description
 *RisksServiceApi* | [**getEarthquakeRiskByLocation**](docs/RisksServiceApi.md#getEarthquakeRiskByLocation) | **GET** /risks/v1/earthquake/bylocation | Get Earthquake Risk By Location
 *RisksServiceApi* | [**getEarthquakeRiskByLocationBatch**](docs/RisksServiceApi.md#getEarthquakeRiskByLocationBatch) | **POST** /risks/v1/earthquake/bylocation | Post Earthquake Risk By Location
 *RisksServiceApi* | [**getFireHistory**](docs/RisksServiceApi.md#getFireHistory) | **GET** /risks/v1/firehistory | Get Fire History
+*RisksServiceApi* | [**getFireHistoryV2**](docs/RisksServiceApi.md#getFireHistoryV2) | **GET** /risks/v2/firehistory | Get Fire History
 *RisksServiceApi* | [**getFireRiskByAddress**](docs/RisksServiceApi.md#getFireRiskByAddress) | **GET** /risks/v1/fire/byaddress | Get Fire Risk By Address
 *RisksServiceApi* | [**getFireRiskByAddressBatch**](docs/RisksServiceApi.md#getFireRiskByAddressBatch) | **POST** /risks/v1/fire/byaddress | Post Fire Risk By Address
 *RisksServiceApi* | [**getFireRiskByLocation**](docs/RisksServiceApi.md#getFireRiskByLocation) | **GET** /risks/v1/fire/bylocation | Get Fire Risk By Location
 *RisksServiceApi* | [**getFireRiskByLocationBatch**](docs/RisksServiceApi.md#getFireRiskByLocationBatch) | **POST** /risks/v1/fire/bylocation | Post Fire Risk By Location
+*RisksServiceApi* | [**getFireRiskV2ByAddress**](docs/RisksServiceApi.md#getFireRiskV2ByAddress) | **GET** /risks/v2/fire/byaddress | Get Fire Risk By Address
+*RisksServiceApi* | [**getFireRiskV2ByAddressBatch**](docs/RisksServiceApi.md#getFireRiskV2ByAddressBatch) | **POST** /risks/v2/fire/byaddress | Post Fire Risk By Address
+*RisksServiceApi* | [**getFireRiskV2ByLocation**](docs/RisksServiceApi.md#getFireRiskV2ByLocation) | **GET** /risks/v2/fire/bylocation | Get Fire Risk By Location
+*RisksServiceApi* | [**getFireRiskV2ByLocationBatch**](docs/RisksServiceApi.md#getFireRiskV2ByLocationBatch) | **POST** /risks/v2/fire/bylocation | Post Fire Risk By Location
 *RisksServiceApi* | [**getFireStationByAddress**](docs/RisksServiceApi.md#getFireStationByAddress) | **GET** /risks/v1/firestation/byaddress | Get Fire Station By Address
 *RisksServiceApi* | [**getFireStationByLocation**](docs/RisksServiceApi.md#getFireStationByLocation) | **GET** /risks/v1/firestation/bylocation | Get Fire Station By Location
 *RisksServiceApi* | [**getFloodRiskByAddress**](docs/RisksServiceApi.md#getFloodRiskByAddress) | **GET** /risks/v1/flood/byaddress | Get Flood Risk By Address
@@ -289,6 +294,7 @@ Class | Method | HTTP request | Description
  - [Amenities](docs/Amenities.md)
  - [Area](docs/Area.md)
  - [AreaCodeInfo](docs/AreaCodeInfo.md)
+ - [AreaV2](docs/AreaV2.md)
  - [AssetsAndWealthTheme](docs/AssetsAndWealthTheme.md)
  - [BaseFloodElevation](docs/BaseFloodElevation.md)
  - [BasementType](docs/BasementType.md)
@@ -322,6 +328,7 @@ Class | Method | HTTP request | Description
  - [City](docs/City.md)
  - [CommonGeometry](docs/CommonGeometry.md)
  - [Community](docs/Community.md)
+ - [CommunityGroup](docs/CommunityGroup.md)
  - [ConsistencyCode](docs/ConsistencyCode.md)
  - [Construction](docs/Construction.md)
  - [ContactDetails](docs/ContactDetails.md)
@@ -338,6 +345,7 @@ Class | Method | HTTP request | Description
  - [CrimeRiskResponse](docs/CrimeRiskResponse.md)
  - [CrimeRiskResponseList](docs/CrimeRiskResponseList.md)
  - [Crs](docs/Crs.md)
+ - [DamageGroup](docs/DamageGroup.md)
  - [Demographics](docs/Demographics.md)
  - [DemographicsAdvancedPreferences](docs/DemographicsAdvancedPreferences.md)
  - [DemographicsAdvancedRequest](docs/DemographicsAdvancedRequest.md)
@@ -376,12 +384,17 @@ Class | Method | HTTP request | Description
  - [FieldsMatching](docs/FieldsMatching.md)
  - [FireDepartment](docs/FireDepartment.md)
  - [FireEvent](docs/FireEvent.md)
+ - [FireEventV2](docs/FireEventV2.md)
  - [FireEventsResponse](docs/FireEventsResponse.md)
+ - [FireEventsV2Response](docs/FireEventsV2Response.md)
  - [FireHistory](docs/FireHistory.md)
+ - [FireHistoryV2](docs/FireHistoryV2.md)
  - [FireRiskByAddressRequest](docs/FireRiskByAddressRequest.md)
  - [FireRiskByLocationRequest](docs/FireRiskByLocationRequest.md)
  - [FireRiskResponse](docs/FireRiskResponse.md)
  - [FireRiskResponseList](docs/FireRiskResponseList.md)
+ - [FireRiskV2Response](docs/FireRiskV2Response.md)
+ - [FireRiskV2ResponseList](docs/FireRiskV2ResponseList.md)
  - [FireShed](docs/FireShed.md)
  - [FireStation](docs/FireStation.md)
  - [FireStationContactDetails](docs/FireStationContactDetails.md)
@@ -398,6 +411,7 @@ Class | Method | HTTP request | Description
  - [FormattedTaxAddress](docs/FormattedTaxAddress.md)
  - [Foundation](docs/Foundation.md)
  - [FreeOrReducedPriceLunches](docs/FreeOrReducedPriceLunches.md)
+ - [FrequencyGroup](docs/FrequencyGroup.md)
  - [FuelType](docs/FuelType.md)
  - [GarageType](docs/GarageType.md)
  - [GeoLocationAccessPoint](docs/GeoLocationAccessPoint.md)
@@ -463,6 +477,7 @@ Class | Method | HTTP request | Description
  - [Matrix](docs/Matrix.md)
  - [Mcd](docs/Mcd.md)
  - [MetadataResponse](docs/MetadataResponse.md)
+ - [MitigationGroup](docs/MitigationGroup.md)
  - [Name](docs/Name.md)
  - [NeighborhoodsResponse](docs/NeighborhoodsResponse.md)
  - [Network](docs/Network.md)
@@ -540,6 +555,7 @@ Class | Method | HTTP request | Description
  - [SchoolsNearByResponse](docs/SchoolsNearByResponse.md)
  - [Segmentation](docs/Segmentation.md)
  - [SegmentationThemes](docs/SegmentationThemes.md)
+ - [SeverityGroup](docs/SeverityGroup.md)
  - [ShoreLineDistance](docs/ShoreLineDistance.md)
  - [Sic](docs/Sic.md)
  - [SicMetadata](docs/SicMetadata.md)

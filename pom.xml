@@ -5,7 +5,7 @@
     <artifactId>PreciselyAPISJavaSDK</artifactId>
     <packaging>jar</packaging>
     <name>PreciselyAPISJavaSDK</name>
-    <version>17.0.0</version>
+    <version>17.1.0</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>
@@ -59,7 +59,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <finalName>PreciselyAPISJavaSDK-17.0.0</finalName>
+                            <finalName>PreciselyAPISJavaSDK-17.1.0</finalName>
                         </configuration>
                     </execution>
                 </executions>
