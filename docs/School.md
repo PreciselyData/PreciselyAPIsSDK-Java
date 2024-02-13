@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **phone** | **String** |  |  [optional]
 **website** | **String** |  |  [optional]
 **addressType** | **String** |  |  [optional]
-**address** | [**Address**](Address.md) |  |  [optional]
+**address** | [**Address1**](Address1.md) |  |  [optional]
 **lowestGrade** | **String** |  |  [optional]
 **highestGrade** | **String** |  |  [optional]
 **schoolType** | **String** |  |  [optional]

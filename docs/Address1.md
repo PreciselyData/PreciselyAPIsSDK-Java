@@ -37,8 +37,6 @@ Name | Type | Description | Notes
 **streetName** | **String** |  |  [optional]
 **unitType** | **String** |  |  [optional]
 **unitValue** | **String** |  |  [optional]
-**postalVerified** | **String** |  |  [optional]
-**customFields** | **Map&lt;String, Object&gt;** |  |  [optional]
 
 
 

@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **timestamp** | **String** |  |  [optional]
-**address** | [**Address**](Address.md) |  |  [optional]
+**address** | [**Address1**](Address1.md) |  |  [optional]
 
 
 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **utcOffset** | **Long** |  |  [optional]
 **dstOffset** | **Long** |  |  [optional]
 **timestamp** | **Long** |  |  [optional]
-**matchedAddress** | [**Address**](Address.md) |  |  [optional]
+**matchedAddress** | [**Address1**](Address1.md) |  |  [optional]
 **country** | **String** |  |  [optional]
 **tzValidFrom** | **String** |  |  [optional]
 **tzValidUntill** | **String** |  |  [optional]

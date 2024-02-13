@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="listLocations"></a>
 # **listLocations**
-> TypeaheadLocations listLocations(searchText, transactionId, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType, searchOnAddressNumber, searchOnUnitInfo)
+> TypeaheadLocations listLocations(searchText, transactionId, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType, searchOnAddressNumber, searchOnUnitInfo, searchOnPOBox)
 
 
 
@@ -53,8 +53,9 @@ public class Example {
     String searchType = "searchType_example"; // String | Preference to control search type of interactive requests.
     String searchOnAddressNumber = "searchOnAddressNumber_example"; // String | Preference to search on address number.
     String searchOnUnitInfo = "searchOnUnitInfo_example"; // String | Preference to search on unit info.
+    String searchOnPOBox = "searchOnPOBox_example"; // String | Specifies whether to enable search for matching on PO Box.
     try {
-      TypeaheadLocations result = apiInstance.listLocations(searchText, transactionId, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType, searchOnAddressNumber, searchOnUnitInfo);
+      TypeaheadLocations result = apiInstance.listLocations(searchText, transactionId, latitude, longitude, searchRadius, searchRadiusUnit, maxCandidates, country, matchOnAddressNumber, autoDetectLocation, ipAddress, areaName1, areaName3, postCode, returnAdminAreasOnly, includeRangesDetails, searchType, searchOnAddressNumber, searchOnUnitInfo, searchOnPOBox);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AddressAutocompleteEnterpriseServiceApi#listLocations");
@@ -90,6 +91,7 @@ Name | Type | Description  | Notes
  **searchType** | **String**| Preference to control search type of interactive requests. | [optional]
  **searchOnAddressNumber** | **String**| Preference to search on address number. | [optional]
  **searchOnUnitInfo** | **String**| Preference to search on unit info. | [optional]
+ **searchOnPOBox** | **String**| Specifies whether to enable search for matching on PO Box. | [optional]
 
 ### Return type
 

@@ -92,7 +92,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.precisely.apis</groupId>
     <artifactId>PreciselyAPISJavaSDK</artifactId>
-    <version>17.1.0</version>
+    <version>18.0.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -102,7 +102,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
- implementation "com.precisely.apis:PreciselyAPISJavaSDK:17.1.0"
+ implementation "com.precisely.apis:PreciselyAPISJavaSDK:18.0.0"
 ```
 
 ### Others
@@ -113,7 +113,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/PreciselyAPISJavaSDK-17.1.0.jar
+* target/PreciselyAPISJavaSDK-18.0.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -284,6 +284,7 @@ Class | Method | HTTP request | Description
  - [Accuracy](docs/Accuracy.md)
  - [Address](docs/Address.md)
  - [Address1](docs/Address1.md)
+ - [Address2](docs/Address2.md)
  - [AddressTime](docs/AddressTime.md)
  - [AddressType](docs/AddressType.md)
  - [AddressesByBoundaryRequest](docs/AddressesByBoundaryRequest.md)
@@ -355,6 +356,7 @@ Class | Method | HTTP request | Description
  - [Depth](docs/Depth.md)
  - [DirectionGeometry](docs/DirectionGeometry.md)
  - [Distance](docs/Distance.md)
+ - [Distance1](docs/Distance1.md)
  - [DistanceToBorder](docs/DistanceToBorder.md)
  - [DistanceToFloodHazardAddressRequest](docs/DistanceToFloodHazardAddressRequest.md)
  - [DistanceToFloodHazardLocationRequest](docs/DistanceToFloodHazardLocationRequest.md)
@@ -376,6 +378,7 @@ Class | Method | HTTP request | Description
  - [EnergyType](docs/EnergyType.md)
  - [ErrorCode](docs/ErrorCode.md)
  - [ErrorInfo](docs/ErrorInfo.md)
+ - [ErrorInfo1](docs/ErrorInfo1.md)
  - [EventsCount](docs/EventsCount.md)
  - [ExpenditureTheme](docs/ExpenditureTheme.md)
  - [ExteriorWalls](docs/ExteriorWalls.md)
@@ -473,12 +476,14 @@ Class | Method | HTTP request | Description
  - [LocationTime](docs/LocationTime.md)
  - [Magnitude](docs/Magnitude.md)
  - [Match](docs/Match.md)
+ - [Match1](docs/Match1.md)
  - [MatchedAddress](docs/MatchedAddress.md)
  - [Matrix](docs/Matrix.md)
  - [Mcd](docs/Mcd.md)
  - [MetadataResponse](docs/MetadataResponse.md)
  - [MitigationGroup](docs/MitigationGroup.md)
  - [Name](docs/Name.md)
+ - [Name1](docs/Name1.md)
  - [NeighborhoodsResponse](docs/NeighborhoodsResponse.md)
  - [Network](docs/Network.md)
  - [OrganizationType](docs/OrganizationType.md)
@@ -502,6 +507,7 @@ Class | Method | HTTP request | Description
  - [PhoneVerification](docs/PhoneVerification.md)
  - [PhoneVerificationOutput](docs/PhoneVerificationOutput.md)
  - [Place](docs/Place.md)
+ - [Place1](docs/Place1.md)
  - [PlacesResponse](docs/PlacesResponse.md)
  - [Poi](docs/Poi.md)
  - [PoiBoundary](docs/PoiBoundary.md)
