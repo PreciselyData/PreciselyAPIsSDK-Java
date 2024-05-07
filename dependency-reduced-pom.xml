@@ -4,28 +4,27 @@
   <groupId>com.precisely.apis</groupId>
   <artifactId>PreciselyAPISJavaSDK</artifactId>
   <name>PreciselyAPISJavaSDK</name>
-  <version>18.0.0</version>
-  <description>OpenAPI Java</description>
-  <url>https://github.com/openapitools/openapi-generator</url>
+  <version>18.1.0</version>
+  <description>Java SDK for accessing Precisely APIs which transform your business with new insights. Enrich and enhance your data, applications, business processes, and workflows with hundreds of Location and Identity datasets and APIs.</description>
+  <url>https://github.com/PreciselyData/PreciselyAPIsSDK-Java</url>
   <developers>
     <developer>
-      <name>OpenAPI-Generator Contributors</name>
-      <email>team@openapitools.org</email>
-      <organization>OpenAPITools.org</organization>
-      <organizationUrl>http://openapitools.org</organizationUrl>
+      <name>Precisely APIs</name>
+      <email>PreciselyAPIs-Support@precisely.com</email>
+      <organization>Precisely</organization>
+      <organizationUrl>https://www.precisely.com</organizationUrl>
     </developer>
   </developers>
   <licenses>
     <license>
-      <name>Unlicense</name>
-      <url>http://springdoc.org</url>
-      <distribution>repo</distribution>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
     </license>
   </licenses>
   <scm>
-    <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
-    <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
-    <url>https://github.com/openapitools/openapi-generator</url>
+    <connection>scm:git:git://github.com/PreciselyData/PreciselyAPIsSDK-Java.git</connection>
+    <developerConnection>scm:git:ssh://github.com:PreciselyData/PreciselyAPIsSDK-Java.git</developerConnection>
+    <url>https://github.com/PreciselyData/PreciselyAPIsSDK-Java/tree/master</url>
   </scm>
   <build>
     <plugins>
@@ -52,7 +51,7 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <finalName>PreciselyAPISJavaSDK-18.0.0</finalName>
+              <finalName>PreciselyAPISJavaSDK-18.1.0</finalName>
             </configuration>
           </execution>
         </executions>
@@ -172,15 +171,39 @@
       </plugin>
       <plugin>
         <artifactId>maven-source-plugin</artifactId>
-        <version>3.2.0</version>
+        <version>3.2.1</version>
         <executions>
           <execution>
             <id>attach-sources</id>
             <goals>
-              <goal>jar-no-fork</goal>
+              <goal>jar</goal>
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.8</version>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>ossrh</serverId>
+          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>com.diffplug.spotless</groupId>
@@ -213,28 +236,6 @@
       </plugin>
     </plugins>
   </build>
-  <profiles>
-    <profile>
-      <id>sign-artifacts</id>
-      <build>
-        <plugins>
-          <plugin>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <version>3.0.1</version>
-            <executions>
-              <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
   <dependencies>
     <dependency>
       <groupId>jakarta.annotation</groupId>
@@ -275,6 +276,16 @@
       </exclusions>
     </dependency>
   </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
   <properties>
     <swagger-core-version>1.6.3</swagger-core-version>
     <spotless.version>2.17.3</spotless.version>

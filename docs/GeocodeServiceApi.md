@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="geocode"></a>
 # **geocode**
-> GeocodeServiceResponse geocode(datapackBundle, country, mainAddress, matchMode, fallbackGeo, fallbackPostal, maxCands, streetOffset, streetOffsetUnits, cornerOffset, cornerOffsetUnits, removeAccentMarks, findDPV)
+> GeocodeServiceResponse geocode(datapackBundle, country, mainAddress, matchMode, fallbackGeo, fallbackPostal, maxCands, streetOffset, streetOffsetUnits, cornerOffset, cornerOffsetUnits, removeAccentMarks)
 
 Get Forward Geocode(Basic/Premium/Advanced)
 
@@ -54,9 +54,8 @@ public class Example {
     String cornerOffset = "7"; // String | Specifies the distance to offset the street end points in street-level matching.
     String cornerOffsetUnits = "METERS"; // String | Specifies the unit of measurement for the corner offset.
     String removeAccentMarks = "false"; // String | Specifies whether to Suppress accents and other diacritical marks.
-    String findDPV = "false"; // String | Specifies if Delivery Point Validation is required. Note: This parameter is only applicable for USA addresses.
     try {
-      GeocodeServiceResponse result = apiInstance.geocode(datapackBundle, country, mainAddress, matchMode, fallbackGeo, fallbackPostal, maxCands, streetOffset, streetOffsetUnits, cornerOffset, cornerOffsetUnits, removeAccentMarks, findDPV);
+      GeocodeServiceResponse result = apiInstance.geocode(datapackBundle, country, mainAddress, matchMode, fallbackGeo, fallbackPostal, maxCands, streetOffset, streetOffsetUnits, cornerOffset, cornerOffsetUnits, removeAccentMarks);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GeocodeServiceApi#geocode");
@@ -85,7 +84,6 @@ Name | Type | Description  | Notes
  **cornerOffset** | **String**| Specifies the distance to offset the street end points in street-level matching. | [optional] [default to 7]
  **cornerOffsetUnits** | **String**| Specifies the unit of measurement for the corner offset. | [optional] [default to METERS] [enum: METERS, FEET]
  **removeAccentMarks** | **String**| Specifies whether to Suppress accents and other diacritical marks. | [optional] [default to false]
- **findDPV** | **String**| Specifies if Delivery Point Validation is required. Note: This parameter is only applicable for USA addresses. | [optional] [default to false]
 
 ### Return type
 

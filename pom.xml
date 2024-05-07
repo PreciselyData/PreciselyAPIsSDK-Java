@@ -5,31 +5,41 @@
     <artifactId>PreciselyAPISJavaSDK</artifactId>
     <packaging>jar</packaging>
     <name>PreciselyAPISJavaSDK</name>
-    <version>18.0.0</version>
-    <url>https://github.com/openapitools/openapi-generator</url>
-    <description>OpenAPI Java</description>
+    <version>18.1.0</version>
+    <description>Java SDK for accessing Precisely APIs which transform your business with new insights. Enrich and enhance your data, applications, business processes, and workflows with hundreds of Location and Identity datasets and APIs.</description>
+    <url>https://github.com/PreciselyData/PreciselyAPIsSDK-Java</url>
     <scm>
-        <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
-        <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
-        <url>https://github.com/openapitools/openapi-generator</url>
+    <connection>scm:git:git://github.com/PreciselyData/PreciselyAPIsSDK-Java.git</connection>
+    <developerConnection>scm:git:ssh://github.com:PreciselyData/PreciselyAPIsSDK-Java.git</developerConnection>
+    <url>https://github.com/PreciselyData/PreciselyAPIsSDK-Java/tree/master</url>
     </scm>
 
-    <licenses>
-        <license>
-            <name>Unlicense</name>
-            <url>http://springdoc.org</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
+   <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
     <developers>
         <developer>
-            <name>OpenAPI-Generator Contributors</name>
-            <email>team@openapitools.org</email>
-            <organization>OpenAPITools.org</organization>
-            <organizationUrl>http://openapitools.org</organizationUrl>
+          <name>Precisely APIs</name>
+          <email>PreciselyAPIs-Support@precisely.com</email>
+          <organization>Precisely</organization>
+          <organizationUrl>https://www.precisely.com</organizationUrl>
         </developer>
-    </developers>
+    </developers> 
+  
+  <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
 
     <build>
         <plugins>
@@ -47,7 +57,7 @@
                     </compilerArgs>
                 </configuration>
             </plugin>
-			<plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>2.3</version>
@@ -59,7 +69,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <finalName>PreciselyAPISJavaSDK-18.0.0</finalName>
+                            <finalName>PreciselyAPISJavaSDK-18.1.0</finalName>
                         </configuration>
                     </execution>
                 </executions>
@@ -186,15 +196,41 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.2.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
                         <goals>
-                            <goal>jar-no-fork</goal>
+                            <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.8</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
             </plugin>
             <!-- Use spotless plugin to automatically format code, remove unused import, etc
                  To apply changes directly to the file, run `mvn spotless:apply`
@@ -240,30 +276,6 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>sign-artifacts</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>3.0.1</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
     <dependencies>
         <dependency>
@@ -353,17 +365,17 @@
             <version>3.12.4</version>
             <scope>test</scope>
         </dependency>
-		<dependency>
-			<groupId>javax.ws.rs</groupId>
-			<artifactId>javax.ws.rs-api</artifactId>
-			<version>2.0.1</version>
-		</dependency>
         <dependency>
-			<groupId>org.skyscreamer</groupId>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.skyscreamer</groupId>
             <artifactId>jsonassert</artifactId>
             <version>1.2.3</version>
-		</dependency>
-		 <dependency>
+        </dependency>
+         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
             <version>2.3.1</version>
