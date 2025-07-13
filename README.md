@@ -170,13 +170,6 @@ Class | Method | HTTP request | Description
 *AddressesServiceApi* | [**getAddressesCountbyBoundary**](docs/AddressesServiceApi.md#getAddressesCountbyBoundary) | **POST** /addresses/v1/addresscount/byboundary | Addresses count by Boundary.
 *AddressesServiceApi* | [**getAddressesbyBoundary**](docs/AddressesServiceApi.md#getAddressesbyBoundary) | **POST** /addresses/v1/address/byboundary | Addresses by Boundary.
 *AddressesServiceApi* | [**getAddressesbyBoundaryName**](docs/AddressesServiceApi.md#getAddressesbyBoundaryName) | **GET** /addresses/v1/address/byboundaryname | Addresses by Boundary Name.
-*DemographicsServiceApi* | [**getDemographicsAdvanced**](docs/DemographicsServiceApi.md#getDemographicsAdvanced) | **POST** /demographics-segmentation/v1/advanced/demographics | Demographics Advanced Endpoint
-*DemographicsServiceApi* | [**getDemographicsBasic**](docs/DemographicsServiceApi.md#getDemographicsBasic) | **GET** /demographics-segmentation/v1/basic/demographics | Demographics Basic
-*DemographicsServiceApi* | [**getDemographicsByAddress**](docs/DemographicsServiceApi.md#getDemographicsByAddress) | **GET** /demographics-segmentation/v1/demographics/byaddress | Demographics By Address.
-*DemographicsServiceApi* | [**getDemographicsByBoundaryIds**](docs/DemographicsServiceApi.md#getDemographicsByBoundaryIds) | **GET** /demographics-segmentation/v1/demographics/byboundaryids | Demographics By Boundaryids.
-*DemographicsServiceApi* | [**getDemographicsByLocation**](docs/DemographicsServiceApi.md#getDemographicsByLocation) | **GET** /demographics-segmentation/v1/demographics/bylocation | Demographics By Location.
-*DemographicsServiceApi* | [**getSegmentationByAddress**](docs/DemographicsServiceApi.md#getSegmentationByAddress) | **GET** /demographics-segmentation/v1/segmentation/byaddress | Segmentation By Address.
-*DemographicsServiceApi* | [**getSegmentationByLocation**](docs/DemographicsServiceApi.md#getSegmentationByLocation) | **GET** /demographics-segmentation/v1/segmentation/bylocation | Segmentation By Location.
 *EmailVerificationServiceApi* | [**validateEmailAddress**](docs/EmailVerificationServiceApi.md#validateEmailAddress) | **POST** /emailverification/v1/validateemailaddress/results.json | ValidateEmailAddress
 *GeocodeServiceApi* | [**geocode**](docs/GeocodeServiceApi.md#geocode) | **GET** /geocode/v1/{datapackBundle}/geocode | Get Forward Geocode(Basic/Premium/Advanced)
 *GeocodeServiceApi* | [**geocodeBatch**](docs/GeocodeServiceApi.md#geocodeBatch) | **POST** /geocode/v1/{datapackBundle}/geocode | Post Forward Geocode
@@ -345,12 +338,6 @@ Class | Method | HTTP request | Description
  - [CrimeRiskResponseList](docs/CrimeRiskResponseList.md)
  - [Crs](docs/Crs.md)
  - [DamageGroup](docs/DamageGroup.md)
- - [Demographics](docs/Demographics.md)
- - [DemographicsAdvancedPreferences](docs/DemographicsAdvancedPreferences.md)
- - [DemographicsAdvancedRequest](docs/DemographicsAdvancedRequest.md)
- - [DemographicsGeometry](docs/DemographicsGeometry.md)
- - [DemographicsGeometryCRC](docs/DemographicsGeometryCRC.md)
- - [DemographicsThemesV2](docs/DemographicsThemesV2.md)
  - [Depth](docs/Depth.md)
  - [DirectionGeometry](docs/DirectionGeometry.md)
  - [Distance](docs/Distance.md)
@@ -557,8 +544,6 @@ Class | Method | HTTP request | Description
  - [SchoolProfile](docs/SchoolProfile.md)
  - [SchoolRanking](docs/SchoolRanking.md)
  - [SchoolsNearByResponse](docs/SchoolsNearByResponse.md)
- - [Segmentation](docs/Segmentation.md)
- - [SegmentationThemes](docs/SegmentationThemes.md)
  - [SeverityGroup](docs/SeverityGroup.md)
  - [ShoreLineDistance](docs/ShoreLineDistance.md)
  - [Sic](docs/Sic.md)
