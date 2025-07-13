@@ -27,8 +27,6 @@
 
 * [911/PSAP](https://developer.precisely.com/apis/911): Emergency call handling. Integrate Public Safety Answering Point (PSAP) administrative call routing information plus Authority Having Jurisdiction (AHJ) phone numbers into your emergency services products and services. The 911/PSAP API retrieves 10-digit phone numbers and local contact info with the input of a location coordinate. Useful for emergency services administrators, call handlers, and dispatchers.
 
-* [Demographics](https://developer.precisely.com/apis/demographics) : Audience Enrichment. Add local demographics and lifestyle segmentation to your people profiles. The Demographics & Lifestyle API returns household demographics and lifestyle characteristics with the input of an address or location coordinate. Know more about your customers and their customers.
-
 * [Local Tax](https://developer.precisely.com/apis/localtax): Local Tax. Add hyperlocal tax rates to your applications, business processes, and workflows. The Local Tax API returns local tax rates with the input of location coordinates or addresses. Critical for any billing, commerce, payment, or payroll application or service.
 
 * [Telecomm Info](https://developer.precisely.com/apis/telecomm): Service Provider Intelligence. Identify Local Exchange Carrier presence, area codes, exchanges, and more within a Rate Center area. The Telecomm Info API retrieves Incumbent Local Exchange Carrier (ILEC) doing-business-as names along with NPA/NXX, LATA, and phone number ranges with the input of an address or location coordinates. Useful for local telecommunications competitive intelligence, partnerships, and provisioning subscribers.
